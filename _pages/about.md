@@ -25,8 +25,7 @@ Before joining ETS, I worked on astrophysics and cosmology at Fermi National Acc
 
 ### Technical Expertises
 
-- Data Science, Machine Learning/AI, Natural Language Processing
-- Statistics, Psychometrics, Scientific Computing
+- Data Science, Machine Learning/AI, Natural Language Processing, Statistics, Psychometrics, Scientific Computing
 - Game/simulation-based Assessments, Assessment of 21st Century Skills and interpersonal skills H Dynamical System and Differential Equations
 - Image Segmentation, Registration, Pattern Recognition
 - Charge Coupling Device (CCD) for Astronomical Imaging

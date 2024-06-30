@@ -35,8 +35,8 @@ Before joining ETS, I worked on astrophysics and cosmology at Fermi National Acc
 ### Employment
 
 - ***Educational Testing Service, Princeton, NJ, USA***
-  - Director, AssessmentofComplexSkillsProgram, 9/2023-now
-  - Director, PsychometricandDataScienceModeling, 10/2020-9/2023
+  - Director, Assessment of Complex Skills Program, 9/2023-now
+  - Director, Psychometric and Data Science Modeling, 10/2020-9/2023
   - Managing Senior Research Scientist, Assessment Analytics and Data Science, 3/2020 - 10/2020 
   - Senior Research Scientist, Psychometrics, Statistics and Data Science, 8/2016 - 3/2020
   - Research Scientist,Center for Computational Psychometrics, 5/2013-8/2016

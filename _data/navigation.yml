@@ -17,7 +17,8 @@ main:
   #  url: /year-archive/
     
   - title: "CV"
-    #url: /cv/
     url: /files/cv-hao.pdf
+  # url: /cv/
+    
   #- title: "Guide"
   #  url: /markdown/

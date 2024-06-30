@@ -35,21 +35,21 @@ Before joining ETS, I worked on astrophysics and cosmology at Fermi National Acc
 
 ### Employment
 
-- Educational Testing Service, Princeton, NJ, USA
-  - Director,AssessmentofComplexSkillsProgram, 9/2023-now
-  - Director,PsychometricandDataScienceModeling, 10/2020-9/2023
+- ***Educational Testing Service, Princeton, NJ, USA***
+  - Director, AssessmentofComplexSkillsProgram, 9/2023-now
+  - Director, PsychometricandDataScienceModeling, 10/2020-9/2023
   - Managing Senior Research Scientist, Assessment Analytics and Data Science, 3/2020 - 10/2020 
   - Senior Research Scientist, Psychometrics, Statistics and Data Science, 8/2016 - 3/2020
   - Research Scientist,Center for Computational Psychometrics, 5/2013-8/2016
 
-- Fermi National Accelerator Laboratory, Batavia, IL, USA
+- ***Fermi National Accelerator Laboratory, Batavia, IL, USA***
   - Visitor, Center for Particle Astrophysics, 5/2013-2019
   - Postdoc, Center for Particle Astrophysics, 5/2009-5/2013
 
-- University of Pennsylvania, Philadelphia, PA, USA
+- ***University of Pennsylvania, Philadelphia, PA, USA***
   - Visiting Scientist, Department of Physics, 1/2012 - 5/2013
 
-- University of Michigan, Ann Arbor, MI, USA
+- ***University of Michigan, Ann Arbor, MI, USA***
   - Research Assistant, Department of Physics, 6/2006 - 5/2009
   - Graduate Student Instructor, Department of Physics, 9/2004 - 6/2006
 

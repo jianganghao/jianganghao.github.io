@@ -13,7 +13,7 @@ My current research centers on innovating EdTech, Data Science, Psychometrics, L
 
 Before joining ETS, I worked on astrophysics and cosmology at Fermi National Accelerator Lab and the University of Michigan, where I worked on two prominent astronomical projects that have embraced big data since the early 2000s, the Sloan Digital Sky Survey (SDSS) and the Dark Energy Survey (DES). In these projects, my research centered on developing unsupervised machine learning algorithms to detect galaxy clusters (my PhD project), CCD sensor, astronomical image processing, and cosmological parameter estimation. 
 
-## Highlights
+### Highlights
 
 - Extensive hands-on experience in data science, machine learning/AI, and statistical/psychometric modeling; playing a pivotal role in shaping the emerging field of computational psychometrics.
 - Extensive experience in developing corporate strategies and initiatives in the areas of AI, data science, test security, remote testing, and division-wide research, driving the organization's growth and innovation.
@@ -23,7 +23,7 @@ Before joining ETS, I worked on astrophysics and cosmology at Fermi National Acc
 - Track record of over 90 peer-reviewed scientific publications receiving more than 8000 citations and an h-index of 39
 
 
-## Technical Expertises
+### Technical Expertises
 
 - Data Science, Machine Learning/AI, Natural Language Processing
 - Statistics, Psychometrics, Scientific Computing
@@ -33,7 +33,7 @@ Before joining ETS, I worked on astrophysics and cosmology at Fermi National Acc
 - Astrophysics, Cosmology, General Relativity
 
 
-## Employment
+### Employment
 
 - Educational Testing Service, Princeton, NJ, USA
   - Director,AssessmentofComplexSkillsProgram, 9/2023-now
@@ -53,26 +53,26 @@ Before joining ETS, I worked on astrophysics and cosmology at Fermi National Acc
   - Research Assistant, Department of Physics, 6/2006 - 5/2009
   - Graduate Student Instructor, Department of Physics, 9/2004 - 6/2006
 
-## Programming SKills
+### Programming SKills
 
 - Python/R (Some public repositoary can be found at my github at: [https://github.com/jgbrainstorm](https://github.com/jgbrainstorm))
 - C++ (see my package at: [https://sites.google.com/site/jiangangecgmm](https://sites.google.com/site/jiangangecgmm))
 - Cloud Computing (Amazon Web Service)
 
-## Patents
+### Patents
 
 - Deane, P., Choi, Ikkyu, Hao, J., and Zhang, M. Educational Testing Service (2023). Behavior-based electronic essay assessment fraud detection. U.S. Patent 11,630,896. Washington, DC: U.S. Patent and Trademark Office.
 - Zhang, M., Hao, J., Deane, P. and Li, C., Educational Testing Service (2021). Defining personalized writing burst measures of translation using keystroke logs. U.S. Patent 11,195,431. Washington, DC: U.S. Patent and Trademark Office.
 - Zhang, M., Hao, J. and Deane, P., Educational Testing Service (2021). Generating scores and feedback for writing assessment and instruction using electronic process logs. U.S. Patent 10,964,224. Washington, DC: U.S. Patent and Trademark Office.
 - Deane, P., Feng, G., Zhang, M., Hao, J., Bergner, Y., Flor, M., ...and Lederer, N. (2019). Generating Scores and Feedback for Writing Assessment and Instruction Using Electronic Process Logs, U.S. Patent No. 14/937,164, Washington, DC: U.S. Patent and Trademark Office.
 
-## Books
+### Books
 
 - Computational Psychometrics: New Methodologies for a New Generation of Digital Learning and Assess- ment, Alina A. von Davier, Robert J. Mislevy, and Jiangang Hao (Eds). Springer, 2021
 - The Meaning of Relativity, by Albert Einstein. Chinese translation by Jiangang Hao, Daojun Liu and Xinzhou Li. Shanghai Science and Technological Education Press, 2001
 
 
-# Awards and Recognition
+### Awards and Recognition
 
 - Annual Award for Exceptional Achievement in Educational Measurement, 2024, National Council on Mea- surement in Education (NCME), USA
 - Presidential Awards, 2016, Educational Testing Service, USA 

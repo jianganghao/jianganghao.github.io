@@ -8,41 +8,23 @@ author_profile: true
 
 Corporate Services and Leadership
 ---------------------------------
-- Member, Enterprise test security leadership team, Educational Testing Service, 2022 - 2024.
+- Member, Enterprise test security leadership team, Educational Testing Service, 2022 - 2024.\n ***Key responsibility***: oversee the development and implementation of the test security initiative
 
-  ***Key responsibility***: oversee the development and implementation of the test security initiative
+- Member, Enterprise test security strategy core team, Educational Testing Service, 2022 - now\n ***Key responsibility***: plan and coordinate the implementation of research efforts on data-driven test security
 
-- Member, Enterprise test security strategy core team, Educational Testing Service, 2022 - now.
+- Lead, Initiative for training in data science, AI and digital learning, Educational Testing Service, 2021 - 2022.\n ***Key responsibility***: lead the initiative and coordinate the development and implementation of upskill training courses on AI, data science and digital learning. 
 
-  ***Key responsibility***: plan and coordinate the implementation of research efforts on data-driven test security
+- Member, R&D tech steering committee, Educational Testing Service, 2019 - now.\n ***Key responsibility***: oversee the R&D computing infrastructure and cloud computing and provide technical guidance.
 
-- Lead, Initiative for training in data science, AI and digital learning, Educational Testing Service, 2021 - 2022.
+- Co-chair, Research Advisory Council, Division of Psychometrics, Statistics and Data Science (PSDS), Educational Testing Service, 2019 - 2020.\n ***Key responsibility***: develop the measurement frontier research agenda for PSDS division, review and select research proposals, and oversee the implementation of the research projects.
 
-  ***Key responsibility***: lead the initiative and coordinate the development and implementation of upskill training courses on AI, data science and digital learning. 
+- Member, ETS AI strategy committee, Educational Testing Service, 2019 - 2020.\n ***Key responsibility***: develop ETS corporate AI strategy
 
-- Member, R&D tech steering committee, Educational Testing Service, 2019 - now.
+- Member, Remote proctoring strategy committee, Educational Testing Service, 2020 - 2021.\n ***Key responsibility***: Develop ETS’ remote proctoring strategy and plan implementation.
 
-  ***Key responsibility***: oversee the R&D computing infrastructure and cloud computing and provide technical guidance.
+- Lead, Computational Psychometrics sub-initiative, Educational Testing Service, 2016 - 2017.\n ***Key responsibility***: develop research agenda around computational psychometrics and oversee the implementation of approved research projects.
 
-- Co-chair, Research Advisory Council, Division of Psychometrics, Statistics and Data Science (PSDS), Educational Testing Service, 2019 - 2020.
-
-  ***Key responsibility***: develop the measurement frontier research agenda for PSDS division, review and select research proposals, and oversee the implementation of the research projects.
-
-- Member, ETS AI strategy committee, Educational Testing Service, 2019 - 2020.
-
-  ***Key responsibility***: develop ETS corporate AI strategy
-
-- Member, Remote proctoring strategy committee, Educational Testing Service, 2020 - 2021.
-
-  ***Key responsibility***: Develop ETS’ remote proctoring strategy and plan implementation.
-
-- Lead, Computational Psychometrics sub-initiative, Educational Testing Service, 2016 - 2017.
-
-  ***Key responsibility***: develop research agenda around computational psychometrics and oversee the implementation of approved research projects.
-
-- Co-lead, Software and Data Infrastructure sub-initiative, Educational Testing Service, 2014 - 2016.
-
-  ***Key responsibility***: develop research agenda around software and data infrastructure and oversee the implementation.
+- Co-lead, Software and Data Infrastructure sub-initiative, Educational Testing Service, 2014 - 2016\n ***Key responsibility***: develop research agenda around software and data infrastructure and oversee the implementation.
 
 
 Academic Services
@@ -51,13 +33,9 @@ Academic Services
 - Editorship and Reviewership
     - ***Associate editor***, Frontiers in Psychology: Quantitative Psychology and Measurement
 
-    - ***Reviewer*** of the following educational research journals (active)
+    - ***Reviewer*** of the following educational research journals (active)\n _Psychometrika, Journal of Educational Measurement, Educational and Psychological Measurement, Journal of Educational and Behavioral Statistics, International Journal of Testing, Learning and Instruction, Computers and Education, PLOS One, Journal of Learning Analytics, Computers in Human Behavior, Journal of Educational Data Mining, Educational Assessment, IEEE Transactions on Learning Technology, Quality Assurance in Education, ETS Research Report_
 
-      _Psychometrika, Journal of Educational Measurement, Educational and Psychological Measurement, Journal of Educational and Behavioral Statistics, International Journal of Testing, Learning and Instruction, Computers and Education, PLOS One, Journal of Learning Analytics, Computers in Human Behavior, Journal of Educational Data Mining, Educational Assessment, IEEE Transactions on Learning Technology, Quality Assurance in Education, ETS Research Report_
-
-    - ***Reviewer*** of the following physics research journals (inactive)
-
-      _Astrophysical Journal Supplement Series, Astrophysical Journal, Physics Letters B, Astroparticle Physics_
+    - ***Reviewer*** of the following physics research journals (inactive)\n _Astrophysical Journal Supplement Series, Astrophysical Journal, Physics Letters B, Astroparticle Physics_
 
 - Conference Program Committee
     - 2024, The 16th International Conference on Computer Supported Education, Angers, France

@@ -32,8 +32,10 @@ Academic Services
 -----------------
 - Editorship and Reviewership
     - ***Associate editor***, Frontiers in Psychology: Quantitative Psychology and Measurement
-    - ***Reviewer*** of the following educational research journals (active)\n _Psychometrika, Journal of Educational Measurement, Educational and Psychological Measurement, Journal of Educational and Behavioral Statistics, International Journal of Testing, Learning and Instruction, Computers and Education, PLOS One, Journal of Learning Analytics, Computers in Human Behavior, Journal of Educational Data Mining, Educational Assessment, IEEE Transactions on Learning Technology, Quality Assurance in Education, ETS Research Report_
-    - ***Reviewer*** of the following physics research journals (inactive)\n _Astrophysical Journal Supplement Series, Astrophysical Journal, Physics Letters B, Astroparticle Physics_
+    - ***Reviewer*** of the following educational research journals (active)
+      _Psychometrika, Journal of Educational Measurement, Educational and Psychological Measurement, Journal of Educational and Behavioral Statistics, International Journal of Testing, Learning and Instruction, Computers and Education, PLOS One, Journal of Learning Analytics, Computers in Human Behavior, Journal of Educational Data Mining, Educational Assessment, IEEE Transactions on Learning Technology, Quality Assurance in Education, ETS Research Report_
+    - ***Reviewer*** of the following physics research journals (inactive)
+      _Astrophysical Journal Supplement Series, Astrophysical Journal, Physics Letters B, Astroparticle Physics_
 
 - Conference Program Committee
     - 2024, The 16th International Conference on Computer Supported Education, Angers, France

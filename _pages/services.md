@@ -9,30 +9,39 @@ author_profile: true
 Corporate Services and Leadership
 ---------------------------------
 - Member, Enterprise test security leadership team, Educational Testing Service, 2022 - 2024.
+
   ***Key responsibility***: oversee the development and implementation of the test security initiative
 
 - Member, Enterprise test security strategy core team, Educational Testing Service, 2022 - now.
+
   ***Key responsibility***: plan and coordinate the implementation of research efforts on data-driven test security
 
 - Lead, Initiative for training in data science, AI and digital learning, Educational Testing Service, 2021 - 2022.
+
   ***Key responsibility***: lead the initiative and coordinate the development and implementation of upskill training courses on AI, data science and digital learning. 
 
 - Member, R&D tech steering committee, Educational Testing Service, 2019 - now.
+
   ***Key responsibility***: oversee the R&D computing infrastructure and cloud computing and provide technical guidance.
 
 - Co-chair, Research Advisory Council, Division of Psychometrics, Statistics and Data Science (PSDS), Educational Testing Service, 2019 - 2020.
+
   ***Key responsibility***: develop the measurement frontier research agenda for PSDS division, review and select research proposals, and oversee the implementation of the research projects.
 
 - Member, ETS AI strategy committee, Educational Testing Service, 2019 - 2020.
+
   ***Key responsibility***: develop ETS corporate AI strategy
 
 - Member, Remote proctoring strategy committee, Educational Testing Service, 2020 - 2021.
+
   ***Key responsibility***: Develop ETS’ remote proctoring strategy and plan implementation.
 
 - Lead, Computational Psychometrics sub-initiative, Educational Testing Service, 2016 - 2017.
+
   ***Key responsibility***: develop research agenda around computational psychometrics and oversee the implementation of approved research projects.
 
 - Co-lead, Software and Data Infrastructure sub-initiative, Educational Testing Service, 2014 - 2016.
+
   ***Key responsibility***: develop research agenda around software and data infrastructure and oversee the implementation.
 
 

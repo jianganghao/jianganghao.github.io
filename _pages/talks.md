@@ -43,7 +43,7 @@ author_profile: true
 
 - Fauss, M., and **Hao, J.**, (Jan. 2023), Automated Speech Similarity Detection (AutoSSD) in TOEFL iBT Speaking, ETS Company-wide presnetation, Princeton, NJ
 
-- \textbf{Hao, J}. and Li, C., (Nov. 2022), Detecting remote desktop access using AI and clickstream process data, 2022 Conference on Test Security, Princeton, NJ, Nov. 2022
+- **Hao, J.**. and Li, C., (Nov. 2022), Detecting remote desktop access using AI and clickstream process data, 2022 Conference on Test Security, Princeton, NJ, Nov. 2022
 
 - Choi, I., **Hao, J.**, Deane, P., and Zhang, Mo., (Nov. 2022), Benchmark Keystroke Biometrics Accuracy from High-Stakes Writing Tasks, 2022 Conference on Test Security, Princeton, NJ, Nov. 2022
 
@@ -55,25 +55,25 @@ author_profile: true
 
 - Deane, P., Zhang, M., and **Hao, J.**, (Oct. 2022), Detecting Writing-Process Characteristics Associated with Non-Genuine Text Generation, 2022 Conference on Test Security, Princeton, NJ, Oct. 2022
 
-- \textbf{Hao, J}., (Nov. 2022), Using Data Analytics and AI to Support Test Security of Remotely Proctored Tests, Invited presentation at 2022 MARC conference. 
+- **Hao, J.**., (Nov. 2022), Using Data Analytics and AI to Support Test Security of Remotely Proctored Tests, Invited presentation at 2022 MARC conference. 
 
-- \textbf{Hao, J}., (July 2022), Response Process Data from Digital Assessments: Challenges and Strategies, Presentation given to ETS summer interns
+- **Hao, J.**., (July 2022), Response Process Data from Digital Assessments: Challenges and Strategies, Presentation given to ETS summer interns
 
-- \textbf{Hao, J}., (June 2022), Streamlit Dashboard and AWS Deployment: Unleashing the Power of Interactive Reports, Presentation given at ETS DA Seminar.
+- **Hao, J.**., (June 2022), Streamlit Dashboard and AWS Deployment: Unleashing the Power of Interactive Reports, Presentation given at ETS DA Seminar.
 
-- Liu, L., and \textbf{Hao, J}., (April 2022), Computer-Supported Collaborative Modeling Activities to Promote Science Learning, presentation given at AERA 2022 
+- Liu, L., and **Hao, J.**., (April 2022), Computer-Supported Collaborative Modeling Activities to Promote Science Learning, presentation given at AERA 2022 
 
-- \textbf{Hao, J}., (March 2022), RMS research on test security, Presentation given to SBU at ETS. 
+- **Hao, J.**., (March 2022), RMS research on test security, Presentation given to SBU at ETS. 
 
 - Novak, J., Choi, I, **Hao, J.**, and Li, (April 2022), AutoESD: An Automated Solution to Detect Copied Essays, Presentation given to ETS employee.
 
-- \textbf{Hao, J}., (Sept. 2021), Using clickstream process data to support remotely proctored high-stakes tests: a synergy between psychometrics, data science and AI, Presentation given to ETS employee.
+- **Hao, J.**., (Sept. 2021), Using clickstream process data to support remotely proctored high-stakes tests: a synergy between psychometrics, data science and AI, Presentation given to ETS employee.
 
-- Zhu, M., Burstein, J., \textbf{Hao, J}. (June, 2021), Uncovering patterns of use in the writing mentor app through cluster analysis, Presentation given at NCME 2021
+- Zhu, M., Burstein, J., **Hao, J.**. (June, 2021), Uncovering patterns of use in the writing mentor app through cluster analysis, Presentation given at NCME 2021
 
-- \textbf{Hao, J}., (July 2021), Psychometric and data science modeling at ETS, Presentation given to 2021 ETS summer interns. 
+- **Hao, J.**., (July 2021), Psychometric and data science modeling at ETS, Presentation given to 2021 ETS summer interns. 
 
-- \textbf{Hao, J}., (April 2021), Beyond a single score: scoring and reporting strategy for scalable assessments of collaborative problem solving, Presentation given at 2021 conference of International Testing Commission (ITC). 
+- **Hao, J.**., (April 2021), Beyond a single score: scoring and reporting strategy for scalable assessments of collaborative problem solving, Presentation given at 2021 conference of International Testing Commission (ITC). 
 
 - **Hao, J.**, (Dec. 4th, 2020), Characterizing the quality of simulation-based task: edit distance-based measures, Presentation given at the virtual ATP EdTech summit.  
 

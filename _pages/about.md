@@ -59,7 +59,7 @@ Before joining ETS, I worked on astrophysics and cosmology at Fermi National Acc
 - ***East China University of Science and Technology, Shanghai, China***
   - DSc, Applied Mathematics (2004); MS, Physics (2001); BS, Physics (1998)
   
-## Programming SKills
+## Programming Skills
 
 - Python/R (Some public repositoary can be found at my github at: [https://github.com/jgbrainstorm](https://github.com/jgbrainstorm))
 - C++ (see my package at: [https://sites.google.com/site/jiangangecgmm](https://sites.google.com/site/jiangangecgmm))
@@ -79,7 +79,7 @@ Before joining ETS, I worked on astrophysics and cosmology at Fermi National Acc
 
 ## Awards and Recognition
 
-- Annual Award for Exceptional Achievement in Educational Measurement, 2024, National Council on Mea- surement in Education (NCME), USA
+- Annual Award for Exceptional Achievement in Educational Measurement, 2024, National Council on Measurement in Education (NCME), USA
 - Presidential Awards, 2016, Educational Testing Service, USA 
 - SPOT Awards,2013-2015, Educational Testing Service, USA 
 - Most Valued Reviewer, 2011, Astroparticle Physics, Elseiver 

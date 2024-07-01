@@ -9,13 +9,13 @@ Data Science and AI/Machine Learning, 2013 - now
 ------------------------------------------------
 - Large Language Model and Generative AI [2023 - now]
 
-Since the release of ChatGPT, I initiated a serious of research projects around LLM and generative AI. The projects inlcude
+  Since the release of ChatGPT, I initiated a serious of research projects around LLM and generative AI. The projects inlcude
   - Multitude methods for detecting AI (ChatGPT,GPT-3) generated essays.
   - Responsible use of AI detectors. 
 
 - Test Security [2020 - now]
 
-Since 2020, I have been leading multiple data-driven projects funded by the Research Allocation and ETS test security initiative to innovate analytics and AI methods to support test security, especially for remotely administered tests. These projects have yielded several significant products, contributing to over 60% of cheating detection. Listed below are some of the tools we developed:
+  Since 2020, I have been leading multiple data-driven projects funded by the Research Allocation and ETS test security initiative to innovate analytics and AI methods to support test security, especially for remotely administered tests. These projects have yielded several significant products, contributing to over 60% of cheating detection. Listed below are some of the tools we developed:
   - AutoESD - Automated Essay Similarity Detection: A system that identifies similar essays, presenting them to human experts for final decisions via an AI-assisted analytics dashboard.
   - AutoSSD - Automated Speech Similarity Detection is a system that detects similar speech responses and supply them through an analytics and AI assisted dashboard for human experts to make final decisions.
   - AI-Reviewer: AI-based essay/speech similarity reviewer is a machine learning system that utilizes a number of similarity features from essay/speech responses and human expert ajudications to make decisions automatically.

@@ -8,7 +8,8 @@ author_profile: true
 Data Science and AI/Machine Learning, 2013 - now
 ------------------------------------------------
 
-- Test Security
+- Test Security [2020 - now]
+
 Since 2020, I have been leading multiple data-driven projects funded by the Research Allocation and ETS test security initiative to innovate analytics and AI methods to support test security, especially for remotely administered tests. These projects have yielded several significant products, contributing to over 60% of cheating detection. Listed below are some of the tools we developed:
   - AutoESD - Automated Essay Similarity Detection: A system that identifies similar essays, presenting them to human experts for final decisions via an AI-assisted analytics dashboard.
   - AutoSSD - Automated Speech Similarity Detection is a system that detects similar speech responses and supply them through an analytics and AI assisted dashboard for human experts to make final decisions.
@@ -16,7 +17,9 @@ Since 2020, I have been leading multiple data-driven projects funded by the Rese
   - Detection of AI (ChatGPT,GPT-3) generated essays includes a set of tools to detect AI generated essays through machine learning, writing process and essay similarity. 
   - Keystroke analytics and biometrics include a set oft ools that are used to identify imposters,copywriting, and AI-generated essays.
   - Clickstream data-based suspicious behavioral detection includes a set of tools that identify anormly behaviors in test taking process.
+  
 - Assessment Process Data [2013 - now]
+
 I have been leading, co-leading, and participating in a variety of projects aimed at enhancing learning and assessment methods through the utilization of response process data. These projects encompass a range of innovative approaches, as detailed below:
   - CPS-rater: This project focuses on the automated annotation of communication in collaborative activities, streamlining the analysis of interactions in group settings.
   - Writing Analytics and Biometrics: Here,the emphasis is on leveraging keystroke data during the writing process. This approach allows for a nuanced understanding of writing habits and skills.
@@ -47,9 +50,9 @@ Astrophysics and Cosmology
 --------------------------
 - Dark Energy Survey [2009 - 2013]. 
 I worked on the dark energy survey project while I was with Fermi National Accelerator Lab. The projects include:
-  - DECam focal plane flatness measurement: I developed a optical method to measure the flatness of the focal plane of DECam.
-  - CCD image recuction and image quality pipeline: I developed the image reduction and image quality measurement pipeline for testing CCDs for DECam.
-  - Galaxy alignment measurement: I performed the precision measurement of galaxy alignment in clusters based on SDSS data.
+  - [DECam focal plane flatness measurement](https://lss.fnal.gov/archive/2010/conf/fermilab-conf-10-191-a.pdf): I developed a optical method to measure the flatness of the focal plane of DECam.
+  - [CCD image recuction and image quality pipeline](https://indico.cern.ch/event/129980/contributions/1351160/attachments/90580/129575/DECam_Hao_DPF2011.pdf): I developed the image reduction and image quality measurement pipeline for testing CCDs for DECam.
+  - [Galaxy alignment measurement](https://iopscience.iop.org/article/10.1088/0004-637X/740/1/39): I performed the precision measurement of galaxy alignment in clusters based on SDSS data.
 
 - Sloan Digital Sky Survey [2004 - 2009].
 During my PhD, my research centers on developing unsupervised machine learning algorithm to detect cluster galaxies based on data from the Sloan Digital Sky Survey. Some projects include: 

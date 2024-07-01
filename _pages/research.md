@@ -7,6 +7,11 @@ author_profile: true
 
 Data Science and AI/Machine Learning, 2013 - now
 ------------------------------------------------
+- Large Language Model and Generative AI [2023 - now]
+
+Since the release of ChatGPT, I initiated a serious of research projects around LLM and generative AI. The projects inlcude
+  - Multitude methods for detecting AI (ChatGPT,GPT-3) generated essays.
+  - Responsible use of AI detectors. 
 
 - Test Security [2020 - now]
 
@@ -14,13 +19,12 @@ Since 2020, I have been leading multiple data-driven projects funded by the Rese
   - AutoESD - Automated Essay Similarity Detection: A system that identifies similar essays, presenting them to human experts for final decisions via an AI-assisted analytics dashboard.
   - AutoSSD - Automated Speech Similarity Detection is a system that detects similar speech responses and supply them through an analytics and AI assisted dashboard for human experts to make final decisions.
   - AI-Reviewer: AI-based essay/speech similarity reviewer is a machine learning system that utilizes a number of similarity features from essay/speech responses and human expert ajudications to make decisions automatically.
-  - Detection of AI (ChatGPT,GPT-3) generated essays includes a set of tools to detect AI generated essays through machine learning, writing process and essay similarity. 
   - Keystroke analytics and biometrics include a set oft ools that are used to identify imposters,copywriting, and AI-generated essays.
   - Clickstream data-based suspicious behavioral detection includes a set of tools that identify anormly behaviors in test taking process.
-  
+
 - Assessment Process Data [2013 - now]
 
-I have been leading, co-leading, and participating in a variety of projects aimed at enhancing learning and assessment methods through the utilization of response process data. These projects encompass a range of innovative approaches, as detailed below:
+  I have been leading, co-leading, and participating in a variety of projects aimed at enhancing learning and assessment methods through the utilization of response process data. These projects encompass a range of innovative approaches, as detailed below:
   - CPS-rater: This project focuses on the automated annotation of communication in collaborative activities, streamlining the analysis of interactions in group settings.
   - Writing Analytics and Biometrics: Here,the emphasis is on leveraging keystroke data during the writing process. This approach allows for a nuanced understanding of writing habits and skills.
   - Learner Behavioral Analytics in Writing Mentor: This initiative analyzes user interaction with the online writing application, Writing Mentor, to gain insights into learning behaviors and patterns.

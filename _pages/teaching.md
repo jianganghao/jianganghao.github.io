@@ -7,8 +7,8 @@ author_profile: true
 
 ETS Upskill Initiative Lead and Instructor, 2020 - 2022
 ----------------------
-- 2021, I led ETS Research upskilling initiative on data science, AI and Machine learning. I lead and coordinate the development of four courses for workforce training on digital learning and assessment. I also taught 10-week training course: Data Science Academy Season II, ETS, NJ, USA 
-- 2020, Taught 10-week training course: Data Science Academy, ETS, NJ, USA
+- 2021, I led the ETS Research upskilling initiative in data science, AI, and machine learning. I led and coordinated the development of four comprehensive courses designed for workforce training in digital learning and assessment, and I taught the 10-week training course titled "Data Science Academy Season II".
+- 2020, I developed and taught a 10-week training course titled "Data Science Academy".
 
 Training Workshop Organizer and Instructor
 -----------------

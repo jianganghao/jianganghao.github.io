@@ -5,7 +5,7 @@ permalink: /teaching/
 author_profile: true
 ---
 
-ETS Upskill Initiative
+ETS Upskill Initiative, 2020 - 2022
 ----------------------
 - 2021, I led ETS Research upskilling initiative on data science, AI and Machine learning. I lead and coordinate the development of four courses for workforce training on digital learning and assessment. I also taught 10-week training course: Data Science Academy Season II, ETS, NJ, USA 
 - 2020, Taught 10-week training course: Data Science Academy, ETS, NJ, USA
@@ -19,3 +19,13 @@ Organized Training Workshop
 - 2021, NCME training workshop: addressing the data challenges from next-generation assessments: data science upskilling for psychometricians, Virtual
 - 2018, NCME training workshop: evidence centered design and computational psychometric solution for process data”, New York, NY, USA
 - 2017, NCME training workshop: evidence centered design and computational psychometric solution for process data”, San Antonio, TX, USA
+
+University of Michigan, 2004 - 2006
+-----------------------------------
+- Taught Physics Lab - Mechanics 
+- Taught Physics Lab - Electricity and Magnetism
+
+Shanghai High School International Division, 2001 - 2003
+--------------------------------------------------------
+- Taught Physics to 8th and 12th graders
+- Taught PhotoShop, Flash, and Visual Basic to 8, 10, and 12 graders

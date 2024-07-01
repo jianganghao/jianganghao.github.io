@@ -29,3 +29,14 @@ Shanghai High School International Division, 2001 - 2003, Part-time Instructor
 --------------------------------------------------------
 - Taught Physics to 8th and 12th graders
 - Taught PhotoShop, Flash, and Visual Basic to 8, 10, and 12 graders
+
+Mentored Students
+-----------------
+
+- Kehinde Elelu, 2024 ETS Summer Intern (Civil Engineering Ph.D. Student of Clemson University)
+- Yang Zhong, 2023 ETS Summer Intern (Computer Science Ph.D. Student of University of Pittsburgh)
+- Daniel Adams, 2018 ETS Summer Intern (Psychometrics Ph.D. Student of University of Wisconsin Madison), now ETS Psychometrician.
+- Yang Jiang, 2017 ETS Summer Intern (Cognitive Science Ph.D. Student of Columbia University), now ETS Research Scientist
+- Lu Ou, 2016 ETS Summer Intern (Statistics Ph.D. Student of Penn State Univeristy), Now at Netflix
+- Thales Ricarte, 2015 ETS Exchange Student (Psychometrics Ph.D. student of University of São Paulo)
+- Zuowei Wang, 2014 ETS Summer Intern (Psychology Ph.D. student of University of Michigan), Now ETS Research Scientist

@@ -31,7 +31,7 @@
       }
     ]
   },
-  "employment": [
+  "work": [
     {
       "organization": "Educational Testing Service",
       "location": "Princeton, NJ, USA",
@@ -129,7 +129,7 @@
       ]
     }
   ],
-  "Education": [
+  "education": [
     {
       "institution": "University of Michigan",
       "studyType": "PhD (Physics, 2009); MA (Statistics, 2006)"
@@ -196,17 +196,6 @@
       "keyResponsibilities": "Developed research agenda around software and data infrastructure and oversaw implementation."
     }
   ],
-  "technical Expertise": [
-    "Data Science, Machine Learning/AI, Natural Language Processing",
-    "Statistics, Psychometrics, Scientific Computing, Visualization",
-    "Assessment of Team Dynamics, Collaboration, and Communication",
-    "Game/Simulation-based Assessments, Digital Learning Analytics",
-    "Dynamical Systems and Differential Equations",
-    "Image Segmentation, Registration, Pattern Recognition",
-    "Charge Coupling Device (CCD) for Astronomical Imaging, Astrophysics, Cosmology, General Relativity"
-  ]
-
-
   "Awards": [
     {
       "title": "Annual Award for Exceptional Achievement in Educational Measurement",

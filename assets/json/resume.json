@@ -33,7 +33,7 @@
   },
   "work": [
     {
-      "organization": "Educational Testing Service",
+      "name": "Educational Testing Service",
       "location": "Princeton, NJ, USA",
       "positions": [
         {
@@ -86,7 +86,7 @@
       ]
     },
     {
-      "organization": "University of Pennsylvania",
+      "name": "University of Pennsylvania",
       "location": "Philadelphia, PA, USA",
       "positions": [
         {
@@ -100,7 +100,7 @@
       ]
     },
     {
-      "organization": "Fermi National Accelerator Laboratory",
+      "name": "Fermi National Accelerator Laboratory",
       "location": "Batavia, IL, USA",
       "positions": [
         {
@@ -115,7 +115,7 @@
       ]
     },
     {
-      "organization": "University of Michigan",
+      "name": "University of Michigan",
       "location": "Ann Arbor, MI, USA",
       "positions": [
         {

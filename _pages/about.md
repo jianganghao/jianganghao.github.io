@@ -6,7 +6,7 @@ subtitle: <a href='https://www.ets.org/research.html'>ETS Research Institute </a
 
 profile:
   align: right
-  image: Hao_head2.png
+  image: Hao_head3.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>N258D Messick Hall</p>

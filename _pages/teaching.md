@@ -22,7 +22,7 @@ I have been teaching a number of data science related courses in training worksh
 - **Hao, J. (2022, June)**  
   *Addressing the Psychometrics Challenges from Digital Learning and Assessment: How Computational Psychometrics Helps.*  
   Pre-conference training workshop given at EdTech and Computational Psychometrics Summit, 2022.  
-  [Workshop details](https://www.globalatpevents.com/ecps2022/pre-conferenceworkshop.aspx). Virtual.
+  [Workshop details](https://www.globalatpevents.com/ecps2022/pre-conference-workshop.aspx). Virtual.
 
 - **Hao, J. & Livne, O. (2021, 2022)**  
   *Data Science Academy.*  

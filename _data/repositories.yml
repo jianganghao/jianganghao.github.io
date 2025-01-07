@@ -1,14 +1,18 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - jgbrainstorm
+  - jianganghao
 
 repo_description_lines_max: 2
 
 github_repos:
-  - alshedivat/al-folio
-  - jekyll/jekyll
-  - twbs/bootstrap
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - mathjax/MathJax
-  - jpswalsh/academicons
+  - jgbrainstorm/plotlyplus
+  - jgbrainstorm/ecgmm
+  - jgbrainstorm/pyjh
+  - jgbrainstorm/covid_dashboard
+  - jgbrainstorm/gmbcg
+  - jgbrainstorm/des-google-earth
+  - jianganghao/chinese-flashcard
+  - jgbrainstorm/computational_psychometrics
+  - jianganghao/NCME2023-data-science-workshop
+  - jgbrainstorm/marc2022_trainingworkshop
+ 

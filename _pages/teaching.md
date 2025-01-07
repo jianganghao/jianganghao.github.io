@@ -4,9 +4,26 @@ permalink: /teaching/
 title: teaching
 description: Materials for courses you taught. Replace this text with your description.
 nav: true
-nav_order: 6
+nav_order: 5
 ---
 
-For now, this page is assumed to be a static description of your courses. You can convert it to a collection similar to `_projects/` so that you can have a dedicated page for each course.
+I have been teaching a number of data science related courses in training workshops. Here is a brief list of the recent ones.
 
-Organize your courses by years, topics, or universities, however you like!
+- **Hao, J. & Livne, O. (2021 - 2023)**  
+  *Addressing the Data Challenges of Next-generation Assessments: Data Science Upskilling for Psychometricians.*  
+  Training workshops given at the annual conference of National Council for Measurement in Education (NCME), Virtual (2021 and 2022), Chicago (2023), IL.  
+  [Tutorial slides](https://github.com/jgbrainstorm/NCME2023-data-science-workshop)
+
+- **Hao, J. (2022, Nov.)**  
+  *Machine Learning, Natural Language Processing, and their Application in Educational Assessment.*  
+  Training workshop given at the MARC conference.  
+  [Tutorial slides](https://github.com/jgbrainstorm/marc2022_trainingworkshop). Virtual.
+
+- **Hao, J. (2022, June)**  
+  *Addressing the Psychometrics Challenges from Digital Learning and Assessment: How Computational Psychometrics Helps.*  
+  Pre-conference training workshop given at EdTech and Computational Psychometrics Summit, 2022.  
+  [Workshop details](https://www.globalatpevents.com/ecps2022/pre-conferenceworkshop.aspx). Virtual.
+
+- **Hao, J. & Livne, O. (2021, 2022)**  
+  *Data Science Academy.*  
+  Two 10-week data science training workshops given to ETS staff. Princeton, NJ.

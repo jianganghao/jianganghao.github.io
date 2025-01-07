@@ -2,12 +2,11 @@
 layout: page
 permalink: /teaching/
 title: teaching
-description: Materials for courses you taught. Replace this text with your description.
+description: Recent data science-related courses I have been teaching
 nav: true
 nav_order: 5
 ---
 
-I have been teaching a number of data science related courses in training workshops. Here is a brief list of the recent ones.
 
 - **Hao, J. & Livne, O. (2021 - 2023)**  
   *Addressing the Data Challenges of Next-generation Assessments: Data Science Upskilling for Psychometricians.*  

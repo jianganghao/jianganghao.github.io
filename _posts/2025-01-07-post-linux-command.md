@@ -10,9 +10,8 @@ related_posts: false
 related_publications: true
 ---
 
-# List of linux commands that could save your life! 
 
-## 1 – SYSTEM INFORMATION
+### 1 – SYSTEM INFORMATION
 - **Display Linux system information**:  
   `uname -a`
 
@@ -48,7 +47,7 @@ related_publications: true
 
 ---
 
-## 2 – HARDWARE INFORMATION
+### 2 – HARDWARE INFORMATION
 - **Display messages in kernel ring buffer**:  
   `dmesg`
 
@@ -81,7 +80,7 @@ related_publications: true
 
 ---
 
-## 3 – PERFORMANCE MONITORING AND STATISTICS
+### 3 – PERFORMANCE MONITORING AND STATISTICS
 - **Display and manage the top processes**:  
   `top`
 
@@ -120,7 +119,7 @@ related_publications: true
 
 ---
 
-## 4 – USER INFORMATION AND MANAGEMENT
+### 4 – USER INFORMATION AND MANAGEMENT
 - **Display the user and group IDs of your current user**:  
   `id`
 
@@ -147,7 +146,7 @@ related_publications: true
 
 ---
 
-## 5 – FILE AND DIRECTORY COMMANDS
+### 5 – FILE AND DIRECTORY COMMANDS
 - **List all files in a long listing format**:  
   `ls -al`
 
@@ -183,7 +182,7 @@ related_publications: true
 
 ---
 
-## 6 – PROCESS MANAGEMENT
+### 6 – PROCESS MANAGEMENT
 - **Display your currently running processes**:  
   `ps`
 
@@ -201,7 +200,7 @@ related_publications: true
 
 ---
 
-## 7 – FILE PERMISSIONS
+### 7 – FILE PERMISSIONS
 - **Change file permissions**:  
   `chmod 755 filename`
 
@@ -210,7 +209,7 @@ related_publications: true
 
 ---
 
-## 8 – NETWORKING
+### 8 – NETWORKING
 - **Display all network interfaces and IP addresses**:  
   `ifconfig -a`
 
@@ -222,7 +221,7 @@ related_publications: true
 
 ---
 
-## 9 – ARCHIVES (TAR FILES)
+### 9 – ARCHIVES (TAR FILES)
 - **Create a tar archive**:  
   `tar cf archive.tar directory`
 
@@ -231,7 +230,7 @@ related_publications: true
 
 ---
 
-## 10 – INSTALLING PACKAGES
+### 10 – INSTALLING PACKAGES
 - **Search for a package by keyword**:  
   `yum search keyword`
 
@@ -243,7 +242,7 @@ related_publications: true
 
 ---
 
-## 11 – SEARCH
+### 11 – SEARCH
 - **Search for a pattern in a file**:  
   `grep pattern file`
 
@@ -252,7 +251,7 @@ related_publications: true
 
 ---
 
-## 12 – SSH LOGINS
+### 12 – SSH LOGINS
 - **Connect to a host as your local username**:  
   `ssh host`
 
@@ -261,7 +260,7 @@ related_publications: true
 
 ---
 
-## 13 – FILE TRANSFERS
+### 13 – FILE TRANSFERS
 - **Securely copy a file**:  
   `scp file.txt server:/tmp`
 
@@ -270,7 +269,7 @@ related_publications: true
 
 ---
 
-## 14 – DISK USAGE
+### 14 – DISK USAGE
 - **Show free and used space on mounted filesystems**:  
   `df -h`
 
@@ -279,7 +278,7 @@ related_publications: true
 
 ---
 
-## 15 – DIRECTORY NAVIGATION
+### 15 – DIRECTORY NAVIGATION
 - **Go to the parent directory**:  
   `cd ..`
 
@@ -291,7 +290,7 @@ related_publications: true
 
 ---
 
-## 16 – SCREEN
+### 16 – SCREEN
 - **List all screens**:  
   `screen -ls`
 
@@ -303,5 +302,3 @@ related_publications: true
 
 - **Attach to a screen**:  
   `screen -r <name>`
-
-

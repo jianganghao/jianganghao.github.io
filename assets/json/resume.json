@@ -260,6 +260,31 @@
     }
   ],
 
+  "patents": [
+    {
+      "name": "Google Scholar Profile",
+      "publisher": "Google Scholar",
+      "releaseDate": 2025,
+      "url": "https://scholar.google.com/citations?user=_LKZ3nAAAAAJ&hl=en",
+      "summary": "Comprehensive list of publications, citations, and academic contributions by Jiangang Hao."
+    },
+    {
+      "name": "Computational Psychometrics: New Methodologies for a New Generation of Digital Learning and Assessment",
+      "publisher": "Springer",
+      "releaseDate": "2021",
+      "url": "https://link.springer.com/book/10.1007/978-3-030-74394-9",
+      "summary": "Edited volume exploring innovative methodologies combining data science and psychometrics for digital learning and assessment."
+    },
+    {
+      "name": "The Meaning of Relativity",
+      "publisher": "Shanghai Science and Technological Education Press",
+      "releaseDate": "2001",
+      "url": "https://www.sste.com/a/1809.html",
+      "summary": "Translation of Albert Einstein's work on relativity by Jiangang Hao, Daojun Liu, and Xinzhou Li."
+    }
+    
+  ], 
+
   "publications": [
     {
       "name": "Google Scholar Profile",
@@ -284,5 +309,7 @@
     }
     
   ]
+
+
   
 }

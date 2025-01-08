@@ -29,7 +29,7 @@
   type: time_table
   contents:
     - title: Director, Assessment of Complex Skills Program
-      institution: ducational Testing Service, Princeton, NJ, USA
+      institution: Educational Testing Service, Princeton, NJ, USA
       year: 09/2023 - now
       description:
         - Led the Assessment of Complex Skills program to develop data analytics and AI-based solutions for complex skills such as collaboration, communication, and social skills in classroom settings.
@@ -37,7 +37,7 @@
         - Developed guidelines and researched new methods for responsible use of detectors of AI-generated texts.
 
     - title: Director, Psychometric and Data Science Modeling
-      institution: ducational Testing Service, Princeton, NJ, USA
+      institution: Educational Testing Service, Princeton, NJ, USA
       year: 10/2020 - 09/2023
       description:
         - Led the Psychometric and Data Science Modeling group to innovate data science methods for extracting insights from complex digital learning and assessment data.
@@ -71,32 +71,81 @@
     
     - title: Visiting Scientist, Department of Physics
       institution: University of Pennsylvania, Philadelphia, PA, USA
-      year: 05/2013 - 08/2016
+      year: 01/2012 - 05/2013
       description:
+        - Developed image reduction pipelines and machine learning methods for the Dark Energy Survey.
+        - Created a machine learning method utilizing image-based shape measurement for real-time feedback on camera alignment.
+        - Enhanced image-based precision measurment for CCD testing in astronomical surveys.
 
+    - title: Postdoc, Fermilab Center for Astroparticle Physics
+      institution: Fermi National Accelerator Laboratory, Bativa, IL, USA
+      year: 05/2009 - 05/2013
+      description:
+        - Developed methods for astronomical data analysis and galaxy clustering.
+        - Developed image-based methods to measure the flatness of the DECam focal plane.
+        - Created the largest catalog of clustered galaxies using the Gaussian Mixture BCG algorithm.
+   
+    - title: Research Assistant, Department of Physics
+      institution: University of Michigan, Ann Arbor, MI, USA
+      year: 06/2006 - 05/2009
+      description:
+        - Conducted research on galaxy clusters and astronomical data using machine learning.
+        - Developed the Gaussian Mixture algorithm to detect galaxy clusters from astronomical data.
+        - Created an error-corrected Gaussian Mixture Model algorithm for precise measurement of galaxy color distributions.
+
+    - title: Graduate Student Instructor, Department of Physics
+      institution: University of Michigan, Ann Arbor, MI, USA
+      year: 09/2004 - 06/2006
+      description:
+        - Taught undergraduate physics lab on Electromagnetics
+        - Taught undergraduate physics lab on Mechanics
 
 - title: Honors and Awards
   type: time_table
   contents:
-    - year: 1921
+    - year: 2024
       items:
-        - Nobel Prize in Physics
-        - Matteucci Medal
-    - year: 2029
+        - Annual Award for Exceptional Achievement in Educational Measurement, NCME
+    - year: 2016
       items:
-        - Max Planck Medal
+        - Presidential Awards, Educational Testing Service
+    - year: 2013 - 2015
+      items: SPOT Awards, Educational Testing Service
+    - year: 2011
+      items: Most Valued Reviewer of Astroparticle Physics, Elsevier 
+    - year: 2011
+      items: Builder, Dark Energy Survey Collaboration
+    - year: 2009
+      items: GROCS Award, University of Michigan
+    - year: 2005
+      items: First Prize for the Advancement of Science and Technology in Shanghai, China
 
-- title: Academic Interests
+- title: Skills
   type: nested_list
   contents:
-    - title: Topic 1.
+    - title: Data Science and AI
       items:
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
+        - Statistics, Machine Learning
+        - Large Language Model and Generative AI
+        - Natural Language Processing
+        - Visualization and Dashboarding
+        - Cloud Computing (AWS, Azure)
+    - title: Assessment and Psychometrics
       items:
-        - Description 1.
-        - Description 2.
+        - Psychometrics and Computational Psychometrics
+        - 21st Century Skills
+        - Game-based Assessment
+    - title: Programming
+        - items: Python
+        - items: C++
+        - items: R
+    - title: Astrophysics, Cosmology and Mathematics
+        - items: Galaxy Clusters
+        - items: Astrostatistics
+        - items: CCD Imaging
+        - items: General Relativity
+        - items: Dynamical system and differential equations
+
 
 - title: Other Interests
   type: list

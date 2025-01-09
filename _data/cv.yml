@@ -70,36 +70,36 @@
         - Led the ETS Collaborative Science project, creating assessment tools showcased at the White House by the NCES commissioner.
         - Developed the ETS data model for virtual performance assessment to capture extensive process data.
     
-    - title: Visiting Scientist, Department of Physics
-      institution: University of Pennsylvania, Philadelphia, PA, USA
-      year: 01/2012 - 05/2013
-      description:
-        - Developed image reduction pipelines and machine learning methods for the Dark Energy Survey.
-        - Created a machine learning method utilizing image-based shape measurement for real-time feedback on camera alignment.
-        - Enhanced image-based precision measurment for CCD testing in astronomical surveys.
+    # - title: Visiting Scientist, Department of Physics
+    #   institution: University of Pennsylvania, Philadelphia, PA, USA
+    #   year: 01/2012 - 05/2013
+    #   description:
+    #     - Developed image reduction pipelines and machine learning methods for the Dark Energy Survey.
+    #     - Created a machine learning method utilizing image-based shape measurement for real-time feedback on camera alignment.
+    #     - Enhanced image-based precision measurment for CCD testing in astronomical surveys.
 
-    - title: Postdoc, Fermilab Center for Astroparticle Physics
-      institution: Fermi National Accelerator Laboratory, Bativa, IL, USA
-      year: 05/2009 - 05/2013
-      description:
-        - Developed methods for astronomical data analysis and galaxy clustering.
-        - Developed image-based methods to measure the flatness of the DECam focal plane.
-        - Created the largest catalog of clustered galaxies using the Gaussian Mixture BCG algorithm.
+    # - title: Postdoc, Fermilab Center for Astroparticle Physics
+    #   institution: Fermi National Accelerator Laboratory, Bativa, IL, USA
+    #   year: 05/2009 - 05/2013
+    #   description:
+    #     - Developed methods for astronomical data analysis and galaxy clustering.
+    #     - Developed image-based methods to measure the flatness of the DECam focal plane.
+    #     - Created the largest catalog of clustered galaxies using the Gaussian Mixture BCG algorithm.
    
-    - title: Research Assistant, Department of Physics
-      institution: University of Michigan, Ann Arbor, MI, USA
-      year: 06/2006 - 05/2009
-      description:
-        - Conducted research on galaxy clusters and astronomical data using machine learning.
-        - Developed the Gaussian Mixture algorithm to detect galaxy clusters from astronomical data.
-        - Created an error-corrected Gaussian Mixture Model algorithm for precise measurement of galaxy color distributions.
+    # - title: Research Assistant, Department of Physics
+    #   institution: University of Michigan, Ann Arbor, MI, USA
+    #   year: 06/2006 - 05/2009
+    #   description:
+    #     - Conducted research on galaxy clusters and astronomical data using machine learning.
+    #     - Developed the Gaussian Mixture algorithm to detect galaxy clusters from astronomical data.
+    #     - Created an error-corrected Gaussian Mixture Model algorithm for precise measurement of galaxy color distributions.
 
-    - title: Graduate Student Instructor, Department of Physics
-      institution: University of Michigan, Ann Arbor, MI, USA
-      year: 09/2004 - 06/2006
-      description:
-        - Taught undergraduate physics lab on Electromagnetics
-        - Taught undergraduate physics lab on Mechanics
+    # - title: Graduate Student Instructor, Department of Physics
+    #   institution: University of Michigan, Ann Arbor, MI, USA
+    #   year: 09/2004 - 06/2006
+    #   description:
+    #     - Taught undergraduate physics lab on Electromagnetics
+    #     - Taught undergraduate physics lab on Mechanics
 
 - title: Honors and Awards
   type: time_table
@@ -132,7 +132,7 @@
     - institution: Shanghai, China  
     - year: 2005
 
-    
+
 - title: Skills
   type: nested_list
   contents:
@@ -143,15 +143,18 @@
         - Natural Language Processing
         - Visualization and Dashboarding
         - Cloud Computing (AWS, Azure)
+
     - title: Assessment and Psychometrics
       items:
         - Psychometrics and Computational Psychometrics
         - 21st Century Skills
         - Game-based Assessment
+
     - title: Programming
         - items: Python
         - items: C++
         - items: R
+
     - title: Astrophysics, Cosmology and Mathematics
         - items: Galaxy Clusters
         - items: Astrostatistics

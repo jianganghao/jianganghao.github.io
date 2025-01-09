@@ -104,23 +104,35 @@
 - title: Honors and Awards
   type: time_table
   contents:
+    - title: Annual Award for Exceptional Achievement in Educational Measurement
+    - institution: National Council on Measurement in Education (NCME)
     - year: 2024
-      items:
-        - Annual Award for Exceptional Achievement in Educational Measurement, NCME
+    
+    - title: Presidential Awards
+    - institution: Educational Testing Service
     - year: 2016
-      items:
-        - Presidential Awards, Educational Testing Service
+  
+    - title: SPOT Awards
+    - institution: Educational Testing Service
     - year: 2013 - 2015
-      items: SPOT Awards, Educational Testing Service
+  
+    - title: Most Valued Reviewer
+    - institution: Astroparticle Physics (Journal), Elsevier 
     - year: 2011
-      items: Most Valued Reviewer of Astroparticle Physics, Elsevier 
+    
+    - title: Builder
+    - institution: Dark Energy Survey Collaboration
     - year: 2011
-      items: Builder, Dark Energy Survey Collaboration
+      
+    - title: GROCS Award
+    - institution: University of Michigan  
     - year: 2009
-      items: GROCS Award, University of Michigan
+      
+    - title: First Prize for the Advancement of Science and Technology in Shanghai
+    - institution: Shanghai, China  
     - year: 2005
-      items: First Prize for the Advancement of Science and Technology in Shanghai, China
 
+    
 - title: Skills
   type: nested_list
   contents:

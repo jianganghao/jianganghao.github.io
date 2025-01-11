@@ -113,34 +113,34 @@
     - 2005, First Prize for the Advancement of Science and Technology in Shanghai, China  
 
 
-- title: Skills
-  type: nested_list
-  contents:
-    - title: Data Science and AI
-      items:
-        - Statistics, Machine Learning
-        - Large Language Model and Generative AI
-        - Natural Language Processing
-        - Visualization and Dashboarding
-        - Cloud Computing (AWS, Azure)
+# - title: Skills
+#   type: nested_list
+#   contents:
+#     - title: Data Science and AI
+#       items:
+#         - Statistics, Machine Learning
+#         - Large Language Model and Generative AI
+#         - Natural Language Processing
+#         - Visualization and Dashboarding
+#         - Cloud Computing (AWS, Azure)
 
-    - title: Assessment and Psychometrics
-      items:
-        - Psychometrics and Computational Psychometrics
-        - 21st Century Skills
-        - Game-based Assessment
+#     - title: Assessment and Psychometrics
+#       items:
+#         - Psychometrics and Computational Psychometrics
+#         - 21st Century Skills
+#         - Game-based Assessment
 
-    - title: Programming
-        - items: Python
-        - items: C++
-        - items: R
+#     - title: Programming
+#         - items: Python
+#         - items: C++
+#         - items: R
 
-    - title: Astrophysics, Cosmology and Mathematics
-        - items: Galaxy Clusters
-        - items: Astrostatistics
-        - items: CCD Imaging
-        - items: General Relativity
-        - items: Dynamical system and differential equations
+#     - title: Astrophysics, Cosmology and Mathematics
+#         - items: Galaxy Clusters
+#         - items: Astrostatistics
+#         - items: CCD Imaging
+#         - items: General Relativity
+#         - items: Dynamical system and differential equations
 
 
 # - title: Other Interests

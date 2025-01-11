@@ -1,10 +1,10 @@
 ---
 layout: page
-permalink: /teaching/
-title: teaching
-description: Recent data science-related courses I have been teaching
+permalink: /services/
+title: services
+description: Coprorate and academic services
 nav: true
-nav_order: 6
+nav_order: 2
 ---
 
 

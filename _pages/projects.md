@@ -1,65 +1,27 @@
 ---
 layout: page
-title: projects
 permalink: /projects/
-description: Some cool projects I have been working on
+title: projects
+description: Research projects I led and contributed
 nav: true
-nav_order: 4
-display_categories: [work, fun]
-horizontal: false
+nav_order: 5
 ---
 
-<!-- pages/projects.md -->
-<div class="projects">
-{% if site.enable_project_categories and page.display_categories %}
-  <!-- Display categorized projects -->
-  {% for category in page.display_categories %}
-  <a id="{{ category }}" href=".#{{ category }}">
-    <h2 class="category">{{ category }}</h2>
-  </a>
-  {% assign categorized_projects = site.projects | where: "category", category %}
-  {% assign sorted_projects = categorized_projects | sort: "importance" %}
-  <!-- Generate cards for each project -->
-  {% if page.horizontal %}
-  <div class="container">
-    <div class="row row-cols-1 row-cols-md-2">
-    {% for project in sorted_projects %}
-      {% include projects_horizontal.liquid %}
-    {% endfor %}
-    </div>
-  </div>
-  {% else %}
-  <div class="row row-cols-1 row-cols-md-3">
-    {% for project in sorted_projects %}
-      {% include projects.liquid %}
-    {% endfor %}
-  </div>
-  {% endif %}
-  {% endfor %}
+- **Hao, J. & Livne, O. (2021 - 2023)**  
+  *Addressing the Data Challenges of Next-generation Assessments: Data Science Upskilling for Psychometricians.*  
+  Training workshops given at the annual conference of National Council for Measurement in Education (NCME), Virtual (2021 and 2022), Chicago (2023), IL.  
+  [Tutorial slides](https://github.com/jgbrainstorm/NCME2023-data-science-workshop)
 
-{% else %}
+- **Hao, J. (2022, Nov.)**  
+  *Machine Learning, Natural Language Processing, and their Application in Educational Assessment.*  
+  Training workshop given at the MARC conference.  
+  [Tutorial slides](https://github.com/jgbrainstorm/marc2022_trainingworkshop). Virtual.
 
-<!-- Display projects without categories -->
+- **Hao, J. (2022, June)**  
+  *Addressing the Psychometrics Challenges from Digital Learning and Assessment: How Computational Psychometrics Helps.*  
+  Pre-conference training workshop given at EdTech and Computational Psychometrics Summit, 2022.  
+  [Workshop details](https://www.globalatpevents.com/ecps2022/pre-conference-workshop.aspx). Virtual.
 
-{% assign sorted_projects = site.projects | sort: "importance" %}
-
-  <!-- Generate cards for each project -->
-
-{% if page.horizontal %}
-
-  <div class="container">
-    <div class="row row-cols-1 row-cols-md-2">
-    {% for project in sorted_projects %}
-      {% include projects_horizontal.liquid %}
-    {% endfor %}
-    </div>
-  </div>
-  {% else %}
-  <div class="row row-cols-1 row-cols-md-3">
-    {% for project in sorted_projects %}
-      {% include projects.liquid %}
-    {% endfor %}
-  </div>
-  {% endif %}
-{% endif %}
-</div>
+- **Hao, J. & Livne, O. (2021, 2022)**  
+  *Data Science Academy.*  
+  Two 10-week data science training workshops given to ETS staff. Princeton, NJ.

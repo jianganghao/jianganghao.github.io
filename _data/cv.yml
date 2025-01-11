@@ -102,35 +102,15 @@
         - Taught undergraduate physics lab on Mechanics
 
 - title: Honors and Awards
-  type: time_table
-  contents:
-    - title: Annual Award for Exceptional Achievement in Educational Measurement
-    - year: 2024
-    - institution: National Council on Measurement in Education (NCME)
-    
-    - title: Presidential Awards
-    - year: 2015
-    - institution: Educational Testing Service
-  
-    - title: SPOT Awards
-    - year: 2013 - 2015
-    - institution: Educational Testing Service
-  
-    - title: Most Valued Reviewer
-    - year: 2011
-    - institution: Astroparticle Physics (Journal), Elsevier 
-    
-    - title: Builder
-    - year: 2011
-    - institution: Dark Energy Survey Collaboration
-      
-    - title: GROCS Award
-    - year: 2009
-    - institution: University of Michigan  
-      
-    - title: First Prize for the Advancement of Science and Technology in Shanghai
-    - year: 2005
-    - institution: Shanghai, China  
+  type: list
+  contents: 
+    - 2024, Annual Award for Exceptional Achievement in Educational Measurement, National Council on Measurement in Education (NCME)
+    - 2015, Presidential Awards, Educational Testing Service
+    - 2013 - 2015, SPOT Awards, Educational Testing Service
+    - 2011, Most Valued Reviewer, Astroparticle Physics (Journal), Elsevier 
+    - 2011, Builder, Dark Energy Survey Collaboration
+    - 2009, GROCS Award, University of Michigan  
+    - 2005, First Prize for the Advancement of Science and Technology in Shanghai, China  
 
 
 # - title: Skills

@@ -70,13 +70,13 @@
         - Led the ETS Collaborative Science project, creating assessment tools showcased at the White House by the NCES commissioner.
         - Developed the ETS data model for virtual performance assessment to capture extensive process data.
     
-    # - title: Visiting Scientist, Department of Physics
-    #   institution: University of Pennsylvania, Philadelphia, PA, USA
-    #   year: 01/2012 - 05/2013
-    #   description:
-    #     - Developed image reduction pipelines and machine learning methods for the Dark Energy Survey.
-    #     - Created a machine learning method utilizing image-based shape measurement for real-time feedback on camera alignment.
-    #     - Enhanced image-based precision measurment for CCD testing in astronomical surveys.
+    - title: Visiting Scientist, Department of Physics
+      institution: University of Pennsylvania, Philadelphia, PA, USA
+      year: 01/2012 - 05/2013
+      description:
+        - Developed image reduction pipelines and machine learning methods for the Dark Energy Survey.
+        - Created a machine learning method utilizing image-based shape measurement for real-time feedback on camera alignment.
+        - Enhanced image-based precision measurment for CCD testing in astronomical surveys.
 
     # - title: Postdoc, Fermilab Center for Astroparticle Physics
     #   institution: Fermi National Accelerator Laboratory, Bativa, IL, USA

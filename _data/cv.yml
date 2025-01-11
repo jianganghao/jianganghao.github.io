@@ -78,13 +78,13 @@
         - Created a machine learning method utilizing image-based shape measurement for real-time feedback on camera alignment.
         - Enhanced image-based precision measurment for CCD testing in astronomical surveys.
 
-    # - title: Postdoc, Fermilab Center for Astroparticle Physics
-    #   institution: Fermi National Accelerator Laboratory, Bativa, IL, USA
-    #   year: 05/2009 - 05/2013
-    #   description:
-    #     - Developed methods for astronomical data analysis and galaxy clustering.
-    #     - Developed image-based methods to measure the flatness of the DECam focal plane.
-    #     - Created the largest catalog of clustered galaxies using the Gaussian Mixture BCG algorithm.
+    - title: Postdoc, Fermilab Center for Astroparticle Physics
+      institution: Fermi National Accelerator Laboratory, Bativa, IL, USA
+      year: 05/2009 - 05/2013
+      description:
+        - Developed methods for astronomical data analysis and galaxy clustering.
+        - Developed image-based methods to measure the flatness of the DECam focal plane.
+        - Created the largest catalog of clustered galaxies using the Gaussian Mixture BCG algorithm.
    
     # - title: Research Assistant, Department of Physics
     #   institution: University of Michigan, Ann Arbor, MI, USA

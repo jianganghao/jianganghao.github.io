@@ -101,6 +101,26 @@
         - Taught undergraduate physics lab on Electromagnetics
         - Taught undergraduate physics lab on Mechanics
 
+- title: Technical Expertise
+  type: list
+  contents:
+    - Data Science, Machine Learning/AI,Natural Language Processing
+    - Statistics, Psychometrics,S cientific Computing, Visualization
+    - Assessment of Team dynamics, Collaboration and Communication
+    - Game/simulation-based Assessments, Learning Analytics
+    - Dynamical System and Diﬀerential Equations
+    - Image Segmentation, Registration, Pattern Recognition
+    - Charged Coupling Device (CCD) for Astronomical Imaging, Astrophysics, Cosmology, GeneralRelativity
+
+- title: Programming Skills:
+  type: list
+  contents:
+    - <u>Programming languages:</u> Python, R, C++
+    - <u>Data Science and AI:</u> Pandas, Numpy, Scikit-learn, NLTK, PyTorch, etc. 
+    - <u>Visualization and Dashboarding:</u> Plotly, Matplotlib, Seaborn, Streamlit, Gradio
+    - <u>LLMs and Cloud Computing:</u> Langchain, Huggingface, Azure, AWS, etc.
+
+
 - title: Honors and Awards
   type: list
   contents: 

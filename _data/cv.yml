@@ -151,19 +151,16 @@
         - Game-based Assessment
 
     - title: Programming
-        - items: Python
-        - items: C++
-        - items: R
+      items:
+        - Python
+        - C++
+        - R
 
     - title: Astrophysics, Cosmology and Mathematics
-        - items: Galaxy Clusters
-        - items: Astrostatistics
-        - items: CCD Imaging
-        - items: General Relativity
-        - items: Dynamical system and differential equations
+      items:
+        - Galaxy Clusters
+        - Astrostatistics
+        - CCD Imaging
+        - General Relativity
+        - Dynamical system and differential equations
 
-
-- title: Other Interests
-  type: list
-  contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.

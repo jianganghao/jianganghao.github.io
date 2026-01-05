@@ -1,7 +1,7 @@
 ---
 layout: page
-title: AI and analytics for test security 
-description: 
+title: AI and analytics for test security
+description:
 img: assets/img/12.jpg
 importance: 1
 category: work

@@ -206,28 +206,15 @@
     },
     {
       "name": "Programming",
-      "keywords": [
-        "Python",
-        "R",
-        "C++"
-      ]
+      "keywords": ["Python", "R", "C++"]
     },
     {
       "name": "Visualization and Dashboarding",
-      "keywords": [
-        "Plotly",
-        "Matplotlib",
-        "Seaborn",
-        "Streamlit",
-        "Gradio"
-      ]
+      "keywords": ["Plotly", "Matplotlib", "Seaborn", "Streamlit", "Gradio"]
     },
     {
       "name": "Cloud Computing",
-      "keywords": [
-        "Azure",
-        "AWS"
-      ]
+      "keywords": ["Azure", "AWS"]
     },
     {
       "name": "Assessment and Psychometrics",
@@ -241,22 +228,11 @@
     },
     {
       "name": "Astrophysics and Cosmology",
-      "keywords": [
-        "Galaxy Clusters",
-        "Astrostatistics",
-        "CCD Imaging",
-        "General Relativity"
-      ]
+      "keywords": ["Galaxy Clusters", "Astrostatistics", "CCD Imaging", "General Relativity"]
     },
     {
       "name": "Python Tools",
-      "keywords": [
-        "Pandas",
-        "NumPy",
-        "Scikit-learn",
-        "PyTorch",
-        "NLTK"
-      ]
+      "keywords": ["Pandas", "NumPy", "Scikit-learn", "PyTorch", "NLTK"]
     }
   ],
 
@@ -282,8 +258,7 @@
       "url": "https://www.sste.com/a/1809.html",
       "summary": "Translation of Albert Einstein's work on relativity by Jiangang Hao, Daojun Liu, and Xinzhou Li."
     }
-    
-  ], 
+  ],
 
   "publications": [
     {
@@ -307,9 +282,5 @@
       "url": "https://www.sste.com/a/1809.html",
       "summary": "Translation of Albert Einstein's work on relativity by Jiangang Hao, Daojun Liu, and Xinzhou Li."
     }
-    
   ]
-
-
-  
 }

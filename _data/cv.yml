@@ -69,7 +69,7 @@
         - Innovated computational psychometric methods and data models for educational assessments.
         - Led the ETS Collaborative Science project, creating assessment tools showcased at the White House by the NCES commissioner.
         - Developed the ETS data model for virtual performance assessment to capture extensive process data.
-    
+
     - title: Visiting Scientist, Department of Physics
       institution: University of Pennsylvania, Philadelphia, PA, USA
       year: 01/2012 - 05/2013
@@ -85,7 +85,7 @@
         - Developed methods for astronomical data analysis and galaxy clustering.
         - Developed image-based methods to measure the flatness of the DECam focal plane.
         - Created the largest catalog of clustered galaxies using the Gaussian Mixture BCG algorithm.
-   
+
     - title: Research Assistant, Department of Physics
       institution: University of Michigan, Ann Arbor, MI, USA
       year: 06/2006 - 05/2009
@@ -116,22 +116,20 @@
   type: list
   contents:
     - <u>Programming languages:</u> Python, R, C++
-    - <u>Data Science and AI:</u> Pandas, Numpy, Scikit-learn, NLTK, PyTorch, etc. 
+    - <u>Data Science and AI:</u> Pandas, Numpy, Scikit-learn, NLTK, PyTorch, etc.
     - <u>Visualization and Dashboarding:</u> Plotly, Matplotlib, Seaborn, Streamlit, Gradio
     - <u>LLMs and Cloud Computing:</u> Langchain, Huggingface, Azure, AWS, etc.
 
-
 - title: Honors and Awards
   type: list
-  contents: 
+  contents:
     - 2024, Annual Award for Exceptional Achievement in Educational Measurement, National Council on Measurement in Education (NCME)
     - 2015, Presidential Awards, Educational Testing Service
     - 2013 - 2015, SPOT Awards, Educational Testing Service
-    - 2011, Most Valued Reviewer, Astroparticle Physics (Journal), Elsevier 
+    - 2011, Most Valued Reviewer, Astroparticle Physics (Journal), Elsevier
     - 2011, Builder, Dark Energy Survey Collaboration
-    - 2009, GROCS Award, University of Michigan  
-    - 2005, First Prize for the Advancement of Science and Technology in Shanghai, China  
-
+    - 2009, GROCS Award, University of Michigan
+    - 2005, First Prize for the Advancement of Science and Technology in Shanghai, China
 
 - title: Skills
   type: nested_list
@@ -163,4 +161,3 @@
         - CCD Imaging
         - General Relativity
         - Dynamical system and differential equations
-

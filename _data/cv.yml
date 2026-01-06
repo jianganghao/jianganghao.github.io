@@ -104,60 +104,32 @@
 - title: Technical Expertise
   type: list
   contents:
-    - Data Science, Machine Learning/AI,Natural Language Processing
-    - Statistics, Psychometrics,S cientific Computing, Visualization
-    - Assessment of Team dynamics, Collaboration and Communication
-    - Game/simulation-based Assessments, Learning Analytics
-    - Dynamical System and Diﬀerential Equations
-    - Image Segmentation, Registration, Pattern Recognition
-    - Charged Coupling Device (CCD) for Astronomical Imaging, Astrophysics, Cosmology, GeneralRelativity
+    - "◦ Data Science, Machine Learning / AI, Natural Language Processing"
+    - "◦ Statistics, Psychometrics, Scientific Computing, Visualization"
+    - "◦ Assessment of 21st-century skills (e.g., team dynamics, collaboration, and communication)"
+    - "◦ Game- and simulation-based assessments, Learning analytics"
+    - "◦ Dynamical systems and differential equations"
+    - "◦ Image segmentation, registration, pattern recognition"
+    - "◦ Charge-Coupled Device (CCD) for astronomical imaging, astrophysics, cosmology, general relativity"
+
 
 - title: Programming Skills
   type: list
   contents:
-    - <u>Programming languages:</u> Python, R, C++
-    - <u>Data Science and AI:</u> Pandas, Numpy, Scikit-learn, NLTK, PyTorch, etc.
-    - <u>Visualization and Dashboarding:</u> Plotly, Matplotlib, Seaborn, Streamlit, Gradio
-    - <u>LLMs and Cloud Computing:</u> Langchain, Huggingface, Azure, AWS, etc.
+    - "◦ Programming languages: Python, R, C++"
+    - "◦ Data science and AI: Pandas, NumPy, Scikit-learn, NLTK, PyTorch"
+    - "◦ Visualization and dashboarding: Plotly, Matplotlib, Seaborn, Streamlit, Gradio"
+    - "◦ LLMs and cloud computing: LangChain, Hugging Face, Azure, AWS"
 
 - title: Honors and Awards
   type: list
   contents:
-    - 2024, Annual Award for Exceptional Achievement in Educational Measurement, National Council on Measurement in Education (NCME)
-    - 2015, Presidential Awards, Educational Testing Service
-    - 2013 - 2015, SPOT Awards, Educational Testing Service
-    - 2011, Most Valued Reviewer, Astroparticle Physics (Journal), Elsevier
-    - 2011, Builder, Dark Energy Survey Collaboration
-    - 2009, GROCS Award, University of Michigan
-    - 2005, First Prize for the Advancement of Science and Technology in Shanghai, China
+    - "◦ 2024 – Annual Award for Exceptional Achievement in Educational Measurement, National Council on Measurement in Education (NCME)"
+    - "◦ 2015 – Presidential Award, Educational Testing Service"
+    - "◦ 2013–2015 – SPOT Awards, Educational Testing Service"
+    - "◦ 2011 – Most Valued Reviewer, *Astroparticle Physics* (Elsevier)"
+    - "◦ 2011 – Builder Award, Dark Energy Survey Collaboration"
+    - "◦ 2009 – GROCS Award, University of Michigan"
+    - "◦ 2005 – First Prize for the Advancement of Science and Technology, Shanghai, China"
 
-- title: Skills
-  type: nested_list
-  contents:
-    - title: Data Science and AI
-      items:
-        - Statistics, Machine Learning
-        - Large Language Model and Generative AI
-        - Natural Language Processing
-        - Visualization and Dashboarding
-        - Cloud Computing (AWS, Azure)
 
-    - title: Assessment and Psychometrics
-      items:
-        - Psychometrics and Computational Psychometrics
-        - 21st Century Skills
-        - Game-based Assessment
-
-    - title: Programming
-      items:
-        - Python
-        - C++
-        - R
-
-    - title: Astrophysics, Cosmology and Mathematics
-      items:
-        - Galaxy Clusters
-        - Astrostatistics
-        - CCD Imaging
-        - General Relativity
-        - Dynamical system and differential equations

@@ -20,6 +20,22 @@ Since the release of ChatGPT in November 2022, I initiated and led a team of sci
 
 ---
 
+## Assessment of Collaborative Problem Solving and 21st-Century Skills (2013–present)
+
+I have led and co-led a sustained research program on the assessment of collaborative problem solving and 21st-century skills:
+
+- **Collaborative Science Assessment Prototype (ECSAP)** (2013–2017): Led development of a collaborative problem-solving assessment prototype in science; selected by the NCES Commissioner as an example of future assessments at the White House (2014).  
+  Paper: https://onlinelibrary.wiley.com/doi/full/10.1002/ets2.12276
+- **ETS Platform for Collaborative Assessment and Learning (EPCAL)** (2015–present): Led development of a platform supporting assessment and learning of human–human interaction (collaboration, communication, SEL). This core infrastructure has supported over 20 projects funded by ETS, NSF, IES, ARI, and other funding agencies.  
+  Platform: https://onlinelibrary.wiley.com/doi/full/10.1002/ets2.12181
+- **ETS Platform for Collaborative Human Annotation (EPCHA)** (2020–present): Led development of a distributed platform for scalable human coding of communication data.
+- **Collaborative Problem Solving Skills: Estimating Individual Contributions** (2019–2022): Co-PI on an Army Research Institute–funded project.
+- **Improve learning and assessment through human–human interaction** (2020–present): Led an ETS-funded project on psychometric frameworks and scoring strategies.
+- **Developing Middle Grade Students’ Social-Emotional Learning through Technology-Enhanced Collaborative Learning** (2024–2028): Co-PI on a U.S. Department of Education EIR-funded project.  
+  Announcement: https://www.ed.gov/news/press-releases/biden-harris-administration-announces-277-million-education-innovation-and-research-grants-help-address-academic-recovery
+
+---
+
 ## Data Analytics and AI for Test Security (2020–present)
 
 Since 2020, I have led multiple data-driven projects funded by ETS Research Allocation and test security initiatives to advance analytics and AI methods for test security, particularly in remote testing contexts. These efforts contribute to over **60% of operational cheating detection**.
@@ -54,22 +70,6 @@ I have led, co-led, and contributed to projects applying data science, machine l
 - **Learner behavioral analytics in Writing Mentor**: Analysis of user interactions to understand learning behaviors.
 - **Winsight process data analytics**: Process data analytics supporting psychometric research.
 - **NAEP process data analysis**: Modeling and analysis of process data from the National Assessment of Educational Progress.
-
----
-
-## Assessment of Collaborative Problem Solving and 21st-Century Skills (2013–present)
-
-I have led and co-led a sustained research program on the assessment of collaborative problem solving and 21st-century skills:
-
-- **Collaborative Science Assessment Prototype (ECSAP)** (2013–2017): Led development of a collaborative problem-solving assessment prototype in science; selected by the NCES Commissioner as an example of future assessments at the White House (2014).  
-  Paper: https://onlinelibrary.wiley.com/doi/full/10.1002/ets2.12276
-- **ETS Platform for Collaborative Assessment and Learning (EPCAL)** (2015–present): Led development of a platform supporting assessment and learning of human–human interaction (collaboration, communication, SEL), supporting over 20 funded projects.  
-  Platform: https://onlinelibrary.wiley.com/doi/full/10.1002/ets2.12181
-- **ETS Platform for Collaborative Human Annotation (EPCHA)** (2020–present): Led development of a distributed platform for scalable human coding of communication data.
-- **Collaborative Problem Solving Skills: Estimating Individual Contributions** (2019–2022): Co-PI on an Army Research Institute–funded project.
-- **Improve learning and assessment through human–human interaction** (2020–present): Led an ETS-funded project on psychometric frameworks and scoring strategies.
-- **Developing Middle Grade Students’ Social-Emotional Learning through Technology-Enhanced Collaborative Learning** (2024–2028): Co-PI on a U.S. Department of Education EIR-funded project.  
-  Announcement: https://www.ed.gov/news/press-releases/biden-harris-administration-announces-277-million-education-innovation-and-research-grants-help-address-academic-recovery
 
 ---
 

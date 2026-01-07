@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /projects/
-title: projects
+title: Projects
 description: Research projects I led and contributed
 nav: true
 nav_order: 5

@@ -1,6 +1,6 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
 subtitle: <a href='https://www.ets.org/research.html'>ETS Research Institute </a> Driving innovations in measurement science to advance quality, equity and fairness.
 

@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /teaching/
-title: teaching
+title: Teaching
 description: Recent data science-related courses I have been teaching
 nav: true
 nav_order: 6

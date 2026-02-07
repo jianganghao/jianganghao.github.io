@@ -45,6 +45,9 @@ nav_order: 2
 - **Associate Editor**  
   *Frontiers in Psychology: Quantitative Psychology and Measurement*
 
+- **Editorial Board**
+  *Journal of Educational Measurement
+
 - **Reviewer (active)**  
   *Psychometrika*; *Journal of Educational Measurement*; *Educational and Psychological Measurement*;  
   *Journal of Educational and Behavioral Statistics*; *International Journal of Testing*;  

@@ -46,7 +46,7 @@ nav_order: 2
   *Frontiers in Psychology: Quantitative Psychology and Measurement*
 
 - **Editorial Board**
-  *Journal of Educational Measurement
+  *Journal of Educational Measurement*
 
 - **Reviewer (active)**  
   *Psychometrika*; *Journal of Educational Measurement*; *Educational and Psychological Measurement*;  
@@ -62,9 +62,9 @@ nav_order: 2
 ## Conference Program Committee Membership
 
 - **AAAI Conference on Artificial Intelligence**: 2021–2024  
-- **International Conference on Educational Data Mining (EDM)**: 2017–2024  
-- **International Conference on Artificial Intelligence in Education (AIED)**: 2024  
-- **Workshop on Innovative Use of NLP for Building Educational Applications (BEA)**: 2017–2023  
+- **International Conference on Educational Data Mining (EDM)**: 2017–now  
+- **International Conference on Artificial Intelligence in Education (AIED)**: 2024 - now  
+- **Workshop on Innovative Use of NLP for Building Educational Applications (BEA)**: 2017–now  
 - **Association for Computational Linguistics (ACL / NAACL / AACL / IJCNLP)**: 2018–2023  
 - **International Conference on Learning Sciences (ICLS)**: 2018  
 - **IEEE International Conference on Systems, Man, and Cybernetics**: 2015

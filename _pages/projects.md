@@ -7,7 +7,28 @@ nav: true
 nav_order: 5
 ---
 
-## Large Language Models and Responsible Use of AI (2023–present)
+## Assessment of Complex Skills (2013–present)
+
+I have led and co-led a sustained research program on the assessment of collaborative problem solving and 21st-century skills:
+- **AI-enabled assessment of communicaiton skills** (2025-present): Technology lead for the development of AI-enabled assessment prototype for communication skills.
+- **ETS Platform for Collaborative Assessment and Learning (EPCAL)** (2015–present): Led development of a platform supporting assessment and learning of human–human interaction (collaboration, communication, SEL). This core infrastructure has supported over 20 projects funded by ETS, NSF, IES, ARI, and other funding agencies.  
+  Platform: https://onlinelibrary.wiley.com/doi/full/10.1002/ets2.12181. Some federally funded projects include:
+  - Kyllonen, P. C. (PI), Hao, J. (Co-PI), Andrews, J., Elliott, S. N., & DiPerna, J. C. (2024–2027). Developing middle school students’ social-emotional learning skill applications through technology-enhanced collaborative learning. U.S. Department of Education, Office of Elementary and Secondary Education, Education Innovation and Research (EIR) Program. Funding amount: $4,329,001.
+  - Kyllonen, P. C. (PI) & Hao, J. (Co-PI). (2019–2022). Collaborative problem solving (CPS) skill: Estimating an individual’s contribution to small group performance. U.S. Army Research Office (Award No. W911NF-19-1-0106). Funding amount: $993,345.
+  - Song, Y. (PI), Sabatini, J. P. (Co-PI), & Ferretti, R. P. (Co-PI). (2019–2024). Exploring and assessing the development of students’ argumentation skills. Institute of Education Sciences. Funding amount: $1,399,578. 
+  - Andrews Todd, J. (PI), D’Mello, S., Chung, G., & Jackson, T. (Co-PIs). (2017–2022). A theory- and data-driven approach for identifying evidence of collaborative problem-solving skills. Institute of Education Sciences (Grant No. R305A170432). Funding amount: $1,399,250.
+  - Graf, A. (PI), Crombie, B., Lai, Y., Lizano, C., & Deleon-Cuevas, C. (Co-PIs), Andrews Todd, J., & van Rijn, P. (Co-Is). (2021–2025). Investigating the role of collaboration on the development of student ideas using a learning progression for the function concept. National Science Foundation (DRL-2101393). Funding amount: $3,063,630.
+  - Glogger-Frey, I. (PI), Abele, S. (co-PI), & Gschwendtner, T. (co-PI). (2019–2023). Digitale Diagnostik und Intervention im Kfz-Wesen (DigiDIn-Kfz). Bundesministerium für Bildung und Forschung, Förderinitiative ASCOT+ (German Federal Ministry of Education and Research, ASCOT+). Development of a digital video-based learning instrument to support diagnostic strategy acquisition among automotive mechatronics apprentices.
+- **ETS Platform for Collaborative Human Annotation (EPCHA)** (2020–present): Led development of a distributed platform for scalable human coding of communication data.
+- **Collaborative Problem Solving Skills: Estimating Individual Contributions** (2019–2022): Co-PI on an Army Research Institute–funded project.
+- **Improve learning and assessment through human–human interaction** (2020–present): Led an ETS-funded project on task development, psychometric frameworks and scoring strategies.
+- **Developing Middle Grade Students’ Social-Emotional Learning through Technology-Enhanced Collaborative Learning** (2024–2028): Co-PI on a U.S. Department of Education EIR-funded project.  
+  Announcement: https://www.ed.gov/news/press-releases/biden-harris-administration-announces-277-million-education-innovation-and-research-grants-help-address-academic-recovery
+- **Collaborative Science Assessment Prototype (ECSAP)** (2013–2017): Led development of a collaborative problem-solving assessment prototype in science; selected by the NCES Commissioner as an example of future assessments at the White House (2014). Paper: https://onlinelibrary.wiley.com/doi/full/10.1002/ets2.12276
+
+---
+
+## Large Language Models and Generative AI and their Responsible Use (2023–present)
 
 Since the release of ChatGPT in November 2022, I initiated and led a team of scientists to explore the impact of large language models (LLMs) and generative AI on assessment and learning. This line of work includes:
 
@@ -19,28 +40,6 @@ Since the release of ChatGPT in November 2022, I initiated and led a team of sci
 - **EPCAL Audio Creator**: Led the development of tools leveraging LLMs and generative AI for audio creation, text translation, and automated coding.
 - **EPCAL AI Coder**: Led the development of a platform using ChatGPT to automatically code communication data.
 - **LLM Writing Evaluator**: Initiated and led a project comparing the quality of writing produced by LLMs.
-
----
-
-## Assessment of Collaborative Problem Solving and 21st-Century Skills (2013–present)
-
-I have led and co-led a sustained research program on the assessment of collaborative problem solving and 21st-century skills:
-
-- **Collaborative Science Assessment Prototype (ECSAP)** (2013–2017): Led development of a collaborative problem-solving assessment prototype in science; selected by the NCES Commissioner as an example of future assessments at the White House (2014).  
-  Paper: https://onlinelibrary.wiley.com/doi/full/10.1002/ets2.12276
-- **ETS Platform for Collaborative Assessment and Learning (EPCAL)** (2015–present): Led development of a platform supporting assessment and learning of human–human interaction (collaboration, communication, SEL). This core infrastructure has supported over 20 projects funded by ETS, NSF, IES, ARI, and other funding agencies.  
-  Platform: https://onlinelibrary.wiley.com/doi/full/10.1002/ets2.12181. Some federally funded projects include:
-  - Kyllonen, P. C. (PI), Hao, J. (Co-PI), Andrews, J., Elliott, S. N., & DiPerna, J. C. (2024–2027). Developing middle school students’ social-emotional learning skill applications through technology-enhanced collaborative learning. U.S. Department of Education, Office of Elementary and Secondary Education, Education Innovation and Research (EIR) Program. Funding amount: $4,329,001.
-  - Kyllonen, P. C. (PI) & Hao, J. (Co-PI). (2019–2022). Collaborative problem solving (CPS) skill: Estimating an individual’s contribution to small group performance. U.S. Army Research Office (Award No. W911NF-19-1-0106). Funding amount: $993,345.
-  - Song, Y. (PI), Sabatini, J. P. (Co-PI), & Ferretti, R. P. (Co-PI). (2019–2024). Exploring and assessing the development of students’ argumentation skills. Institute of Education Sciences. Funding amount: $1,399,578. 
-  - Andrews Todd, J. (PI), D’Mello, S., Chung, G., & Jackson, T. (Co-PIs). (2017–2022). A theory- and data-driven approach for identifying evidence of collaborative problem-solving skills. Institute of Education Sciences (Grant No. R305A170432). Funding amount: $1,399,250.
-  - Graf, A. (PI), Crombie, B., Lai, Y., Lizano, C., & Deleon-Cuevas, C. (Co-PIs), Andrews Todd, J., & van Rijn, P. (Co-Is). (2021–2025). Investigating the role of collaboration on the development of student ideas using a learning progression for the function concept. National Science Foundation (DRL-2101393). Funding amount: $3,063,630.
-  - Glogger-Frey, I. (PI), Abele, S. (co-PI), & Gschwendtner, T. (co-PI). (2019–2023). Digitale Diagnostik und Intervention im Kfz-Wesen (DigiDIn-Kfz). Bundesministerium für Bildung und Forschung, Förderinitiative ASCOT+ (German Federal Ministry of Education and Research, ASCOT+). Development of a digital video-based learning instrument to support diagnostic strategy acquisition among automotive mechatronics apprentices.
-- **ETS Platform for Collaborative Human Annotation (EPCHA)** (2020–present): Led development of a distributed platform for scalable human coding of communication data.
-- **Collaborative Problem Solving Skills: Estimating Individual Contributions** (2019–2022): Co-PI on an Army Research Institute–funded project.
-- **Improve learning and assessment through human–human interaction** (2020–present): Led an ETS-funded project on psychometric frameworks and scoring strategies.
-- **Developing Middle Grade Students’ Social-Emotional Learning through Technology-Enhanced Collaborative Learning** (2024–2028): Co-PI on a U.S. Department of Education EIR-funded project.  
-  Announcement: https://www.ed.gov/news/press-releases/biden-harris-administration-announces-277-million-education-innovation-and-research-grants-help-address-academic-recovery
 
 ---
 

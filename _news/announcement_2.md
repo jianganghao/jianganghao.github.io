@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2025-01-06 07:59:00-0400
+date: 2025-10-06 07:59:00-0400
 inline: true
 related_posts: false
 ---
 
-Our [paper on detecting non-authentic writing using keystroke data](https://onlinelibrary.wiley.com/doi/full/10.1111/jedm.12416) is officially published in the Journal of Educational Measurement :smile:
+Our [paper on detecting non-authentic writing using keystroke data](https://onlinelibrary.wiley.com/doi/abs/10.1111/jedm.12431) as well as its [fairness across subgroups](https://onlinelibrary.wiley.com/doi/full/10.1111/jedm.12416) are officially published in the Journal of Educational Measurement :smile:

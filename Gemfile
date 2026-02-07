@@ -1,4 +1,8 @@
 source 'https://rubygems.org'
+
+# Ruby 4 compatibility: ostruct is no longer in default stdlib
+gem 'ostruct'
+
 group :jekyll_plugins do
     gem 'classifier-reborn'
     gem 'jekyll'
@@ -21,6 +25,7 @@ group :jekyll_plugins do
     gem 'unicode_utils'
     gem 'webrick'
 end
+
 group :other_plugins do
     gem 'css_parser'
     gem 'feedjira'

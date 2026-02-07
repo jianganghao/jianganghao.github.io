@@ -40,9 +40,7 @@ nav_order: 2
 
 ---
 
-## Academic and Professional Services
-
-### Editorial and Reviewing Activities
+## Editorial and Reviewing Activities
 
 - **Associate Editor**  
   *Frontiers in Psychology: Quantitative Psychology and Measurement*
@@ -58,7 +56,7 @@ nav_order: 2
 
 ---
 
-### Conference Program Committee Membership
+## Conference Program Committee Membership
 
 - **AAAI Conference on Artificial Intelligence**: 2021–2024  
 - **International Conference on Educational Data Mining (EDM)**: 2017–2024  

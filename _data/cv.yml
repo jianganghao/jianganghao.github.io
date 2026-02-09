@@ -118,7 +118,7 @@
         - name: LLMs, Generative AI, Context Engineering
     - category: Scientific Computing
       items:
-        - name: Scientific Computing
+        - name: Statistical Algorithm Development
         - name: Visualization
         - name: Image Segmentation, Registration, Pattern Recognition
     - category: Physics & Systems

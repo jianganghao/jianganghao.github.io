@@ -1,4 +1,480 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://jianganghao.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://jianganghao.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2026-02-09T21:05:21+00:00</updated><id>https://jianganghao.github.io/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design. </subtitle><entry><title type="html">Github and Gitlab</title><link href="https://jianganghao.github.io/blog/2025/post-github-gitlab/" rel="alternate" type="text/html" title="Github and Gitlab"/><published>2025-01-07T13:56:00+00:00</published><updated>2025-01-07T13:56:00+00:00</updated><id>https://jianganghao.github.io/blog/2025/post-github-gitlab</id><content type="html" xml:base="https://jianganghao.github.io/blog/2025/post-github-gitlab/"><![CDATA[<p>Suppose you have a code repository on GitHub (or GitLab), and you want to switch it to the other platform. To achieve this, you need to update the remote origin. Follow these steps:</p> <h3 id="switching-the-remote-origin">Switching the Remote Origin</h3> <ol> <li> <p><strong>Check your current remote origin</strong>:<br/> Run the following command to see the current remote repository:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git remote <span class="nt">-v</span>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://jianganghao.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://jianganghao.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2026-02-09T21:46:50+00:00</updated><id>https://jianganghao.github.io/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design. </subtitle><entry><title type="html">LLM-based ChatBot in Streamlit</title><link href="https://jianganghao.github.io/blog/2026/llm-chatbot-streamlit/" rel="alternate" type="text/html" title="LLM-based ChatBot in Streamlit"/><published>2026-02-09T16:00:00+00:00</published><updated>2026-02-09T16:00:00+00:00</updated><id>https://jianganghao.github.io/blog/2026/llm-chatbot-streamlit</id><content type="html" xml:base="https://jianganghao.github.io/blog/2026/llm-chatbot-streamlit/"><![CDATA[<p>This tutorial shows how to build a production-ready LLM chatbot in Streamlit using <code class="language-plaintext highlighter-rouge">st.chat_message</code> and <code class="language-plaintext highlighter-rouge">st.chat_input</code>, with optional audio input/output, session logging, and a simple admin panel. The code below is a cleaned-up, working template you can adapt for your own app.</p> <h3 id="1-what-this-app-does">1. What This App Does</h3> <ul> <li>Chat UI with streaming responses</li> <li>Azure OpenAI backend</li> <li>Optional audio input (Whisper) + audio output (gTTS)</li> <li>Session logging with TinyDB</li> <li>Simple admin prompt editor and analytics</li> </ul> <h3 id="2-install-dependencies">2. Install Dependencies</h3> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip <span class="nb">install </span>streamlit openai python-dotenv tinydb pytz gTTS langdetect librosa whisper pandas
+</code></pre></div></div> <p>If you plan to use Whisper locally, make sure you can run it on your machine (it can be heavy).</p> <h3 id="3-set-environment-variables">3. Set Environment Variables</h3> <p>Create a <code class="language-plaintext highlighter-rouge">.env</code> file with:</p> <div class="language-ini highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="py">AZURE_OPENAI_API_KEY</span><span class="p">=</span><span class="s">...</span>
+<span class="py">OPENAI_API_VERSION</span><span class="p">=</span><span class="s">...</span>
+<span class="py">AZURE_OPENAI_ENDPOINT</span><span class="p">=</span><span class="s">...</span>
+<span class="py">PASS_TOKEN</span><span class="p">=</span><span class="s">...</span>
+</code></pre></div></div> <h3 id="4-full-example">4. Full Example</h3> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">os</span>
+<span class="kn">import</span> <span class="n">uuid</span>
+<span class="kn">from</span> <span class="n">io</span> <span class="kn">import</span> <span class="n">BytesIO</span>
+<span class="kn">from</span> <span class="n">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+
+<span class="kn">import</span> <span class="n">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="kn">import</span> <span class="n">pytz</span>
+<span class="kn">import</span> <span class="n">streamlit</span> <span class="k">as</span> <span class="n">st</span>
+<span class="kn">from</span> <span class="n">dotenv</span> <span class="kn">import</span> <span class="n">load_dotenv</span>
+<span class="kn">from</span> <span class="n">tinydb</span> <span class="kn">import</span> <span class="n">TinyDB</span>
+<span class="kn">from</span> <span class="n">langdetect</span> <span class="kn">import</span> <span class="n">detect</span>
+<span class="kn">from</span> <span class="n">gtts</span> <span class="kn">import</span> <span class="n">gTTS</span>
+<span class="kn">import</span> <span class="n">librosa</span>
+<span class="kn">import</span> <span class="n">whisper</span>
+
+<span class="kn">from</span> <span class="n">openai</span> <span class="kn">import</span> <span class="n">AzureOpenAI</span>
+
+<span class="c1"># ---------------------------------
+# Config
+# ---------------------------------
+</span><span class="nf">load_dotenv</span><span class="p">(</span><span class="n">override</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">APP_ID</span> <span class="o">=</span> <span class="sh">"</span><span class="s">sel</span><span class="sh">"</span>
+
+<span class="n">st</span><span class="p">.</span><span class="nf">set_page_config</span><span class="p">(</span><span class="n">layout</span><span class="o">=</span><span class="sh">"</span><span class="s">wide</span><span class="sh">"</span><span class="p">)</span>
+
+<span class="c1"># ---------------------------------
+# Models &amp; Clients
+# ---------------------------------
+</span><span class="nd">@st.cache_resource</span>
+<span class="k">def</span> <span class="nf">load_whisper_model</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">whisper</span><span class="p">.</span><span class="nf">load_model</span><span class="p">(</span><span class="sh">"</span><span class="s">small.en</span><span class="sh">"</span><span class="p">)</span>
+
+<span class="nd">@st.cache_resource</span>
+<span class="k">def</span> <span class="nf">get_azure_openai_client</span><span class="p">():</span>
+    <span class="k">return</span> <span class="nc">AzureOpenAI</span><span class="p">(</span>
+        <span class="n">api_key</span><span class="o">=</span><span class="n">os</span><span class="p">.</span><span class="nf">getenv</span><span class="p">(</span><span class="sh">"</span><span class="s">AZURE_OPENAI_API_KEY</span><span class="sh">"</span><span class="p">),</span>
+        <span class="n">api_version</span><span class="o">=</span><span class="n">os</span><span class="p">.</span><span class="nf">getenv</span><span class="p">(</span><span class="sh">"</span><span class="s">OPENAI_API_VERSION</span><span class="sh">"</span><span class="p">),</span>
+        <span class="n">azure_endpoint</span><span class="o">=</span><span class="n">os</span><span class="p">.</span><span class="nf">getenv</span><span class="p">(</span><span class="sh">"</span><span class="s">AZURE_OPENAI_ENDPOINT</span><span class="sh">"</span><span class="p">),</span>
+    <span class="p">)</span>
+
+<span class="n">whisper_model</span> <span class="o">=</span> <span class="nf">load_whisper_model</span><span class="p">()</span>
+<span class="n">client</span> <span class="o">=</span> <span class="nf">get_azure_openai_client</span><span class="p">()</span>
+
+<span class="c1"># ---------------------------------
+# Helpers
+# ---------------------------------
+</span><span class="n">EASTERN_TZ</span> <span class="o">=</span> <span class="n">pytz</span><span class="p">.</span><span class="nf">timezone</span><span class="p">(</span><span class="sh">"</span><span class="s">US/Eastern</span><span class="sh">"</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">get_eastern_time</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">datetime</span><span class="p">.</span><span class="nf">now</span><span class="p">(</span><span class="n">EASTERN_TZ</span><span class="p">).</span><span class="nf">strftime</span><span class="p">(</span><span class="sh">"</span><span class="s">%Y-%m-%d %H:%M:%S</span><span class="sh">"</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">play_audio</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">autoplay</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">text_language</span> <span class="o">=</span> <span class="nf">detect</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+    <span class="k">except</span> <span class="nb">Exception</span><span class="p">:</span>
+        <span class="n">text_language</span> <span class="o">=</span> <span class="sh">"</span><span class="s">en</span><span class="sh">"</span>
+    <span class="n">tts</span> <span class="o">=</span> <span class="nf">gTTS</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">lang</span><span class="o">=</span><span class="n">text_language</span><span class="p">)</span>
+    <span class="n">mp3_fp</span> <span class="o">=</span> <span class="nc">BytesIO</span><span class="p">()</span>
+    <span class="n">tts</span><span class="p">.</span><span class="nf">write_to_fp</span><span class="p">(</span><span class="n">mp3_fp</span><span class="p">)</span>
+    <span class="n">mp3_fp</span><span class="p">.</span><span class="nf">seek</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">st</span><span class="p">.</span><span class="nf">audio</span><span class="p">(</span><span class="n">mp3_fp</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="sh">"</span><span class="s">audio/mp3</span><span class="sh">"</span><span class="p">,</span> <span class="n">autoplay</span><span class="o">=</span><span class="n">autoplay</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">input_audio_to_text</span><span class="p">():</span>
+    <span class="n">audio_data</span> <span class="o">=</span> <span class="n">st</span><span class="p">.</span><span class="nf">audio_input</span><span class="p">(</span>
+        <span class="sh">"</span><span class="s">:red[Click the microphone button to talk, then stop to submit]</span><span class="sh">"</span>
+    <span class="p">)</span>
+    <span class="k">if</span> <span class="n">audio_data</span><span class="p">:</span>
+        <span class="n">audio_array</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">librosa</span><span class="p">.</span><span class="nf">load</span><span class="p">(</span><span class="n">audio_data</span><span class="p">,</span> <span class="n">sr</span><span class="o">=</span><span class="mi">16000</span><span class="p">)</span>
+        <span class="n">text_msg</span> <span class="o">=</span> <span class="n">whisper_model</span><span class="p">.</span><span class="nf">transcribe</span><span class="p">(</span><span class="n">audio_array</span><span class="p">)[</span><span class="sh">"</span><span class="s">text</span><span class="sh">"</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">text_msg</span>
+    <span class="k">return</span> <span class="bp">None</span>
+
+<span class="c1"># ---------------------------------
+# DB
+# ---------------------------------
+</span><span class="n">os</span><span class="p">.</span><span class="nf">makedirs</span><span class="p">(</span><span class="sh">"</span><span class="s">user_logs</span><span class="sh">"</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">db</span> <span class="o">=</span> <span class="nc">TinyDB</span><span class="p">(</span><span class="sh">"</span><span class="s">user_logs/user_log.json</span><span class="sh">"</span><span class="p">)</span>
+<span class="n">db_table</span> <span class="o">=</span> <span class="n">db</span><span class="p">.</span><span class="nf">table</span><span class="p">(</span><span class="sh">"</span><span class="s">sel_listening</span><span class="sh">"</span><span class="p">)</span>
+
+<span class="c1"># ---------------------------------
+# UI: Header
+# ---------------------------------
+</span><span class="n">st</span><span class="p">.</span><span class="nf">markdown</span><span class="p">(</span>
+    <span class="sh">'</span><span class="s">&lt;p style=</span><span class="sh">"</span><span class="s">text-align:center; font-size:42px;</span><span class="sh">"</span><span class="s">&gt;Your App Name&lt;/p&gt;</span><span class="sh">'</span><span class="p">,</span>
+    <span class="n">unsafe_allow_html</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="n">st</span><span class="p">.</span><span class="nf">markdown</span><span class="p">(</span><span class="sh">"</span><span class="s">***</span><span class="sh">"</span><span class="p">)</span>
+
+<span class="n">st</span><span class="p">.</span><span class="nf">markdown</span><span class="p">(</span><span class="sh">"</span><span class="s">### About</span><span class="sh">"</span><span class="p">)</span>
+<span class="n">st</span><span class="p">.</span><span class="nf">markdown</span><span class="p">(</span>
+    <span class="sh">"</span><span class="s">This is an example of creating a Streamlit chatbot using an LLM. </span><span class="sh">"</span>
+    <span class="sh">"</span><span class="s">For questions and support, contact: &lt;jianganghao@gmail.com&gt;</span><span class="sh">"</span>
+<span class="p">)</span>
+
+<span class="c1"># ---------------------------------
+# Login
+# ---------------------------------
+</span><span class="n">st</span><span class="p">.</span><span class="nf">markdown</span><span class="p">(</span><span class="sh">"</span><span class="s">### Login</span><span class="sh">"</span><span class="p">)</span>
+<span class="n">col_login</span> <span class="o">=</span> <span class="n">st</span><span class="p">.</span><span class="nf">columns</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<span class="n">userid</span> <span class="o">=</span> <span class="n">col_login</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nf">text_input</span><span class="p">(</span><span class="sh">"</span><span class="s">Please enter your username (nickname):</span><span class="sh">"</span><span class="p">)</span>
+<span class="n">access_token</span> <span class="o">=</span> <span class="n">col_login</span><span class="p">[</span><span class="mi">2</span><span class="p">].</span><span class="nf">text_input</span><span class="p">(</span>
+    <span class="sh">"</span><span class="s">Please enter your access token:</span><span class="sh">"</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="sh">"</span><span class="s">password</span><span class="sh">"</span>
+<span class="p">)</span>
+<span class="k">if</span> <span class="n">access_token</span> <span class="o">!=</span> <span class="n">os</span><span class="p">.</span><span class="nf">getenv</span><span class="p">(</span><span class="sh">"</span><span class="s">PASS_TOKEN</span><span class="sh">"</span><span class="p">):</span>
+    <span class="n">st</span><span class="p">.</span><span class="nf">markdown</span><span class="p">(</span>
+        <span class="sh">"</span><span class="s">#### :blue[Sorry, invalid login token. Please try again or contact the administrator.]</span><span class="sh">"</span>
+    <span class="p">)</span>
+    <span class="n">st</span><span class="p">.</span><span class="nf">stop</span><span class="p">()</span>
+
+<span class="c1"># ---------------------------------
+# Session State
+# ---------------------------------
+</span><span class="k">if</span> <span class="sh">"</span><span class="s">app_page</span><span class="sh">"</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">st</span><span class="p">.</span><span class="n">session_state</span><span class="p">:</span>
+    <span class="n">st</span><span class="p">.</span><span class="n">session_state</span><span class="p">.</span><span class="n">app_page</span> <span class="o">=</span> <span class="n">APP_ID</span>
+<span class="k">if</span> <span class="sh">"</span><span class="s">user_id</span><span class="sh">"</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">st</span><span class="p">.</span><span class="n">session_state</span><span class="p">:</span>
+    <span class="n">st</span><span class="p">.</span><span class="n">session_state</span><span class="p">.</span><span class="n">user_id</span> <span class="o">=</span> <span class="n">userid</span>
+
+<span class="k">if</span> <span class="n">st</span><span class="p">.</span><span class="n">session_state</span><span class="p">.</span><span class="n">app_page</span> <span class="o">!=</span> <span class="n">APP_ID</span> <span class="ow">or</span> <span class="n">st</span><span class="p">.</span><span class="n">session_state</span><span class="p">.</span><span class="n">user_id</span> <span class="o">!=</span> <span class="n">userid</span><span class="p">:</span>
+    <span class="n">st</span><span class="p">.</span><span class="n">session_state</span><span class="p">.</span><span class="nf">clear</span><span class="p">()</span>
+    <span class="n">st</span><span class="p">.</span><span class="n">session_state</span><span class="p">.</span><span class="n">app_page</span> <span class="o">=</span> <span class="n">APP_ID</span>
+
+<span class="k">if</span> <span class="sh">"</span><span class="s">system_instruction</span><span class="sh">"</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">st</span><span class="p">.</span><span class="n">session_state</span><span class="p">:</span>
+    <span class="n">st</span><span class="p">.</span><span class="n">session_state</span><span class="p">.</span><span class="n">system_instruction</span> <span class="o">=</span> <span class="p">(</span>
+        <span class="sh">"</span><span class="s">You are an experienced teacher on ***. </span><span class="sh">"</span>
+        <span class="sh">"</span><span class="s">Ask the user questions to check understanding. </span><span class="sh">"</span>
+        <span class="sh">"</span><span class="s">Keep responses concise and age-appropriate.</span><span class="sh">"</span>
+    <span class="p">)</span>
+
+<span class="k">if</span> <span class="sh">"</span><span class="s">session_id</span><span class="sh">"</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">st</span><span class="p">.</span><span class="n">session_state</span><span class="p">:</span>
+    <span class="n">st</span><span class="p">.</span><span class="n">session_state</span><span class="p">.</span><span class="n">session_id</span> <span class="o">=</span> <span class="nf">str</span><span class="p">(</span><span class="n">uuid</span><span class="p">.</span><span class="nf">uuid4</span><span class="p">())[:</span><span class="mi">8</span><span class="p">]</span>
+
+<span class="k">if</span> <span class="sh">"</span><span class="s">messages</span><span class="sh">"</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">st</span><span class="p">.</span><span class="n">session_state</span><span class="p">:</span>
+    <span class="n">st</span><span class="p">.</span><span class="n">session_state</span><span class="p">.</span><span class="n">messages</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">intro</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="sh">"</span><span class="s">role</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">assistant</span><span class="sh">"</span><span class="p">,</span>
+        <span class="sh">"</span><span class="s">content</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">Hi, I am your AI learning assistant. Let</span><span class="sh">'</span><span class="s">s start!</span><span class="sh">"</span><span class="p">,</span>
+        <span class="sh">"</span><span class="s">datetime</span><span class="sh">"</span><span class="p">:</span> <span class="nf">get_eastern_time</span><span class="p">(),</span>
+        <span class="sh">"</span><span class="s">user_id</span><span class="sh">"</span><span class="p">:</span> <span class="n">userid</span><span class="p">,</span>
+        <span class="sh">"</span><span class="s">session_id</span><span class="sh">"</span><span class="p">:</span> <span class="n">st</span><span class="p">.</span><span class="n">session_state</span><span class="p">.</span><span class="n">session_id</span><span class="p">,</span>
+        <span class="sh">"</span><span class="s">app_id</span><span class="sh">"</span><span class="p">:</span> <span class="n">APP_ID</span><span class="p">,</span>
+        <span class="sh">"</span><span class="s">event_name</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">chat</span><span class="sh">"</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">st</span><span class="p">.</span><span class="n">session_state</span><span class="p">.</span><span class="n">messages</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">intro</span><span class="p">)</span>
+    <span class="n">db_table</span><span class="p">.</span><span class="nf">insert</span><span class="p">(</span><span class="n">intro</span><span class="p">)</span>
+
+<span class="c1"># ---------------------------------
+# Admin Panel
+# ---------------------------------
+</span><span class="k">if</span> <span class="n">userid</span> <span class="o">==</span> <span class="sh">"</span><span class="s">admin</span><span class="sh">"</span><span class="p">:</span>
+    <span class="k">with</span> <span class="n">st</span><span class="p">.</span><span class="nf">expander</span><span class="p">(</span><span class="sh">"</span><span class="s">Admin: edit system instruction</span><span class="sh">"</span><span class="p">):</span>
+        <span class="n">st</span><span class="p">.</span><span class="n">session_state</span><span class="p">.</span><span class="n">system_instruction</span> <span class="o">=</span> <span class="n">st</span><span class="p">.</span><span class="nf">text_area</span><span class="p">(</span>
+            <span class="sh">""</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">st</span><span class="p">.</span><span class="n">session_state</span><span class="p">.</span><span class="n">system_instruction</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">300</span>
+        <span class="p">)</span>
+        <span class="n">st</span><span class="p">.</span><span class="nf">download_button</span><span class="p">(</span>
+            <span class="n">label</span><span class="o">=</span><span class="sh">"</span><span class="s">Download instruction</span><span class="sh">"</span><span class="p">,</span>
+            <span class="n">data</span><span class="o">=</span><span class="n">st</span><span class="p">.</span><span class="n">session_state</span><span class="p">.</span><span class="n">system_instruction</span><span class="p">.</span><span class="nf">encode</span><span class="p">(</span><span class="sh">"</span><span class="s">utf-8</span><span class="sh">"</span><span class="p">),</span>
+            <span class="n">file_name</span><span class="o">=</span><span class="sh">"</span><span class="s">prompt.txt</span><span class="sh">"</span><span class="p">,</span>
+            <span class="n">mime</span><span class="o">=</span><span class="sh">"</span><span class="s">text/plain</span><span class="sh">"</span><span class="p">,</span>
+        <span class="p">)</span>
+
+<span class="n">st</span><span class="p">.</span><span class="nf">markdown</span><span class="p">(</span><span class="sh">"</span><span class="s">***</span><span class="sh">"</span><span class="p">)</span>
+
+<span class="c1"># ---------------------------------
+# Chat UI
+# ---------------------------------
+</span><span class="n">show_audio</span> <span class="o">=</span> <span class="n">st</span><span class="p">.</span><span class="nf">checkbox</span><span class="p">(</span><span class="sh">"</span><span class="s">Enable Audio Chat</span><span class="sh">"</span><span class="p">)</span>
+<span class="n">container</span> <span class="o">=</span> <span class="n">st</span><span class="p">.</span><span class="nf">container</span><span class="p">(</span><span class="n">height</span><span class="o">=</span><span class="mi">550</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">message</span> <span class="ow">in</span> <span class="n">st</span><span class="p">.</span><span class="n">session_state</span><span class="p">.</span><span class="n">messages</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">message</span><span class="p">[</span><span class="sh">"</span><span class="s">event_name</span><span class="sh">"</span><span class="p">]</span> <span class="o">==</span> <span class="sh">"</span><span class="s">chat</span><span class="sh">"</span><span class="p">:</span>
+        <span class="k">with</span> <span class="n">container</span><span class="p">.</span><span class="nf">chat_message</span><span class="p">(</span><span class="n">message</span><span class="p">[</span><span class="sh">"</span><span class="s">role</span><span class="sh">"</span><span class="p">]):</span>
+            <span class="n">st</span><span class="p">.</span><span class="nf">markdown</span><span class="p">(</span><span class="n">message</span><span class="p">[</span><span class="sh">"</span><span class="s">content</span><span class="sh">"</span><span class="p">])</span>
+
+<span class="n">prompt</span> <span class="o">=</span> <span class="nf">input_audio_to_text</span><span class="p">()</span> <span class="k">if</span> <span class="n">show_audio</span> <span class="k">else</span> <span class="n">st</span><span class="p">.</span><span class="nf">chat_input</span><span class="p">(</span><span class="sh">"</span><span class="s">Enter to chat</span><span class="sh">"</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">prompt</span><span class="p">:</span>
+    <span class="n">user_msg</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="sh">"</span><span class="s">role</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">user</span><span class="sh">"</span><span class="p">,</span>
+        <span class="sh">"</span><span class="s">content</span><span class="sh">"</span><span class="p">:</span> <span class="n">prompt</span><span class="p">,</span>
+        <span class="sh">"</span><span class="s">datetime</span><span class="sh">"</span><span class="p">:</span> <span class="nf">get_eastern_time</span><span class="p">(),</span>
+        <span class="sh">"</span><span class="s">user_id</span><span class="sh">"</span><span class="p">:</span> <span class="n">userid</span><span class="p">,</span>
+        <span class="sh">"</span><span class="s">session_id</span><span class="sh">"</span><span class="p">:</span> <span class="n">st</span><span class="p">.</span><span class="n">session_state</span><span class="p">.</span><span class="n">session_id</span><span class="p">,</span>
+        <span class="sh">"</span><span class="s">app_id</span><span class="sh">"</span><span class="p">:</span> <span class="n">APP_ID</span><span class="p">,</span>
+        <span class="sh">"</span><span class="s">event_name</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">chat</span><span class="sh">"</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">st</span><span class="p">.</span><span class="n">session_state</span><span class="p">.</span><span class="n">messages</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">user_msg</span><span class="p">)</span>
+    <span class="n">db_table</span><span class="p">.</span><span class="nf">insert</span><span class="p">(</span><span class="n">user_msg</span><span class="p">)</span>
+
+    <span class="k">with</span> <span class="n">container</span><span class="p">.</span><span class="nf">chat_message</span><span class="p">(</span><span class="sh">"</span><span class="s">user</span><span class="sh">"</span><span class="p">):</span>
+        <span class="n">st</span><span class="p">.</span><span class="nf">markdown</span><span class="p">(</span><span class="n">prompt</span><span class="p">)</span>
+
+    <span class="k">with</span> <span class="n">container</span><span class="p">.</span><span class="nf">chat_message</span><span class="p">(</span><span class="sh">"</span><span class="s">assistant</span><span class="sh">"</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">stream</span> <span class="o">=</span> <span class="n">client</span><span class="p">.</span><span class="n">chat</span><span class="p">.</span><span class="n">completions</span><span class="p">.</span><span class="nf">create</span><span class="p">(</span>
+                <span class="n">model</span><span class="o">=</span><span class="sh">"</span><span class="s">gpt-4o</span><span class="sh">"</span><span class="p">,</span>
+                <span class="n">messages</span><span class="o">=</span><span class="p">[</span>
+                    <span class="p">{</span><span class="sh">"</span><span class="s">role</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">system</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">content</span><span class="sh">"</span><span class="p">:</span> <span class="n">st</span><span class="p">.</span><span class="n">session_state</span><span class="p">.</span><span class="n">system_instruction</span><span class="p">}</span>
+                <span class="p">]</span>
+                <span class="o">+</span> <span class="p">[</span>
+                    <span class="p">{</span><span class="sh">"</span><span class="s">role</span><span class="sh">"</span><span class="p">:</span> <span class="n">m</span><span class="p">[</span><span class="sh">"</span><span class="s">role</span><span class="sh">"</span><span class="p">],</span> <span class="sh">"</span><span class="s">content</span><span class="sh">"</span><span class="p">:</span> <span class="n">m</span><span class="p">[</span><span class="sh">"</span><span class="s">content</span><span class="sh">"</span><span class="p">]}</span>
+                    <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">st</span><span class="p">.</span><span class="n">session_state</span><span class="p">.</span><span class="n">messages</span>
+                <span class="p">],</span>
+                <span class="n">stream</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+            <span class="p">)</span>
+            <span class="n">response</span> <span class="o">=</span> <span class="n">st</span><span class="p">.</span><span class="nf">write_stream</span><span class="p">(</span><span class="n">stream</span><span class="p">)</span>
+        <span class="k">except</span> <span class="nb">Exception</span><span class="p">:</span>
+            <span class="n">response</span> <span class="o">=</span> <span class="sh">"</span><span class="s">Please avoid inappropriate content in classroom settings.</span><span class="sh">"</span>
+            <span class="n">st</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+
+    <span class="n">assistant_msg</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="sh">"</span><span class="s">role</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">assistant</span><span class="sh">"</span><span class="p">,</span>
+        <span class="sh">"</span><span class="s">content</span><span class="sh">"</span><span class="p">:</span> <span class="n">response</span><span class="p">,</span>
+        <span class="sh">"</span><span class="s">datetime</span><span class="sh">"</span><span class="p">:</span> <span class="nf">get_eastern_time</span><span class="p">(),</span>
+        <span class="sh">"</span><span class="s">user_id</span><span class="sh">"</span><span class="p">:</span> <span class="n">userid</span><span class="p">,</span>
+        <span class="sh">"</span><span class="s">session_id</span><span class="sh">"</span><span class="p">:</span> <span class="n">st</span><span class="p">.</span><span class="n">session_state</span><span class="p">.</span><span class="n">session_id</span><span class="p">,</span>
+        <span class="sh">"</span><span class="s">app_id</span><span class="sh">"</span><span class="p">:</span> <span class="n">APP_ID</span><span class="p">,</span>
+        <span class="sh">"</span><span class="s">event_name</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">chat</span><span class="sh">"</span><span class="p">,</span>
+    <span class="p">}</span>
+    <span class="n">st</span><span class="p">.</span><span class="n">session_state</span><span class="p">.</span><span class="n">messages</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">assistant_msg</span><span class="p">)</span>
+    <span class="n">db_table</span><span class="p">.</span><span class="nf">insert</span><span class="p">(</span><span class="n">assistant_msg</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">show_audio</span><span class="p">:</span>
+        <span class="k">with</span> <span class="n">container</span><span class="p">:</span>
+            <span class="nf">play_audio</span><span class="p">(</span><span class="n">response</span><span class="p">,</span> <span class="n">autoplay</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+<span class="c1"># ---------------------------------
+# Analytics (Admin)
+# ---------------------------------
+</span><span class="k">if</span> <span class="n">userid</span> <span class="o">==</span> <span class="sh">"</span><span class="s">admin</span><span class="sh">"</span><span class="p">:</span>
+    <span class="n">st</span><span class="p">.</span><span class="nf">markdown</span><span class="p">(</span><span class="sh">"</span><span class="s">### Analytics</span><span class="sh">"</span><span class="p">)</span>
+    <span class="k">with</span> <span class="n">st</span><span class="p">.</span><span class="nf">expander</span><span class="p">(</span><span class="sh">"</span><span class="s">Click to see details</span><span class="sh">"</span><span class="p">):</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="nc">DataFrame</span><span class="p">(</span><span class="n">st</span><span class="p">.</span><span class="n">session_state</span><span class="p">.</span><span class="n">messages</span><span class="p">)</span>
+        <span class="n">df</span><span class="p">[</span><span class="sh">"</span><span class="s">datetime</span><span class="sh">"</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="nf">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="sh">"</span><span class="s">datetime</span><span class="sh">"</span><span class="p">])</span>
+        <span class="n">df</span><span class="p">[</span><span class="sh">"</span><span class="s">session_time</span><span class="sh">"</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">.</span><span class="n">datetime</span> <span class="o">-</span> <span class="n">df</span><span class="p">.</span><span class="n">datetime</span><span class="p">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">df</span><span class="p">[</span><span class="sh">"</span><span class="s">session_time</span><span class="sh">"</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">.</span><span class="n">session_time</span><span class="p">.</span><span class="nf">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">.</span><span class="nf">total_seconds</span><span class="p">())</span>
+        <span class="n">st</span><span class="p">.</span><span class="nf">markdown</span><span class="p">(</span>
+            <span class="sa">f</span><span class="sh">"</span><span class="s">#### Total turns: </span><span class="si">{</span><span class="n">df</span><span class="p">.</span><span class="nf">query</span><span class="p">(</span><span class="sh">'</span><span class="s">role==</span><span class="se">\"</span><span class="s">user</span><span class="se">\"</span><span class="sh">'</span><span class="p">).</span><span class="n">content</span><span class="p">.</span><span class="nf">count</span><span class="p">()</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span><span class="si">}</span><span class="sh">"</span>
+        <span class="p">)</span>
+        <span class="n">st</span><span class="p">.</span><span class="nf">markdown</span><span class="p">(</span>
+            <span class="sa">f</span><span class="sh">"</span><span class="s">#### Total words by user: </span><span class="si">{</span><span class="n">df</span><span class="p">.</span><span class="nf">query</span><span class="p">(</span><span class="sh">'</span><span class="s">role==</span><span class="se">\"</span><span class="s">user</span><span class="se">\"</span><span class="sh">'</span><span class="p">).</span><span class="n">content</span><span class="p">.</span><span class="nb">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="si">:</span> <span class="nf">len</span><span class="p">(</span><span class="n">x</span><span class="p">.</span><span class="nf">split</span><span class="p">())).</span><span class="nf">sum</span><span class="p">()</span><span class="si">}</span><span class="sh">"</span>
+        <span class="p">)</span>
+        <span class="n">st</span><span class="p">.</span><span class="nf">markdown</span><span class="p">(</span>
+            <span class="sa">f</span><span class="sh">"</span><span class="s">#### Total words by agent: </span><span class="si">{</span><span class="n">df</span><span class="p">.</span><span class="nf">query</span><span class="p">(</span><span class="sh">'</span><span class="s">role==</span><span class="se">\"</span><span class="s">assistant</span><span class="se">\"</span><span class="sh">'</span><span class="p">).</span><span class="n">content</span><span class="p">.</span><span class="nb">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="si">:</span> <span class="nf">len</span><span class="p">(</span><span class="n">x</span><span class="p">.</span><span class="nf">split</span><span class="p">())).</span><span class="nf">sum</span><span class="p">()</span><span class="si">}</span><span class="sh">"</span>
+        <span class="p">)</span>
+        <span class="n">st</span><span class="p">.</span><span class="nf">dataframe</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</code></pre></div></div> <h3 id="5-notes-and-improvements">5. Notes and Improvements</h3> <ul> <li><strong>Security</strong>: Use environment variables and rotate keys regularly.</li> <li><strong>Scaling</strong>: Add rate limiting and store logs in a database (Postgres, SQLite, etc.).</li> <li><strong>UX</strong>: Add a “Clear chat” button and default welcome messages per session.</li> <li><strong>Audio</strong>: Whisper + gTTS are optional; disable for lighter deployments.</li> </ul> <hr/> <p>That’s it. You now have a solid Streamlit chatbot template with LLM streaming, logging, and optional audio support.</p>]]></content><author><name></name></author><category term="data-science"/><category term="streamlit,"/><category term="llm,"/><category term="azure-openai,"/><category term="tutorial"/><summary type="html"><![CDATA[Build a Streamlit chatbot with Azure OpenAI, optional audio, and chat logging]]></summary></entry><entry><title type="html">Python Argument &amp;amp; Unpacking Tricks — A Practical Tutorial</title><link href="https://jianganghao.github.io/blog/2026/python-args-unpacking/" rel="alternate" type="text/html" title="Python Argument &amp;amp; Unpacking Tricks — A Practical Tutorial"/><published>2026-02-09T15:00:00+00:00</published><updated>2026-02-09T15:00:00+00:00</updated><id>https://jianganghao.github.io/blog/2026/python-args-unpacking</id><content type="html" xml:base="https://jianganghao.github.io/blog/2026/python-args-unpacking/"><![CDATA[<p>This tutorial covers the most useful Python argument and unpacking patterns: <code class="language-plaintext highlighter-rouge">*</code>, <code class="language-plaintext highlighter-rouge">**</code>, <code class="language-plaintext highlighter-rouge">*args</code>, <code class="language-plaintext highlighter-rouge">**kwargs</code>, keyword-only, positional-only, and common idioms.</p> <h3 id="1-positional-vs-keyword-arguments">1. Positional vs. Keyword Arguments</h3> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="nf">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+
+<span class="nf">f</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>          <span class="c1"># positional
+</span><span class="nf">f</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>      <span class="c1"># keyword
+</span><span class="nf">f</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>        <span class="c1"># mixed
+</span></code></pre></div></div> <p>In <code class="language-plaintext highlighter-rouge">def f(a, b)</code>, parameters are positional-or-keyword by default.</p> <h3 id="2---unpack-a-sequence-into-positional-arguments">2. <code class="language-plaintext highlighter-rouge">*</code> — Unpack a Sequence into Positional Arguments</h3> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="nf">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+
+<span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="nf">f</span><span class="p">(</span><span class="o">*</span><span class="n">lst</span><span class="p">)</span>
+</code></pre></div></div> <p>Equivalent to <code class="language-plaintext highlighter-rouge">f(1, 2)</code>.</p> <p>Rule: <code class="language-plaintext highlighter-rouge">*sequence</code> → positional arguments.</p> <h3 id="3---unpack-a-dict-into-keyword-arguments">3. <code class="language-plaintext highlighter-rouge">**</code> — Unpack a Dict into Keyword Arguments</h3> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="nf">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+
+<span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="sh">"</span><span class="s">a</span><span class="sh">"</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="sh">"</span><span class="s">b</span><span class="sh">"</span><span class="p">:</span> <span class="mi">2</span><span class="p">}</span>
+<span class="nf">f</span><span class="p">(</span><span class="o">**</span><span class="n">d</span><span class="p">)</span>
+</code></pre></div></div> <p>Equivalent to <code class="language-plaintext highlighter-rouge">f(a=1, b=2)</code>.</p> <p>Rule: <code class="language-plaintext highlighter-rouge">**dict</code> → keyword arguments. Keys must match parameter names.</p> <h3 id="4-args--collect-extra-positional-arguments">4. <code class="language-plaintext highlighter-rouge">*args</code> — Collect Extra Positional Arguments</h3> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
+    <span class="nf">print</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+
+<span class="nf">f</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="c1"># (1, 2, 3)
+</span></code></pre></div></div> <p>Use cases: unknown number of inputs, wrappers/decorators, forwarding arguments.</p> <h3 id="5-kwargs--collect-extra-keyword-arguments">5. <code class="language-plaintext highlighter-rouge">**kwargs</code> — Collect Extra Keyword Arguments</h3> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="nf">print</span><span class="p">(</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="nf">f</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="c1"># {'a': 1, 'b': 2}
+</span></code></pre></div></div> <p>Use cases: configuration objects, flexible APIs, passing JSON-like data.</p> <h3 id="6-forwarding-arguments">6. Forwarding Arguments</h3> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nf">real_function</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</code></pre></div></div> <p>Common in decorators, FastAPI routing, Pydantic models, and tool orchestration.</p> <h3 id="7--in-function-definitions--keyword-only-arguments">7. <code class="language-plaintext highlighter-rouge">*</code> in Function Definitions — Keyword-Only Arguments</h3> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="nf">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+
+<span class="nf">f</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>   <span class="c1"># OK
+</span><span class="nf">f</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>     <span class="c1"># TypeError
+</span></code></pre></div></div> <p>Use when you want clarity or stable public APIs.</p> <h3 id="8--in-function-definitions--positional-only-arguments">8. <code class="language-plaintext highlighter-rouge">/</code> in Function Definitions — Positional-Only Arguments</h3> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="o">/</span><span class="p">):</span>
+    <span class="nf">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+
+<span class="nf">f</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>        <span class="c1"># OK
+</span><span class="nf">f</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>    <span class="c1"># TypeError
+</span></code></pre></div></div> <p>Common in built-ins and performance-critical APIs.</p> <h3 id="9-extended-unpacking-destructuring">9. Extended Unpacking (Destructuring)</h3> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span><span class="p">,</span> <span class="o">*</span><span class="n">middle</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">middle</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="c1"># 1 [2, 3, 4] 5
+</span></code></pre></div></div> <p>Useful for flexible slicing and sequence parsing.</p> <h3 id="10--vs---common-mistakes">10. <code class="language-plaintext highlighter-rouge">*</code> vs. <code class="language-plaintext highlighter-rouge">**</code> — Common Mistakes</h3> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">*</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>        <span class="c1"># OK -&gt; 1, 2
+</span><span class="o">**</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>       <span class="c1"># TypeError (list is not a mapping)
+</span>
+<span class="o">*</span><span class="p">{</span><span class="sh">"</span><span class="s">a</span><span class="sh">"</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span>      <span class="c1"># 'a'
+</span><span class="o">**</span><span class="p">{</span><span class="sh">"</span><span class="s">a</span><span class="sh">"</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span>     <span class="c1"># a=1
+</span></code></pre></div></div> <h3 id="11-why-pydantic-and-fastapi-rely-on-this">11. Why Pydantic and FastAPI Rely on This</h3> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="sh">"</span><span class="s">text</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">hello</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">threshold</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">0.7</span><span class="sh">"</span><span class="p">}</span>
+<span class="nc">Params</span><span class="p">(</span><span class="o">**</span><span class="n">data</span><span class="p">)</span>
+</code></pre></div></div> <p>Models expect named fields, so <code class="language-plaintext highlighter-rouge">**data</code> turns a dict into keyword arguments and triggers validation automatically.</p> <h3 id="12-mental-model">12. Mental Model</h3> <table> <thead> <tr> <th>Syntax</th> <th>Meaning</th> </tr> </thead> <tbody> <tr> <td><code class="language-plaintext highlighter-rouge">*args</code></td> <td>collect positional args</td> </tr> <tr> <td><code class="language-plaintext highlighter-rouge">**kwargs</code></td> <td>collect keyword args</td> </tr> <tr> <td><code class="language-plaintext highlighter-rouge">*lst</code></td> <td>unpack list (positional)</td> </tr> <tr> <td><code class="language-plaintext highlighter-rouge">**dict</code></td> <td>unpack dict (keyword)</td> </tr> <tr> <td><code class="language-plaintext highlighter-rouge">*</code> in <code class="language-plaintext highlighter-rouge">def</code></td> <td>keyword-only</td> </tr> <tr> <td><code class="language-plaintext highlighter-rouge">/</code> in <code class="language-plaintext highlighter-rouge">def</code></td> <td>positional-only</td> </tr> </tbody> </table> <h3 id="13-one-sentence-takeaway">13. One-Sentence Takeaway</h3> <p>Python’s <code class="language-plaintext highlighter-rouge">*</code> and <code class="language-plaintext highlighter-rouge">**</code> are the glue that connects lists, dictionaries, JSON, APIs, and function calls.</p>]]></content><author><name></name></author><category term="data-science"/><category term="python,"/><category term="tutorial"/><summary type="html"><![CDATA[The essential * and ** patterns for arguments, unpacking, and API design]]></summary></entry><entry><title type="html">Running Tasks as a System Daemon with systemd</title><link href="https://jianganghao.github.io/blog/2026/systemd-daemon-tasks/" rel="alternate" type="text/html" title="Running Tasks as a System Daemon with systemd"/><published>2026-02-09T14:00:00+00:00</published><updated>2026-02-09T14:00:00+00:00</updated><id>https://jianganghao.github.io/blog/2026/systemd-daemon-tasks</id><content type="html" xml:base="https://jianganghao.github.io/blog/2026/systemd-daemon-tasks/"><![CDATA[<p>If you want to run a Streamlit dashboard, you can use <code class="language-plaintext highlighter-rouge">screen</code>, but a more reliable approach is to run it as a system daemon with <code class="language-plaintext highlighter-rouge">systemd</code>. This post is based on a helpful tutorial by Shubham Dipt and adds a few practical details for real-world setups.</p> <h3 id="1-create-a-service-file">1. Create a Service File</h3> <p>SSH into your EC2 instance and move to the systemd unit directory:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> /etc/systemd/system
+</code></pre></div></div> <p>Create a service file, for example <code class="language-plaintext highlighter-rouge">epcaldash.service</code>, and add the following:</p> <div class="language-ini highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">[Unit]</span><span class="w">
+</span><span class="py">Description</span><span class="p">=</span><span class="s">EPCAL Dashboard</span>
+<span class="w">
+</span><span class="nn">[Service]</span><span class="w">
+</span><span class="py">User</span><span class="p">=</span><span class="s">ubuntu</span>
+<span class="py">WorkingDirectory</span><span class="p">=</span><span class="s">/home/ubuntu/epcal/epcal_dashboard</span>
+<span class="py">ExecStart</span><span class="p">=</span><span class="s">/home/ubuntu/miniconda3/envs/py39/bin/streamlit run epcal_dashboard.py</span>
+<span class="py">Restart</span><span class="p">=</span><span class="s">always</span>
+<span class="w">
+</span><span class="nn">[Install]</span><span class="w">
+</span><span class="py">WantedBy</span><span class="p">=</span><span class="s">multi-user.target</span>
+</code></pre></div></div> <p>Notes:</p> <ul> <li><code class="language-plaintext highlighter-rouge">WorkingDirectory</code> should point to your Streamlit app directory.</li> <li><code class="language-plaintext highlighter-rouge">ExecStart</code> must use the correct Streamlit executable (e.g., from your virtual environment).</li> </ul> <h3 id="2-optional-run-a-shell-script-first">2. Optional: Run a Shell Script First</h3> <p>If you need extra commands (e.g., <code class="language-plaintext highlighter-rouge">iptables</code> for port forwarding), you can point <code class="language-plaintext highlighter-rouge">ExecStart</code> to a shell script instead:</p> <div class="language-ini highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">[Unit]</span><span class="w">
+</span><span class="py">Description</span><span class="p">=</span><span class="s">EPCAL Dashboard</span>
+<span class="w">
+</span><span class="nn">[Service]</span><span class="w">
+</span><span class="py">User</span><span class="p">=</span><span class="s">ubuntu</span>
+<span class="py">WorkingDirectory</span><span class="p">=</span><span class="s">/home/ubuntu/epcal/epcal_dashboard</span>
+<span class="py">ExecStart</span><span class="p">=</span><span class="s">/bin/bash epcaldash_service.sh</span>
+<span class="py">Restart</span><span class="p">=</span><span class="s">always</span>
+<span class="w">
+</span><span class="nn">[Install]</span><span class="w">
+</span><span class="py">WantedBy</span><span class="p">=</span><span class="s">multi-user.target</span>
+</code></pre></div></div> <p>Example <code class="language-plaintext highlighter-rouge">epcaldash_service.sh</code>:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#! /bin/bash</span>
+
+<span class="nb">sudo </span>iptables <span class="nt">-A</span> PREROUTING <span class="nt">-t</span> nat <span class="nt">-p</span> tcp <span class="nt">--dport</span> 80 <span class="nt">-j</span> REDIRECT <span class="nt">--to-ports</span> 8501
+/home/ubuntu/miniconda3/envs/py39/bin/streamlit run /home/ubuntu/epcal/epcal_dashboard/epcal_dashboard.py
+</code></pre></div></div> <p>Make it executable:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">chmod</span> +x epcaldash_service.sh
+</code></pre></div></div> <h3 id="3-reload-start-and-enable">3. Reload, Start, and Enable</h3> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>systemctl daemon-reload
+<span class="nb">sudo </span>systemctl start epcaldash.service
+<span class="nb">sudo </span>systemctl status epcaldash.service
+</code></pre></div></div> <p>Enable on boot:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>systemctl <span class="nb">enable </span>epcaldash.service
+</code></pre></div></div> <p>Disable on boot:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>systemctl disable epcaldash.service
+</code></pre></div></div> <h3 id="4-logs">4. Logs</h3> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>journalctl <span class="nt">-u</span> epcaldash.service
+journalctl <span class="nt">-u</span> epcaldash.service <span class="nt">-n</span> 1000
+</code></pre></div></div> <hr/> <p>With this setup, your Streamlit app runs as a managed service and will restart automatically if it fails.</p>]]></content><author><name></name></author><category term="data-science"/><category term="linux,"/><category term="systemd,"/><category term="devops,"/><category term="streamlit"/><summary type="html"><![CDATA[A practical guide to running Streamlit apps (or any task) as a systemd service]]></summary></entry><entry><title type="html">PyTorch in 5 Minutes</title><link href="https://jianganghao.github.io/blog/2026/pytorch-in-5-mins/" rel="alternate" type="text/html" title="PyTorch in 5 Minutes"/><published>2026-02-09T13:00:00+00:00</published><updated>2026-02-09T13:00:00+00:00</updated><id>https://jianganghao.github.io/blog/2026/pytorch-in-5-mins</id><content type="html" xml:base="https://jianganghao.github.io/blog/2026/pytorch-in-5-mins/"><![CDATA[<p>This quick tutorial was originally drafted by prompting ChatGPT in 2023 and lightly edited by me. It is intended for readers who know Python and want a fast start with PyTorch. For a systematic guide, see the official <a href="https://pytorch.org/tutorials/">PyTorch Tutorials</a>.</p> <h3 id="1-installation">1. Installation</h3> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip <span class="nb">install </span>torch torchvision
+</code></pre></div></div> <h3 id="2-pytorch-basics">2. PyTorch Basics</h3> <h4 id="tensors">Tensors</h4> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">torch</span>
+
+<span class="c1"># Create a 1D tensor
+</span><span class="n">x</span> <span class="o">=</span> <span class="n">torch</span><span class="p">.</span><span class="nf">tensor</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="c1"># Create a 2x3 tensor (matrix) filled with ones
+</span><span class="n">y</span> <span class="o">=</span> <span class="n">torch</span><span class="p">.</span><span class="nf">ones</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+</code></pre></div></div> <h4 id="numpy-and-tensor-interoperability">NumPy and Tensor Interoperability</h4> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">import</span> <span class="n">torch</span>
+
+<span class="c1"># NumPy -&gt; PyTorch
+</span><span class="n">numpy_arr</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<span class="n">tensor_from_numpy</span> <span class="o">=</span> <span class="n">torch</span><span class="p">.</span><span class="nf">from_numpy</span><span class="p">(</span><span class="n">numpy_arr</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">tensor_from_numpy</span><span class="p">)</span>
+
+<span class="c1"># PyTorch -&gt; NumPy
+</span><span class="n">tensor</span> <span class="o">=</span> <span class="n">torch</span><span class="p">.</span><span class="nf">tensor</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<span class="n">numpy_from_tensor</span> <span class="o">=</span> <span class="n">tensor</span><span class="p">.</span><span class="nf">numpy</span><span class="p">()</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">numpy_from_tensor</span><span class="p">)</span>
+</code></pre></div></div> <h3 id="3-automatic-differentiation">3. Automatic Differentiation</h3> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">torch</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">torch</span><span class="p">.</span><span class="nf">tensor</span><span class="p">(</span><span class="mf">2.0</span><span class="p">,</span> <span class="n">requires_grad</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span>
+
+<span class="n">y</span><span class="p">.</span><span class="nf">backward</span><span class="p">()</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">x</span><span class="p">.</span><span class="n">grad</span><span class="p">)</span>  <span class="c1"># 4.0 (dy/dx = 2*x at x=2)
+</span></code></pre></div></div> <h3 id="4-neural-network-basics">4. Neural Network Basics</h3> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">torch</span>
+<span class="kn">import</span> <span class="n">torch.nn</span> <span class="k">as</span> <span class="n">nn</span>
+<span class="kn">import</span> <span class="n">torch.optim</span> <span class="k">as</span> <span class="n">optim</span>
+
+<span class="k">class</span> <span class="nc">SimpleNN</span><span class="p">(</span><span class="n">nn</span><span class="p">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+        <span class="nf">super</span><span class="p">(</span><span class="n">SimpleNN</span><span class="p">,</span> <span class="n">self</span><span class="p">).</span><span class="nf">__init__</span><span class="p">()</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">fc</span> <span class="o">=</span> <span class="n">nn</span><span class="p">.</span><span class="nc">Linear</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">self</span><span class="p">.</span><span class="nf">fc</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="n">model</span> <span class="o">=</span> <span class="nc">SimpleNN</span><span class="p">()</span>
+<span class="n">loss_fn</span> <span class="o">=</span> <span class="n">nn</span><span class="p">.</span><span class="nc">MSELoss</span><span class="p">()</span>
+<span class="n">optimizer</span> <span class="o">=</span> <span class="n">optim</span><span class="p">.</span><span class="nc">SGD</span><span class="p">(</span><span class="n">model</span><span class="p">.</span><span class="nf">parameters</span><span class="p">(),</span> <span class="n">lr</span><span class="o">=</span><span class="mf">0.01</span><span class="p">)</span>
+
+<span class="n">inputs</span> <span class="o">=</span> <span class="n">torch</span><span class="p">.</span><span class="nf">tensor</span><span class="p">([[</span><span class="mf">1.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">2.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">3.0</span><span class="p">]])</span>
+<span class="n">outputs</span> <span class="o">=</span> <span class="n">torch</span><span class="p">.</span><span class="nf">tensor</span><span class="p">([[</span><span class="mf">2.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">4.0</span><span class="p">],</span> <span class="p">[</span><span class="mf">6.0</span><span class="p">]])</span>
+
+<span class="k">for</span> <span class="n">epoch</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
+    <span class="n">preds</span> <span class="o">=</span> <span class="nf">model</span><span class="p">(</span><span class="n">inputs</span><span class="p">)</span>
+    <span class="n">loss</span> <span class="o">=</span> <span class="nf">loss_fn</span><span class="p">(</span><span class="n">preds</span><span class="p">,</span> <span class="n">outputs</span><span class="p">)</span>
+
+    <span class="n">optimizer</span><span class="p">.</span><span class="nf">zero_grad</span><span class="p">()</span>
+    <span class="n">loss</span><span class="p">.</span><span class="nf">backward</span><span class="p">()</span>
+    <span class="n">optimizer</span><span class="p">.</span><span class="nf">step</span><span class="p">()</span>
+
+    <span class="nf">if </span><span class="p">(</span><span class="n">epoch</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="mi">10</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">Epoch [</span><span class="si">{</span><span class="n">epoch</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s">/100], Loss: </span><span class="si">{</span><span class="n">loss</span><span class="p">.</span><span class="nf">item</span><span class="p">()</span><span class="si">:</span><span class="p">.</span><span class="mi">4</span><span class="n">f</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>
+</code></pre></div></div> <p>The loop above trains a simple network to approximate <code class="language-plaintext highlighter-rouge">y = 2x</code> using forward pass, loss computation, and backpropagation.</p> <h3 id="5-tensor-operations">5. Tensor Operations</h3> <h4 id="reshaping">Reshaping</h4> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">torch</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">torch</span><span class="p">.</span><span class="nf">randn</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="p">.</span><span class="nf">view</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+</code></pre></div></div> <h4 id="element-wise-operations">Element-wise Operations</h4> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">torch</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">torch</span><span class="p">.</span><span class="nf">tensor</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">torch</span><span class="p">.</span><span class="nf">tensor</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
+
+<span class="n">z</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+</code></pre></div></div> <h4 id="matrix-multiplication">Matrix Multiplication</h4> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">torch</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">torch</span><span class="p">.</span><span class="nf">randn</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">torch</span><span class="p">.</span><span class="nf">randn</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="n">z</span> <span class="o">=</span> <span class="n">torch</span><span class="p">.</span><span class="nf">mm</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+</code></pre></div></div> <h4 id="reductions">Reductions</h4> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">torch</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">torch</span><span class="p">.</span><span class="nf">tensor</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>
+
+<span class="n">sum_x</span> <span class="o">=</span> <span class="n">torch</span><span class="p">.</span><span class="nf">sum</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">mean_x</span> <span class="o">=</span> <span class="n">torch</span><span class="p">.</span><span class="nf">mean</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">sum_x</span><span class="p">,</span> <span class="n">mean_x</span><span class="p">)</span>
+</code></pre></div></div> <h3 id="6-autograd-basics">6. Autograd Basics</h3> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">torch</span>
+
+<span class="c1"># Track gradients
+</span><span class="n">x</span> <span class="o">=</span> <span class="n">torch</span><span class="p">.</span><span class="nf">tensor</span><span class="p">(</span><span class="mf">2.0</span><span class="p">,</span> <span class="n">requires_grad</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span>
+<span class="n">y</span><span class="p">.</span><span class="nf">backward</span><span class="p">()</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">x</span><span class="p">.</span><span class="n">grad</span><span class="p">)</span>
+
+<span class="c1"># Stop tracking
+</span><span class="n">x</span> <span class="o">=</span> <span class="n">torch</span><span class="p">.</span><span class="nf">tensor</span><span class="p">(</span><span class="mf">2.0</span><span class="p">,</span> <span class="n">requires_grad</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="k">with</span> <span class="n">torch</span><span class="p">.</span><span class="nf">no_grad</span><span class="p">():</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span>
+<span class="nf">print</span><span class="p">(</span><span class="n">y</span><span class="p">.</span><span class="n">requires_grad</span><span class="p">)</span>  <span class="c1"># False
+</span></code></pre></div></div> <h3 id="7-chain-rule-example-autograd">7. Chain Rule Example (Autograd)</h3> <p>We define:</p> <ul> <li><code class="language-plaintext highlighter-rouge">f(u, v) = u^2 + 3uv + 5v^2</code></li> <li><code class="language-plaintext highlighter-rouge">u(x, y) = xy + sin(x)</code></li> <li><code class="language-plaintext highlighter-rouge">v(x, y) = y^2 - cos(y)</code></li> </ul> <p>At <code class="language-plaintext highlighter-rouge">x = π</code>, <code class="language-plaintext highlighter-rouge">y = 1</code>, we compute <code class="language-plaintext highlighter-rouge">df/dx</code> and <code class="language-plaintext highlighter-rouge">df/dy</code> with autograd:</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">torch</span>
+<span class="kn">from</span> <span class="n">math</span> <span class="kn">import</span> <span class="n">pi</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">torch</span><span class="p">.</span><span class="nf">tensor</span><span class="p">(</span><span class="n">pi</span><span class="p">,</span> <span class="n">requires_grad</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">torch</span><span class="p">.</span><span class="nf">tensor</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">requires_grad</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+<span class="n">u</span> <span class="o">=</span> <span class="n">x</span> <span class="o">*</span> <span class="n">y</span> <span class="o">+</span> <span class="n">torch</span><span class="p">.</span><span class="nf">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">v</span> <span class="o">=</span> <span class="n">y</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">torch</span><span class="p">.</span><span class="nf">cos</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+
+<span class="n">f</span> <span class="o">=</span> <span class="n">u</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span><span class="o">*</span><span class="n">u</span><span class="o">*</span><span class="n">v</span> <span class="o">+</span> <span class="mi">5</span><span class="o">*</span><span class="n">v</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">f</span><span class="p">.</span><span class="nf">backward</span><span class="p">()</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">df/dx: </span><span class="si">{</span><span class="n">x</span><span class="p">.</span><span class="n">grad</span><span class="p">.</span><span class="nf">item</span><span class="p">()</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">df/dy: </span><span class="si">{</span><span class="n">y</span><span class="p">.</span><span class="n">grad</span><span class="p">.</span><span class="nf">item</span><span class="p">()</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>
+</code></pre></div></div> <p>PyTorch builds a computation graph and applies the chain rule automatically when you call <code class="language-plaintext highlighter-rouge">.backward()</code>.</p> <h3 id="8-device-cpugpu-quickstart">8. Device (CPU/GPU) Quickstart</h3> <h4 id="1-check-your-cpu-architecture">1) Check your CPU architecture</h4> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">platform</span>
+
+<span class="n">platform</span><span class="p">.</span><span class="nf">platform</span><span class="p">()</span>
+</code></pre></div></div> <h4 id="2-check-your-gpu-backend">2) Check your GPU backend</h4> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">torch</span>
+
+<span class="n">torch</span><span class="p">.</span><span class="n">has_mps</span>   <span class="c1"># Apple Silicon (Metal)
+</span><span class="n">torch</span><span class="p">.</span><span class="n">has_cuda</span>  <span class="c1"># NVIDIA CUDA
+</span></code></pre></div></div> <h4 id="3-set-the-device">3) Set the device</h4> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">torch</span>
+
+<span class="n">device</span> <span class="o">=</span> <span class="n">torch</span><span class="p">.</span><span class="nf">device</span><span class="p">(</span><span class="sh">"</span><span class="s">mps</span><span class="sh">"</span><span class="p">)</span>  <span class="c1"># or "cuda" / "cpu"
+</span><span class="n">device</span>
+</code></pre></div></div> <h4 id="4-move-computation-to-gpu-and-bring-results-back-to-cpu">4) Move computation to GPU and bring results back to CPU</h4> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">import</span> <span class="n">torch</span>
+<span class="kn">from</span> <span class="n">transformers</span> <span class="kn">import</span> <span class="n">GPT2LMHeadModel</span><span class="p">,</span> <span class="n">GPT2TokenizerFast</span>
+
+<span class="n">device</span> <span class="o">=</span> <span class="n">torch</span><span class="p">.</span><span class="nf">device</span><span class="p">(</span><span class="sh">"</span><span class="s">mps</span><span class="sh">"</span><span class="p">)</span>  <span class="c1"># or "cuda"
+</span>
+<span class="n">tokenizer</span> <span class="o">=</span> <span class="n">GPT2TokenizerFast</span><span class="p">.</span><span class="nf">from_pretrained</span><span class="p">(</span><span class="sh">"</span><span class="s">gpt2</span><span class="sh">"</span><span class="p">)</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">GPT2LMHeadModel</span><span class="p">.</span><span class="nf">from_pretrained</span><span class="p">(</span><span class="sh">"</span><span class="s">gpt2</span><span class="sh">"</span><span class="p">).</span><span class="nf">eval</span><span class="p">().</span><span class="nf">to</span><span class="p">(</span><span class="n">device</span><span class="p">)</span>
+
+<span class="n">sentence</span> <span class="o">=</span> <span class="sh">"</span><span class="s">Hello world</span><span class="sh">"</span>
+<span class="n">tokenize_input</span> <span class="o">=</span> <span class="n">tokenizer</span><span class="p">.</span><span class="nf">encode</span><span class="p">(</span><span class="n">sentence</span><span class="p">)</span>
+<span class="n">tensor_input</span> <span class="o">=</span> <span class="n">torch</span><span class="p">.</span><span class="nf">tensor</span><span class="p">([</span><span class="n">tokenize_input</span><span class="p">]).</span><span class="nf">to</span><span class="p">(</span><span class="n">device</span><span class="p">)</span>
+
+<span class="n">loss</span> <span class="o">=</span> <span class="nf">model</span><span class="p">(</span><span class="n">tensor_input</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="n">tensor_input</span><span class="p">).</span><span class="n">loss</span>
+<span class="n">loss_cpu</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">exp</span><span class="p">(</span><span class="n">loss</span><span class="p">.</span><span class="nf">detach</span><span class="p">().</span><span class="nf">cpu</span><span class="p">().</span><span class="nf">numpy</span><span class="p">())</span>
+<span class="n">loss_cpu</span>
+</code></pre></div></div> <h3 id="summary">Summary</h3> <p>PyTorch gives you NumPy-like tensors with GPU acceleration and a powerful autograd system. If you already know Python and NumPy, you can start quickly and scale to more advanced workflows without changing tools.</p>]]></content><author><name></name></author><category term="data-science"/><category term="pytorch,"/><category term="deep-learning,"/><category term="tutorial"/><summary type="html"><![CDATA[A fast-start PyTorch tutorial for Python users]]></summary></entry><entry><title type="html">Github and Gitlab</title><link href="https://jianganghao.github.io/blog/2025/post-github-gitlab/" rel="alternate" type="text/html" title="Github and Gitlab"/><published>2025-01-07T13:56:00+00:00</published><updated>2025-01-07T13:56:00+00:00</updated><id>https://jianganghao.github.io/blog/2025/post-github-gitlab</id><content type="html" xml:base="https://jianganghao.github.io/blog/2025/post-github-gitlab/"><![CDATA[<p>Suppose you have a code repository on GitHub (or GitLab), and you want to switch it to the other platform. To achieve this, you need to update the remote origin. Follow these steps:</p> <h3 id="switching-the-remote-origin">Switching the Remote Origin</h3> <ol> <li> <p><strong>Check your current remote origin</strong>:<br/> Run the following command to see the current remote repository:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git remote <span class="nt">-v</span>
 </code></pre></div> </div> </li> <li> <p><strong>Remove the current remote origin</strong>:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git remote remove origin
 </code></pre></div> </div> </li> <li> <p><strong>Add the new remote origin</strong>:<br/> Replace the URL with the new repository’s URL. For example:</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git remote add origin https://gitlab-token-name:token@gitlab.com/myuser/myrepo.git
 </code></pre></div> </div> </li> <li> <p><strong>Set the main branch</strong>:<br/> Rename the current branch to <code class="language-plaintext highlighter-rouge">main</code> (if it’s not already <code class="language-plaintext highlighter-rouge">main</code>):</p> <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git branch <span class="nt">-M</span> main

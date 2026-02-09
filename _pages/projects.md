@@ -4,7 +4,7 @@ permalink: /projects/
 title: Projects
 description: Research projects I led and contributed
 nav: true
-nav_order: 5
+nav_order: 3
 ---
 
 ## Assessment of Complex Skills [2013 - present]

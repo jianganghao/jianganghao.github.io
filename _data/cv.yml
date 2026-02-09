@@ -104,10 +104,10 @@
 - title: Technical Expertise
   type: list
   contents:
-    - "◦ Data Science, Machine Learning / AI, Natural Language Processing"
-    - "◦ Statistics, Psychometrics, Scientific Computing, Visualization"
-    - "◦ Assessment of 21st-century skills (e.g., team dynamics, collaboration, and communication)"
-    - "◦ Game- and simulation-based assessments, Learning analytics"
+    - "◦ Evidence-Centered Design | Assessment of Complex Skills | Game/simulation-based Assessments"
+    - "◦ Statistics & Psychometrics | Data Science | Machine Learning & Natural Language Processing | Automated Scoring and Coding"
+    - "◦ LLMs, Generative AI, Context Engineering"
+    - "◦ Scientific Computing, Visualization"
     - "◦ Dynamical systems and differential equations"
     - "◦ Image segmentation, registration, pattern recognition"
     - "◦ Charge-Coupled Device (CCD) for astronomical imaging, astrophysics, cosmology, general relativity"
@@ -120,6 +120,8 @@
     - "◦ Data science and AI: Pandas, NumPy, Scikit-learn, NLTK, PyTorch"
     - "◦ Visualization and dashboarding: Plotly, Matplotlib, Seaborn, Streamlit, Gradio"
     - "◦ LLMs and cloud computing: LangChain, Hugging Face, Azure, AWS"
+    - "◦ GitHub: jgbrainstorm, jianganghao"
+
 
 - title: Honors and Awards
   type: list

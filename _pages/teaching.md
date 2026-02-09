@@ -2,10 +2,12 @@
 layout: page
 permalink: /teaching/
 title: Teaching
-description: Recent data science-related courses I have been teaching
+description: 
 nav: true
 nav_order: 6
 ---
+
+## Courses
 
 - **Hao, J. & Livne, O. (2021 - 2023)**  
   _Addressing the Data Challenges of Next-generation Assessments: Data Science Upskilling for Psychometricians._  
@@ -25,3 +27,14 @@ nav_order: 6
 - **Hao, J. & Livne, O. (2021, 2022)**  
   _Data Science Academy._  
   Two 10-week data science training workshops given to ETS staff. Princeton, NJ.
+
+## Mentoring
+
+- Nurseit Baizhanov, ETS Visiting Scholar (National Testing Center of Kazakhstan)
+- Kehinde Elelu, 2024 ETS Summer Intern (Civil Engineering Ph.D. Student of Clemson University)
+- Yang Zhong, 2023 ETS Summer Intern (Computer Science Ph.D. Student of the University of Pittsburgh)
+- Daniel Adams, 2018 ETS Summer Intern (Psychometrics Ph.D. Student of the University of Wisconsin - Madison), Now ETS Psychometrician
+- Yang Jiang, 2017 ETS Summer Intern (Cognitive Science Ph.D. Student of Columbia University), Now ETS Research Scientist
+- Lu Ou, 2016 ETS Summer Intern (Statistics Ph.D. Student of Penn State University), Now at Netflix
+- Thales Ricarte, 2015 ETS Exchange Student (Psychometrics Ph.D. student of the University of São Paulo)
+- Zuowei Wang, 2014 ETS Summer Intern (Psychology Ph.D. student of the University of Michigan), Now ETS Research Scientist

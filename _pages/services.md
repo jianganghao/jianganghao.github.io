@@ -7,7 +7,7 @@ nav: true
 nav_order: 2
 ---
 
-## Corporate Service
+### Corporate Service
 
 - Enterprise Test Security Leadership Team [2022–2023]: Oversaw development and implementation of enterprise-wide test security initiatives.
 - AI and Data Analytics Initiative for Test Security [2021–2023]: Defined research agenda and budget to develop AI- and data-driven solutions for test security.
@@ -19,7 +19,7 @@ nav_order: 2
 - Computational Psychometrics Initiative [2016–2017]: Led agenda setting and execution of research initiatives defining computational psychometrics.
 - Software and Data Infrastructure Sub-Initiative [2014–2016]: Led research agenda development and implementation for software and data infrastructure.
 
-## Professional Service
+### Professional Service
 
 - **Associate Editor**  
   _Frontiers in Psychology: Quantitative Psychology and Measurement_

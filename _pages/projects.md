@@ -7,7 +7,7 @@ nav: true
 nav_order: 3
 ---
 
-## Assessment of Complex Skills [2013 - present]
+### Assessment of Complex Skills [2013 - present]
 
 Since 2013, I have led and co-led a sustained portfolio of research projects focused on the assessment of complex skills using technology-enabled and performance-based approaches. Key projects include:
 
@@ -36,7 +36,7 @@ Since 2013, I have led and co-led a sustained portfolio of research projects foc
 
 ---
 
-## Large Language Model and Responsible Use of AI [2023 - now]
+### Large Language Model and Responsible Use of AI [2023 - now]
 
 Since the release of ChatGPT in November 2022, I initiated and led a team of scientists to explore its impact on assessment and learning. The projects include:
 
@@ -49,7 +49,7 @@ Since the release of ChatGPT in November 2022, I initiated and led a team of sci
 
 ---
 
-## Data Analytics and AI to Support Test Security [2020 - present]
+### Data Analytics and AI to Support Test Security [2020 - present]
 
 Since 2020, I have led multiple AI and data analytics-driven projects funded by the ETS Test Security Initiative to advance analytics and AI methods supporting test security, particularly for remotely administered tests. These projects have resulted in several impactful systems that contribute to over 60% of cheating detection at the peak time. Listed below are some of the key tools:
 
@@ -61,7 +61,7 @@ Since 2020, I have led multiple AI and data analytics-driven projects funded by 
 
 ---
 
-## Development of Core Data and Software Infrastructure for Game/Simulation-Based (Virtual Performance) Assessments [2014 - 2021]
+### Development of Core Data and Software Infrastructure for Game/Simulation-Based (Virtual Performance) Assessments [2014 - 2021]
 
 I led a series of projects dedicated to developing data analytics solutions for telemetry logs from game-based assessments and digital learning environments. Key projects include:
 
@@ -71,7 +71,7 @@ I led a series of projects dedicated to developing data analytics solutions for 
 
 ---
 
-## Application of Data Science, Machine Learning/AI, and Natural Language Processing to Improve Learning and Assessment [2013 - present]
+### Application of Data Science, Machine Learning/AI, and Natural Language Processing to Improve Learning and Assessment [2013 - present]
 
 I have led, co-led, and contributed to a wide range of projects aimed at enhancing learning and assessment through the analysis of response process data. These initiatives employ innovative data science and AI approaches, as outlined below:
 
@@ -83,7 +83,7 @@ I have led, co-led, and contributed to a wide range of projects aimed at enhanci
 
 ---
 
-## Astrophysics and Cosmology (Before 2013)
+### Astrophysics and Cosmology (Before 2013)
 
 I conducted research in astrophysics and cosmology before I switched to educational measurement. Key research topics include:
 

@@ -7,7 +7,7 @@ nav: true
 nav_order: 4
 ---
 
-## Courses
+### Courses
 
 - **Hao, J. & Livne, O. (2021 - 2023)**  
   _Addressing the Data Challenges of Next-generation Assessments: Data Science Upskilling for Psychometricians._  
@@ -28,7 +28,7 @@ nav_order: 4
   _Data Science Academy._  
   Two 10-week data science training workshops given to ETS staff. Princeton, NJ.
 
-## Mentoring
+### Mentoring
 
 - Nurseit Baizhanov, ETS Visiting Scholar (National Testing Center of Kazakhstan)
 - Kehinde Elelu, 2024 ETS Summer Intern (Civil Engineering Ph.D. Student of Clemson University)

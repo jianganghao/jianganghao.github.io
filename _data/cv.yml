@@ -131,35 +131,19 @@
   contents:
     - category: Languages
       items:
-        - name: Python
-        - name: R
-        - name: C++
+        - name: Python | R | C++
     - category: Data Science & ML
       items:
-        - name: Pandas
-        - name: NumPy
-        - name: Scikit-learn
-        - name: NLTK
-        - name: PyTorch
+        - name: Pandas | NumPy | Scikit-learn | NLTK | PyTorch
     - category: Visualization & Apps
       items:
-        - name: Plotly
-        - name: Matplotlib
-        - name: Seaborn
-        - name: Streamlit
-        - name: Gradio
-    - category: LLMs, Cloud & Dev
+        - name: Plotly | Matplotlib | Seaborn | Streamlit | Gradio
+    - category: LLMs & Cloud
       items:
-        - name: LangChain
-        - name: Hugging Face
-        - name: Azure
-        - name: AWS
-        - name: GitHub /jgbrainstorm
-          link: https://github.com/jgbrainstorm
-          link_inline: true
-        - name: GitHub /jianganghao
-          link: https://github.com/jianganghao
-          link_inline: true
+        - name: LangChain | Hugging Face | Azure | AWS
+    - category: Dev & Collaboration
+      items:
+        - name: 'GitHub: <a href="https://github.com/jgbrainstorm" target="_blank">jgbrainstorm</a> | <a href="https://github.com/jianganghao" target="_blank">jianganghao</a>'
 
 - title: Honors and Awards
   type: time_table

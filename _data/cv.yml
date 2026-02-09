@@ -122,12 +122,26 @@
     - "◦ GitHub: jgbrainstorm, jianganghao"
 
 - title: Honors and Awards
-  type: list
+  type: time_table
   contents:
-    - "◦ 2024 – Annual Award for Exceptional Achievement in Educational Measurement, National Council on Measurement in Education (NCME)"
-    - "◦ 2015 – Presidential Award, Educational Testing Service"
-    - "◦ 2013–2015 – SPOT Awards, Educational Testing Service"
-    - "◦ 2011 – Most Valued Reviewer, *Astroparticle Physics* (Elsevier)"
-    - "◦ 2011 – Builder Award, Dark Energy Survey Collaboration"
-    - "◦ 2009 – GROCS Award, University of Michigan"
-    - "◦ 2005 – First Prize for the Advancement of Science and Technology, Shanghai, China"
+    - title: Annual Award for Exceptional Achievement in Educational Measurement
+      institution: National Council on Measurement in Education (NCME)
+      year: 2024
+    - title: Presidential Award
+      institution: Educational Testing Service
+      year: 2015
+    - title: SPOT Awards
+      institution: Educational Testing Service
+      year: 2013–2015
+    - title: Most Valued Reviewer, *Astroparticle Physics* (Elsevier)
+      institution: Astroparticle Physics
+      year: 2011
+    - title: Builder Award
+      institution: Dark Energy Survey Collaboration
+      year: 2011
+    - title: GROCS Award
+      institution: University of Michigan
+      year: 2009
+    - title: First Prize for the Advancement of Science and Technology
+      institution: Shanghai, China
+      year: 2005

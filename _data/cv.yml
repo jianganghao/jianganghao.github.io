@@ -102,24 +102,61 @@
         - Taught undergraduate physics lab on Mechanics
 
 - title: Technical Expertise
-  type: list
+  type: list_groups
   contents:
-    - "◦ Evidence-Centered Design | Assessment of Complex Skills | Game/simulation-based Assessments"
-    - "◦ Statistics & Psychometrics | Data Science | Machine Learning & Natural Language Processing | Automated Scoring and Coding"
-    - "◦ LLMs, Generative AI, Context Engineering"
-    - "◦ Scientific Computing, Visualization"
-    - "◦ Dynamical systems and differential equations"
-    - "◦ Image segmentation, registration, pattern recognition"
-    - "◦ Charge-Coupled Device (CCD) for astronomical imaging, astrophysics, cosmology, general relativity"
+    - category: Assessment & Measurement
+      items:
+        - name: Evidence-Centered Design
+        - name: Assessment of Complex Skills
+        - name: Game/Simulation-Based Assessments
+        - name: Automated Scoring and Coding
+    - category: Data Science & AI
+      items:
+        - name: Statistics & Psychometrics
+        - name: Data Science
+        - name: Machine Learning & Natural Language Processing
+        - name: LLMs, Generative AI, Context Engineering
+    - category: Scientific Computing
+      items:
+        - name: Scientific Computing
+        - name: Visualization
+        - name: Image Segmentation, Registration, Pattern Recognition
+    - category: Physics & Systems
+      items:
+        - name: Dynamical Systems and Differential Equations
+        - name: CCD for Astronomical Imaging, Astrophysics, Cosmology, General Relativity
 
 - title: Programming Skills
-  type: list
+  type: list_groups
   contents:
-    - "◦ Programming languages: Python, R, C++"
-    - "◦ Data science and AI: Pandas, NumPy, Scikit-learn, NLTK, PyTorch"
-    - "◦ Visualization and dashboarding: Plotly, Matplotlib, Seaborn, Streamlit, Gradio"
-    - "◦ LLMs and cloud computing: LangChain, Hugging Face, Azure, AWS"
-    - "◦ GitHub: jgbrainstorm, jianganghao"
+    - category: Languages
+      items:
+        - name: Python
+        - name: R
+        - name: C++
+    - category: Data Science & ML
+      items:
+        - name: Pandas
+        - name: NumPy
+        - name: Scikit-learn
+        - name: NLTK
+        - name: PyTorch
+    - category: Visualization & Apps
+      items:
+        - name: Plotly
+        - name: Matplotlib
+        - name: Seaborn
+        - name: Streamlit
+        - name: Gradio
+    - category: LLMs & Cloud
+      items:
+        - name: LangChain
+        - name: Hugging Face
+        - name: Azure
+        - name: AWS
+    - category: Dev & Collaboration
+      items:
+        - name: GitHub (jgbrainstorm, jianganghao)
 
 - title: Honors and Awards
   type: time_table

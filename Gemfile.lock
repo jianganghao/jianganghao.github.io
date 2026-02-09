@@ -229,6 +229,7 @@ PLATFORMS
   arm-linux-musl
   arm-linux-musleabihf
   arm64-darwin-25
+  x86_64-linux
 
 DEPENDENCIES
   classifier-reborn

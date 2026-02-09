@@ -18,9 +18,15 @@ This tutorial covers the most useful Python argument and unpacking patterns: `*`
 def f(a, b):
     print(a, b)
 
-f(1, 2)          # positional
-f(a=1, b=2)      # keyword
-f(1, b=2)        # mixed
+f(1, 2)
+f(a=1, b=2)
+f(1, b=2)
+```
+
+```text
+positional
+keyword
+mixed
 ```
 
 In `def f(a, b)`, parameters are positional-or-keyword by default.
@@ -35,7 +41,9 @@ lst = [1, 2]
 f(*lst)
 ```
 
-Equivalent to `f(1, 2)`.
+```text
+Equivalent to f(1, 2)
+```
 
 Rule: `*sequence` → positional arguments.
 
@@ -49,7 +57,9 @@ d = {"a": 1, "b": 2}
 f(**d)
 ```
 
-Equivalent to `f(a=1, b=2)`.
+```text
+Equivalent to f(a=1, b=2)
+```
 
 Rule: `**dict` → keyword arguments. Keys must match parameter names.
 
@@ -60,7 +70,10 @@ def f(*args):
     print(args)
 
 f(1, 2, 3)
-# (1, 2, 3)
+```
+
+```text
+(1, 2, 3)
 ```
 
 Use cases: unknown number of inputs, wrappers/decorators, forwarding arguments.
@@ -72,7 +85,10 @@ def f(**kwargs):
     print(kwargs)
 
 f(a=1, b=2)
-# {'a': 1, 'b': 2}
+```
+
+```text
+{'a': 1, 'b': 2}
 ```
 
 Use cases: configuration objects, flexible APIs, passing JSON-like data.
@@ -92,8 +108,19 @@ Common in decorators, FastAPI routing, Pydantic models, and tool orchestration.
 def f(a, *, b):
     print(a, b)
 
-f(1, b=2)   # OK
-f(1, 2)     # TypeError
+f(1, b=2)
+```
+
+```text
+OK
+```
+
+```python
+f(1, 2)
+```
+
+```text
+TypeError
 ```
 
 Use when you want clarity or stable public APIs.
@@ -104,8 +131,19 @@ Use when you want clarity or stable public APIs.
 def f(a, b, /):
     print(a, b)
 
-f(1, 2)        # OK
-f(a=1, b=2)    # TypeError
+f(1, 2)
+```
+
+```text
+OK
+```
+
+```python
+f(a=1, b=2)
+```
+
+```text
+TypeError
 ```
 
 Common in built-ins and performance-critical APIs.
@@ -115,7 +153,10 @@ Common in built-ins and performance-critical APIs.
 ```python
 a, *middle, b = [1, 2, 3, 4, 5]
 print(a, middle, b)
-# 1 [2, 3, 4] 5
+```
+
+```text
+1 [2, 3, 4] 5
 ```
 
 Useful for flexible slicing and sequence parsing.
@@ -123,11 +164,11 @@ Useful for flexible slicing and sequence parsing.
 ### 10. `*` vs. `**` — Common Mistakes
 
 ```python
-*[1, 2]        # OK -> 1, 2
+*[1, 2]        # OK
 **[1, 2]       # TypeError (list is not a mapping)
 
-*{"a": 1}      # 'a'
-**{"a": 1}     # a=1
+*{"a": 1}     # 'a'
+**{"a": 1}    # a=1
 ```
 
 ### 11. Why Pydantic and FastAPI Rely on This

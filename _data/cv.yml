@@ -148,15 +148,18 @@
         - name: Seaborn
         - name: Streamlit
         - name: Gradio
-    - category: LLMs & Cloud
+    - category: LLMs, Cloud & Dev
       items:
         - name: LangChain
         - name: Hugging Face
         - name: Azure
         - name: AWS
-    - category: Dev & Collaboration
-      items:
-        - name: GitHub (jgbrainstorm, jianganghao)
+        - name: GitHub /jgbrainstorm
+          link: https://github.com/jgbrainstorm
+          link_inline: true
+        - name: GitHub /jianganghao
+          link: https://github.com/jianganghao
+          link_inline: true
 
 - title: Honors and Awards
   type: time_table

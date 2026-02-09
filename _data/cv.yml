@@ -112,7 +112,6 @@
     - "◦ Image segmentation, registration, pattern recognition"
     - "◦ Charge-Coupled Device (CCD) for astronomical imaging, astrophysics, cosmology, general relativity"
 
-
 - title: Programming Skills
   type: list
   contents:
@@ -121,7 +120,6 @@
     - "◦ Visualization and dashboarding: Plotly, Matplotlib, Seaborn, Streamlit, Gradio"
     - "◦ LLMs and cloud computing: LangChain, Hugging Face, Azure, AWS"
     - "◦ GitHub: jgbrainstorm, jianganghao"
-
 
 - title: Honors and Awards
   type: list
@@ -133,5 +131,3 @@
     - "◦ 2011 – Builder Award, Dark Energy Survey Collaboration"
     - "◦ 2009 – GROCS Award, University of Michigan"
     - "◦ 2005 – First Prize for the Advancement of Science and Technology, Shanghai, China"
-
-

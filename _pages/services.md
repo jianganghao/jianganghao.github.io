@@ -10,11 +10,11 @@ nav_order: 2
 ### Corporate Service
 
 - Enterprise Test Security Leadership Team [2022–2023]: Oversaw development and implementation of enterprise-wide test security initiatives.
-- AI and Data Analytics Initiative for Test Security [2021–2023]: Defined research agenda and budget to develop AI- and data-driven solutions for test security.
-- Research Upskilling Initiative [2021–2022]: Designed and led training programs in AI, data science, and digital learning.
-- Remote Proctoring Strategy Committee [2020–2021]: Defined and planed the remote proctoring strategy and implementation.
+- AI and Data Analytics Initiative for Test Security [2021–2023]: Led the definition of research agenda and budget to develop AI- and data-driven solutions for test security.
+- Research Upskilling Initiative [2021–2022]: Led the design and implementation of training programs in AI, data science, and digital learning.
+- Remote Proctoring Strategy Committee [2020–2021]: Helped to plan the remote proctoring strategy and implementation.
 - R&D Technology Steering Committee [2019–present]: Provided technical oversight and strategic guidance for R&D computing infrastructure and cloud strategy.
-- Research Advisory Council, PSDS Division (Co-Chair) [2019–2020]: Led research agenda setting, proposal review, and portfolio oversight.
+- Research Advisory Council, PSDS Division (Co-Chair) [2019–2020]: Co-led research agenda setting, proposal review, and portfolio oversight.
 - AI Strategy Committee [2019–2020]: Contributed to the development and prioritization of enterprise AI strategy.
 - Computational Psychometrics Initiative [2016–2017]: Led agenda setting and execution of research initiatives defining computational psychometrics.
 - Software and Data Infrastructure Sub-Initiative [2014–2016]: Led research agenda development and implementation for software and data infrastructure.
@@ -49,7 +49,9 @@ nav_order: 2
   - _International Conference on Learning Sciences (ICLS)_: 2018
   - _IEEE International Conference on Systems, Man, and Cybernetics_: 2015
 
+
 - **Workshop/Symposium Chair/Panel**
+
   - Coordiated session "Computer-Supported Collaborative Social Emotional Learning and Assessment in Classroom", 2025 NCME 2025, Denver, CO.
   - Organized panel discussion "One year after GPT-4: how AI changed Assessments", 2024 NCME, Philadelphia, PA.
   - Coordinated session "Support Test Security of Remote Testing with Process Data Analytics and AI", 2023 NCME, Chicago, IL

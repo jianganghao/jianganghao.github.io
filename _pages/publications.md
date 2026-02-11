@@ -24,9 +24,19 @@ nav_order: 5
 
 I have published over **100 peer-reviewed papers**, with over **10,0000 citations** (h-index 46). For the most up-to-date and complete list of publications, please visit my **[Google Scholar profile](https://scholar.google.com/citations?hl=en&user=_LKZ3nAAAAAJ&view_op=list_works&sortby=pubdate)**.
 
+- Cui, W., **Hao, J.**, Jiang, Y., Kyllonen, P., & Kerzabi, E. (Under Review), Automated Coding of Communication Data With ChatGPT using Hierarchical Coding Framework, _Frontiers in Education_
+
 - Zhong, Y., **Hao, J.**, Fauss, M., Li, C., & Wang, Y. (2026). AI-generated essays: Characteristics and implications on automated scoring and academic integrity. _Educational Measurement: Issues and Practice_, _45_(1), e70013.
 
 - **Hao, J.** (2025). Mentor, collaborator, and role model. In M. E. Oliveri, E. M. Tucker, S. L. Gómez, D. Slomp, & N. Elliot (Eds.), _Reminiscences: Reflections on the life of Robert J. Mislevy_ (_The Journal of Writing Analytics_, Vol. 8, pp. 34–36). https://doi.org/10.37514/JWA-J.2025.8.1.06
+
+- **Hao, J.**, Cui, W., Kyllonen, P., Kerzabi, E., Liu, L., & Flor, M. (2025). Automated Coding of Communications in Collaborative Problem-Solving Tasks Using ChatGPT. _Journal of Educational Measurement_, 62(4), 809-837.
+
+- Jiang, Y., **Hao, J.**, Cui, W., Kerzabi, E., & Kyllonen, P. (2025). Uncovering transferable collaboration patterns across tasks using large language models. In _Artificial Intelligence in Education_ (pp. 320–335). Springer Nature Switzerland.
+
+- Jiang, Y., Klebanov, B. B., **Hao, J.**, Deane, P., & Livne, O. E. (2025). Unveiling patterns of interaction with automated feedback in Writing Mentor and their relationships with use goals and writing outcomes. _Journal of Computer Assisted Learning_, _41_(2), e70014.
+
+- Deane, P., Zhang, M., **Hao, J.**, & Li, C. (2025). Using keystroke dynamics to detect nonoriginal text. _Journal of Educational Measurement_, _63_(1), e12431. https://doi.org/10.1111/jedm.12431
 
 - Baizhanov, N., Abdrasilov, B., **Hao, J.**, & Makhmutova, A. (2025). Harnessing the potential of AI technologies in the national educational assessments in Kazakhstan. _Pedagogy and Psychology_, _65_(4), 5–13.
 
@@ -35,14 +45,6 @@ I have published over **100 peer-reviewed papers**, with over **10,0000 citation
 - **Hao, J.**, Cui, W., Kyllonen, P., & Kerzabi, E. (2025). Can ChatGPT code communication data fairly?: Empirical evidence from multiple collaborative tasks. _arXiv preprint arXiv:2510.20584_.
 
 - **Hao, J.**, Kyllonen, P., Kerzabi, E., Cui, W., Guo, E., Andrews-Todd, J., Jiang, Y., & Elliott, S. (2025). _Leveraging CSCL for social emotional learning: Early insights from a large-scale classroom study_. EdArXiv: https://osf.io/preprints/edarxiv/9cbe2_v1
-
-- Jiang, Y., **Hao, J.**, Cui, W., Kerzabi, E., & Kyllonen, P. (2025). Uncovering transferable collaboration patterns across tasks using large language models. In _Artificial Intelligence in Education_ (pp. 320–335). Springer Nature Switzerland.
-
-- Jiang, Y., Klebanov, B. B., **Hao, J.**, Deane, P., & Livne, O. E. (2025). Unveiling patterns of interaction with automated feedback in Writing Mentor and their relationships with use goals and writing outcomes. _Journal of Computer Assisted Learning_, _41_(2), e70014.
-
-- Deane, P., Zhang, M., **Hao, J.**, & Li, C. (2025). Using keystroke dynamics to detect nonoriginal text. _Journal of Educational Measurement_, _63_(1), e12431. https://doi.org/10.1111/jedm.12431
-
-- **Hao, J.**, Cui, W., Kyllonen, P., Kerzabi, E., Liu, L., & Flor, M. (2025). Automated Coding of Communications in Collaborative Problem-Solving Tasks Using ChatGPT. _Journal of Educational Measurement_, 62(4), 809-837.
 
 - **Hao, J.**, von Davier, A. A., Yaneva, V., Lottridge, S., von Davier, M., & Harris, D. J. (2024). Transforming assessment: The impacts and implications of large language models and generative AI. _Educational Measurement: Issues and Practice_, _43_(2), 16–29.
 

@@ -33,6 +33,8 @@ For the latest updates on talks, projects, and presentations, please visit my Li
 
 - **Hao, J.**, (Nov. 2024), Assessing Collaborative Problem Solving at Scale: Challenges, Opportunities, and the Path Forward, Invited talk, National Institute of Education, Singapore.
 
+- **Hao, J.** & Palmer, M., (Aug. 2024), Data Analytics and AI to Support Test Security for English Lanugage Assessments, Invited talk at TOEFL Symposium, Princeton, NJ. 
+
 - **Hao, J.**, (April 2024), Explorations of GPT, Discussant, NCME 2024, Philadelphia, PA.
 
 - **Hao, J.**, (April 2024), Characterizing individual collaborative problem solving through conditional transition profile: stability across tasks and teams. NCME 2024, Philadelphia, PA.

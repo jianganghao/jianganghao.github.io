@@ -215,6 +215,74 @@ ul.task-list input[type="checkbox"] {
   margin-right: 1rem;
 }
 
+// About page layout and spacing improvements
+.about-page {
+  .post-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .post-title {
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+  }
+
+  .desc {
+    font-size: 1.15rem;
+    line-height: 1.45;
+    max-width: 54ch;
+    margin-bottom: 0;
+  }
+
+  .about-shell {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .about-content {
+    p {
+      max-width: 72ch;
+      line-height: 1.7;
+      margin-bottom: 1.15rem;
+    }
+
+    h2 {
+      margin-top: 2rem;
+      margin-bottom: 0.9rem;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    li {
+      margin-bottom: 0.9rem;
+      line-height: 1.6;
+    }
+  }
+
+  .profile {
+    float: none !important;
+    width: 100%;
+    max-width: 360px;
+    margin: 0;
+
+    .more-info {
+      margin-top: 0.85rem;
+      padding: 0.85rem 1rem;
+      border: 1px solid var(--global-divider-color);
+      border-radius: 0.65rem;
+      background-color: var(--global-card-bg-color);
+      line-height: 1.45;
+
+      p {
+        display: block;
+      }
+    }
+  }
+}
+
 @media (min-width: 576px) {
   .profile {
     width: 30%;
@@ -223,6 +291,29 @@ ul.task-list input[type="checkbox"] {
       p {
         display: block;
       }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .about-page {
+    .about-shell {
+      grid-template-columns: minmax(0, 1.4fr) minmax(260px, 0.8fr);
+      gap: 2rem;
+      align-items: start;
+    }
+
+    .about-content {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    .profile {
+      grid-column: 2;
+      grid-row: 1;
+      justify-self: end;
+      position: sticky;
+      top: 84px;
     }
   }
 }

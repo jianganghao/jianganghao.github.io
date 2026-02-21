@@ -22,9 +22,9 @@ nav_order: 5
 
 ### Papers
 
-I have published over **100 peer-reviewed papers**, with over **10,0000 citations** (h-index 46). For the most up-to-date and complete list of publications, please visit my **[Google Scholar profile](https://scholar.google.com/citations?hl=en&user=_LKZ3nAAAAAJ&view_op=list_works&sortby=pubdate)**.
+I have published over **100 peer-reviewed papers**, with over **10,000 citations** (h-index 46). For the most up-to-date and complete list of publications, please visit my **[Google Scholar profile](https://scholar.google.com/citations?hl=en&user=_LKZ3nAAAAAJ&view_op=list_works&sortby=pubdate)**.
 
-- Cui, W., **Hao, J.**, Jiang, Y., Kyllonen, P., & Kerzabi, E. (Under Review), Automated Coding of Communication Data With ChatGPT using Hierarchical Coding Framework, _Frontiers in Education_
+- Cui, W., **Hao, J.**, Jiang, Y., Kyllonen, P., & Kerzabi, E. (2026), Automated Coding of Communication Data With ChatGPT using Hierarchical Coding Framework, _Frontiers in Education_
 
 - Zhong, Y., **Hao, J.**, Fauss, M., Li, C., & Wang, Y. (2026). AI-generated essays: Characteristics and implications on automated scoring and academic integrity. _Educational Measurement: Issues and Practice_, _45_(1), e70013.
 

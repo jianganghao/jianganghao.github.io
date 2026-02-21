@@ -1,11 +1,13 @@
 ---
 layout: page
 permalink: /projects/
-title: Projects
+title: Research
 description: Research projects I led and contributed
 nav: true
 nav_order: 3
 ---
+
+Throughout my scientific career, my research has spanned a wide range of fields, from physics and astronomy to educational measurement. My current work focuses on advancing the assessment of complex skills through innovations in digital technology, AI, data science, and psychometrics. Specific areas of focus include collaborative problem solving, communication, automated scoring and coding, test security in remote testing environments, and game- and simulation-based assessments. Below are selected projects that I have been leading and contributing to.
 
 ### Assessment of Complex Skills [2013 - present]
 
@@ -94,3 +96,4 @@ I conducted research in astrophysics and cosmology before I switched to educatio
 - CCD image reduction and image-quality pipelines
 - Precision measurements of galaxy alignment using SDSS data
 - Dynamical system of dark energy
+- Stability of Black hole; Solitons

@@ -4,18 +4,17 @@ layout: default
 {% unless site.data.resume %}
   <div class="post">
     <header class="post-header">
-      <h1 class="post-title">
-        {{ page.title }}
-        {% if page.cv_pdf %}
-          <a
-            href="{{ page.cv_pdf | prepend: 'assets/pdf/' | relative_url}}"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="float-right"
-            ><i class="fa-solid fa-file-pdf"></i
-          ></a>
-        {% endif %}
-      </h1>
+      {% if page.cv_pdf %}
+        <div class="cv-title-row">
+          <h1 class="post-title">{{ page.title }}</h1>
+          <a href="{{ page.cv_pdf | prepend: 'assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0 cv-download-btn">
+            <i class="fa-solid fa-file-pdf"></i>
+            View PDF Version
+          </a>
+        </div>
+      {% else %}
+        <h1 class="post-title">{{ page.title }}</h1>
+      {% endif %}
       {% if page.description %}
         <p class="post-description">{{ page.description }}</p>
       {% endif %}
@@ -50,23 +49,29 @@ layout: default
 {% else %}
   <div class="post">
     <header class="post-header">
-      <h1 class="post-title">
-        {{ page.title }}
-        {% if page.cv_pdf %}
+      {% if page.cv_pdf %}
+        {% if page.cv_pdf contains '://' %}
+          {% assign cv_pdf_href = page.cv_pdf %}
+        {% else %}
+          {% assign cv_pdf_href = page.cv_pdf | prepend: 'assets/pdf/' | relative_url %}
+        {% endif %}
+        <div class="cv-title-row">
+          <h1 class="post-title">{{ page.title }}</h1>
           <a
+            href="{{ cv_pdf_href }}"
+            class="btn btn-sm z-depth-0 cv-download-btn"
             {% if page.cv_pdf contains '://' %}
-              href="{{ page.cv_pdf }}"
-            {% else %}
-              href="{{ page.cv_pdf | prepend: 'assets/pdf/' | relative_url }}"
+              target="_blank"
+              rel="noopener noreferrer"
             {% endif %}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="float-right"
           >
             <i class="fa-solid fa-file-pdf"></i>
+            View PDF Version
           </a>
-        {% endif %}
-      </h1>
+        </div>
+      {% else %}
+        <h1 class="post-title">{{ page.title }}</h1>
+      {% endif %}
       {% if page.description %}
         <p class="post-description">{{ page.description }}</p>
       {% endif %}

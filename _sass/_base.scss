@@ -262,6 +262,53 @@ ul.task-list input[type="checkbox"] {
     }
   }
 
+  .about-social {
+    margin-bottom: 0.85rem;
+    width: 100%;
+
+    .contact-icons {
+      display: grid;
+      width: 100%;
+      grid-template-columns: repeat(auto-fit, minmax(2.5rem, 1fr));
+      gap: 0.65rem;
+      font-size: 1.85rem;
+      line-height: 1;
+    }
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 2.5rem;
+      border-radius: 0.45rem;
+      color: var(--global-text-color);
+      background-color: var(--global-card-bg-color);
+      border: 1px solid var(--global-divider-color);
+      transition: transform 0.15s ease, color 0.15s ease;
+
+      &:hover {
+        color: var(--global-theme-color);
+        transform: translateY(-1px);
+        text-decoration: none;
+      }
+    }
+
+    img,
+    svg {
+      width: 1rem;
+      height: 1rem;
+      margin: 0;
+    }
+
+    svg {
+      image {
+        width: 1rem;
+        height: 1rem;
+      }
+    }
+  }
+
   .profile {
     float: none !important;
     width: 100%;
@@ -596,6 +643,34 @@ footer.sticky-bottom {
 }
 
 // CV
+
+.cv-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.9rem;
+  margin-bottom: 0.9rem;
+}
+
+.cv-title-row .post-title {
+  margin-bottom: 0;
+}
+
+.cv-download-btn {
+  font-size: 1.16rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+@media (max-width: 576px) {
+  .cv-title-row {
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+}
 
 .cv {
   margin-bottom: 40px;

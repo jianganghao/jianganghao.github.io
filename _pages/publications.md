@@ -24,9 +24,15 @@ nav_order: 5
 
 I have published over **100 peer-reviewed papers**, with over **10,000 citations** (h-index 46). For the most up-to-date and complete list of publications, please visit my **[Google Scholar profile](https://scholar.google.com/citations?hl=en&user=_LKZ3nAAAAAJ&view_op=list_works&sortby=pubdate)**.
 
-- Cui, W., **Hao, J.**, Jiang, Y., Kyllonen, P., & Kerzabi, E. (2026), Automated Coding of Communication Data With ChatGPT using Hierarchical Coding Framework, _Frontiers in Education_
+- Cui, W., **Hao, J.**, Jiang, Y., Kyllonen, P. C., & Kerzabi, E. (2026). Automated Coding of Communication Data with ChatGPT using a Hierarchical Coding Framework. In _Frontiers in Education_ (Vol. 11, p. 1764154). Frontiers.
 
 - Zhong, Y., **Hao, J.**, Fauss, M., Li, C., & Wang, Y. (2026). AI-generated essays: Characteristics and implications on automated scoring and academic integrity. _Educational Measurement: Issues and Practice_, _45_(1), e70013.
+
+- **Hao, J.** (2026). Detecting AI-Generated Essays in Writing Assessment: Responsible Use and Generalizability Across LLMs. Book chapter accepted to Artificial Intelligence in Educational Learning and Assessment, arXiv preprint arXiv:2603.02353.
+
+- Guo, E., Kerzabi, E., Andrews-Todd, J., **Hao, J.**, & Kyllonen, P. (2026). _Designing digital enhancements for social emotional skill in a collaborative learning environment_. Proceeding of International Conference on Computer Supported Collaborative Learning (CSCL2026).
+
+- **Hao, J.**, Kyllonen, P., Kerzabi, E., Cui, W., Guo, E., Andrews-Todd, J., Jiang, Y., & Elliott, S. (2026). _Leveraging CSCL for social emotional learning: Early insights from a large-scale classroom study_. Proceeding of International Conference on Computer Supported Collaborative Learning (CSCL2026). EdArXiv: https://osf.io/preprints/edarxiv/9cbe2_v1
 
 - **Hao, J.** (2025). Mentor, collaborator, and role model. In M. E. Oliveri, E. M. Tucker, S. L. Gómez, D. Slomp, & N. Elliot (Eds.), _Reminiscences: Reflections on the life of Robert J. Mislevy_ (_The Journal of Writing Analytics_, Vol. 8, pp. 34–36). https://doi.org/10.37514/JWA-J.2025.8.1.06
 
@@ -43,8 +49,6 @@ I have published over **100 peer-reviewed papers**, with over **10,000 citations
 - **Hao, J.** (2025). _AI for educational assessment: Opportunities and challenges through the lens of evidence-centered design and measurement values_. EdArXiv: https://osf.io/preprints/edarxiv/dacxj_v2
 
 - **Hao, J.**, Cui, W., Kyllonen, P., & Kerzabi, E. (2025). Can ChatGPT code communication data fairly?: Empirical evidence from multiple collaborative tasks. _arXiv preprint arXiv:2510.20584_.
-
-- **Hao, J.**, Kyllonen, P., Kerzabi, E., Cui, W., Guo, E., Andrews-Todd, J., Jiang, Y., & Elliott, S. (2025). _Leveraging CSCL for social emotional learning: Early insights from a large-scale classroom study_. EdArXiv: https://osf.io/preprints/edarxiv/9cbe2_v1
 
 - **Hao, J.**, von Davier, A. A., Yaneva, V., Lottridge, S., von Davier, M., & Harris, D. J. (2024). Transforming assessment: The impacts and implications of large language models and generative AI. _Educational Measurement: Issues and Practice_, _43_(2), 16–29.
 

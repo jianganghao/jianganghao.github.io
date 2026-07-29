@@ -22,13 +22,21 @@ nav_order: 5
 
 ### Papers
 
-I have published over **100 peer-reviewed papers**, with over **10,000 citations** (h-index 46). For the most up-to-date and complete list of publications, please visit my **[Google Scholar profile](https://scholar.google.com/citations?hl=en&user=_LKZ3nAAAAAJ&view_op=list_works&sortby=pubdate)**.
+I have published over **100 peer-reviewed papers**, with over **11,000 citations** (h-index 47). For the most up-to-date and complete list of publications, please visit my **[Google Scholar profile](https://scholar.google.com/citations?hl=en&user=_LKZ3nAAAAAJ&view_op=list_works&sortby=pubdate)**.
 
-- Cui, W., **Hao, J.**, Jiang, Y., Kyllonen, P. C., & Kerzabi, E. (2026). Automated Coding of Communication Data with ChatGPT using a Hierarchical Coding Framework. In _Frontiers in Education_ (Vol. 11, p. 1764154). Frontiers.
+- von Davier, A. A., & **Hao, J.** (2026). Robert J. Mislevy and computational psychometrics. _Educational Measurement: Issues and Practice_, _45_(3), e70024. https://doi.org/10.1111/emip.70024
+
+- Jiang, Y., Song, Y., Roll, I., **Hao, J.**, Ruan, C., & Liu, L. (2026). Toward fair and scalable assessment of socially shared regulation of learning with large language models. In _Artificial Intelligence in Education_ (pp. 194–209). Springer. https://doi.org/10.1007/978-3-032-29773-0_15
+
+- **Hao, J.**, Cui, W., Kyllonen, P., & Kerzabi, E. (2026). Automated coding of communication data using LLM: Consistency across subgroups. _Journal of Educational Measurement_, _63_(2), e70049. https://doi.org/10.1111/jedm.70049
+
+- Cui, W., **Hao, J.**, Jiang, Y., Kyllonen, P. C., & Kerzabi, E. (2026). Automated coding of communication data using large language models: A comparison of hierarchical and direct prompting strategies. _Frontiers in Education_, _11_, 1764154.
 
 - Zhong, Y., **Hao, J.**, Fauss, M., Li, C., & Wang, Y. (2026). AI-generated essays: Characteristics and implications on automated scoring and academic integrity. _Educational Measurement: Issues and Practice_, _45_(1), e70013.
 
-- **Hao, J.** (2026). Detecting AI-Generated Essays in Writing Assessment: Responsible Use and Generalizability Across LLMs. Book chapter accepted to Artificial Intelligence in Educational Learning and Assessment, arXiv preprint arXiv:2603.02353.
+- **Hao, J.** (2026). Detecting AI-generated essays in writing assessment: Responsible use and generalizability across LLMs. In _Artificial Intelligence Applications in Educational Learning and Assessment_.
+
+- Deane, P., Zhang, M., **Hao, J.**, & Li, C. (2026). Using keystroke dynamics to detect nonoriginal text. _Journal of Educational Measurement_, _63_(1), e12431. https://doi.org/10.1111/jedm.12431
 
 - Guo, E., Kerzabi, E., Andrews-Todd, J., **Hao, J.**, & Kyllonen, P. (2026). _Designing digital enhancements for social emotional skill in a collaborative learning environment_. Proceeding of International Conference on Computer Supported Collaborative Learning (CSCL2026).
 
@@ -42,13 +50,9 @@ I have published over **100 peer-reviewed papers**, with over **10,000 citations
 
 - Jiang, Y., Klebanov, B. B., **Hao, J.**, Deane, P., & Livne, O. E. (2025). Unveiling patterns of interaction with automated feedback in Writing Mentor and their relationships with use goals and writing outcomes. _Journal of Computer Assisted Learning_, _41_(2), e70014.
 
-- Deane, P., Zhang, M., **Hao, J.**, & Li, C. (2025). Using keystroke dynamics to detect nonoriginal text. _Journal of Educational Measurement_, _63_(1), e12431. https://doi.org/10.1111/jedm.12431
-
 - Baizhanov, N., Abdrasilov, B., **Hao, J.**, & Makhmutova, A. (2025). Harnessing the potential of AI technologies in the national educational assessments in Kazakhstan. _Pedagogy and Psychology_, _65_(4), 5–13.
 
-- **Hao, J.** (2025). _AI for educational assessment: Opportunities and challenges through the lens of evidence-centered design and measurement values_. EdArXiv: https://osf.io/preprints/edarxiv/dacxj_v2
-
-- **Hao, J.**, Cui, W., Kyllonen, P., & Kerzabi, E. (2025). Can ChatGPT code communication data fairly?: Empirical evidence from multiple collaborative tasks. _arXiv preprint arXiv:2510.20584_.
+- **Hao, J.** (2025). AI for educational assessment: Opportunities and challenges through the lens of evidence-centered design and measurement values. In _AI and VR for Higher Education_.
 
 - **Hao, J.**, von Davier, A. A., Yaneva, V., Lottridge, S., von Davier, M., & Harris, D. J. (2024). Transforming assessment: The impacts and implications of large language models and generative AI. _Educational Measurement: Issues and Practice_, _43_(2), 16–29.
 

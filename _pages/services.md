@@ -27,21 +27,22 @@ nav_order: 2
 - **Editorial Board**  
   _Journal of Educational Measurement_
 
-- **Reviewer (active)**  
-  _Psychometrika_; _Journal of Educational Measurement_; _Educational and Psychological Measurement_;  
-  _Journal of Educational and Behavioral Statistics_; _International Journal of Testing_;  
-  _Learning and Instruction_; _Computers & Education_; _PLOS One_;  
-  _Journal of Learning Analytics_; _Computers in Human Behavior_;  
-  _Journal of Educational Data Mining_; _Educational Assessment_;  
-  _IEEE Transactions on Learning Technologies_; _Quality Assurance in Education_;  
-  _ETS Research Report_
+- **Reviewer (active)**<br>
+  _Psychometrika_; _Journal of Educational Measurement_; _Educational and Psychological Measurement_;<br>
+  _Journal of Educational and Behavioral Statistics_; _Journal of Applied Measurement in Education_; _International Journal of Testing_;<br>
+  _Learning and Instruction_; _Computers & Education_; _Journal of Computer Assisted Learning_; _PLOS One_;<br>
+  _Journal of Learning Analytics_; _Computers in Human Behavior_;<br>
+  _Journal of Educational Data Mining_; _Educational Assessment_;<br>
+  _IEEE Transactions on Learning Technologies_; _Quality Assurance in Education_;<br>
+  _Studies in Educational Evaluation_; _Assessing Writing_; _ETS Research Report_
 
 - **Conference Program/Organizing Committee**
 
-  - _International Conference on Educational Data Mining (EDM)_: 2017–now
-  - _International Conference on Artificial Intelligence in Education (AIED)_: 2024 - now
-  - _Workshop on Innovative Use of NLP for Building Educational Applications (BEA)_: 2017–now
-  - _International Conference on Computer Supported Education_: 2023 - now
+  - _International Conference on Educational Data Mining (EDM)_: 2017–present
+  - _International Conference on Learning Analytics & Knowledge (LAK)_: 2025–present
+  - _International Conference on Artificial Intelligence in Education (AIED)_: 2024–present
+  - _Workshop on Innovative Use of NLP for Building Educational Applications (BEA)_: 2017–present
+  - _International Conference on Computer Supported Education_: 2023–present
   - _EdTech and Computational Psychometrics Summit (ECPS)_: 2024
   - _NeurIPS workshop_: 2024
   - _AAAI Conference on Artificial Intelligence_: 2021–2024
@@ -52,7 +53,10 @@ nav_order: 2
 
 - **Workshop/Symposium Chair/Panel**
 
-  - Coordiated session "Computer-Supported Collaborative Social Emotional Learning and Assessment in Classroom", 2025 NCME 2025, Denver, CO.
+  - Coordinated session "Automated Coding with LLM: Accuracy and Fairness", NCME 2026.
+  - Organized discussion session "In Memory of Robert J. Mislevy: A Legacy of Innovation in Measurement", NCME 2026.
+  - Organized panel discussion "Three Years After GPT-4: How Has AI Changed Assessments? How Will It?", NCME 2026.
+  - Coordinated session "Computer-Supported Collaborative Social Emotional Learning and Assessment in Classroom", NCME 2025, Denver, CO.
   - Organized panel discussion "One year after GPT-4: how AI changed Assessments", 2024 NCME, Philadelphia, PA.
   - Coordinated session "Support Test Security of Remote Testing with Process Data Analytics and AI", 2023 NCME, Chicago, IL
   - Training workshop "Addressing the Data Challenges of Next-generation Assessments: Data Science Upskilling for Psychometricians", 2023 NCME, Chicago, IL
@@ -70,3 +74,20 @@ nav_order: 2
   - Workshop “Evidence-centered design and computational psychometric solution for process data”, annual meeting of the National Council on Measurement in Education, New York, NY, USA (2018)
   - Workshop “EPCAL: computer-supported collaboration at scale”, 12th International Conference on Computer Supported Collaborative Learning, Philadelphia, PA, USA (2017)
   - Workshop “Evidence-centered design and computational psychometric solution for process data”, annual meeting of the National Council on Measurement in Education, San Antonio, TX, USA (2017)
+
+### Awards and Recognition
+
+- **Top 10 Most-Cited Paper Published in 2024**, _Educational Measurement: Issues and Practice_, for “Transforming assessment: The impacts and implications of large language models and generative AI.”
+- **Top 10 Most-Cited Paper Published in 2024**, _Journal of Educational Measurement_, for “Using keystroke behavior patterns to detect nonauthentic texts in writing assessments: Evaluating the fairness of predictive models.”
+
+### Mentorship
+
+- Xiaomeng Huang, 2026 ETS Summer Intern (Educational Communication and Technology Ph.D. student at NYU)
+- Nurseit Baizhanov, 2025 ETS Visiting Scholar (National Testing Center of Kazakhstan)
+- Kehinde Elelu, 2024 ETS Summer Intern (Civil Engineering Ph.D. student at Clemson University)
+- Yang Zhong, 2023 ETS Summer Intern (Computer Science Ph.D. student at the University of Pittsburgh)
+- Daniel Adams, 2018 ETS Summer Intern (Psychometrics Ph.D. student at the University of Wisconsin–Madison), now ETS Psychometrician
+- Yang Jiang, 2017 ETS Summer Intern (Cognitive Science Ph.D. student at Columbia University), now ETS Research Scientist
+- Lu Ou, 2016 ETS Summer Intern (Statistics Ph.D. student at Penn State University), now at Netflix
+- Thales Ricarte, 2015 ETS Exchange Student (Psychometrics Ph.D. student at the University of São Paulo)
+- Zuowei Wang, 2014 ETS Summer Intern (Psychology Ph.D. student at the University of Michigan), now ETS Research Scientist

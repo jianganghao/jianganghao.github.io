@@ -15,6 +15,24 @@ For the latest updates on talks, projects, and presentations, please visit my Li
 
 ### Past presentations
 
+- **Hao, J.**, (Sept. 2026), Scaling Evidence Identification from Communication Process Data with AI, Invited talk, Beyond Results 2026 - Process Data and AI in Educational Assessment.
+
+- **Hao, J.** (Organizer). (2026). Automated Coding with LLM: Accuracy and Fairness. Coordinated session, NCME 2026. The session included four presentations:
+  - **Hao, J.**, Cui, W., Kyllonen, P., & Kerzabi, E., Reliability and Fairness of LLM-Based Coding on Communication Data.
+  - Cui, W., **Hao, J.**, Kyllonen, P., & Kerzabi, E., ChatGPT-Based Automated Coding for a Hierarchical Coding Framework.
+  - Wang, Y., Cui, W., Gooch, R., **Hao, J.**, Ling, G., & Haviland, S., An Exploration of Human-AI Coding Across Different Types of Qualitative Data.
+  - Jiang, Y., Song, Y., & Ruan, C., Leveraging Large Language Models for Automated Coding of Socially Shared Regulation of Learning.
+
+- **Hao, J.** (Organizer), Ercikan, K., Zwick, R., Pellegrino, J., & Everson. (2026). In Memory of Robert J. Mislevy: A Legacy of Innovation in Measurement. Organized discussion session, NCME 2026.
+
+- **Hao, J.** (Organizer), von Davier, A., Yaneva, V., Lottridge, S., von Davier, M., & Ho, A. (Panelists). (2026). Three Years After GPT-4: How Has AI Changed Assessments? How Will It? Organized discussion session, NCME 2026.
+
+- **Hao, J.** (Discussant). (2026). Test-Taking Behaviors, Strategies, and Interventions. Coordinated paper session, NCME 2026.
+
+- **Hao, J.**, Kyllonen, P., Kerzabi, E., Cui, W., Guo, E., Andrews-Todd, J., Jiang, Y., & Elliott, S. (2026). Leveraging CSCL for Social Emotional Learning: Early Insights from a Large-Scale Classroom Study. Poster presentation, International Conference on Computer-Supported Collaborative Learning (CSCL 2026).
+
+- Guo, E., Kerzabi, E., Andrews-Todd, J., **Hao, J.**, & Kyllonen, P. (2026). Designing Digital Enhancements for Social Emotional Skill in a Collaborative Learning Environment. Presentation, International Conference on Computer-Supported Collaborative Learning (CSCL 2026).
+
 - **Hao, J.**, (Oct. 2025), Data Analytics and AI to Support Test Security in Remote Testing, NCME Test Security SIGIMIE Webinar: Test Security Operation Challenges, Considerations and Tips. Virtual.
 
 - **Hao, J.**, (Apr. 2025), Computer-Supported Collaborative Social Emotional Learning and Assessment in Classroom, Organized symposium, NCME 2025, Denver, CO.

@@ -22,7 +22,11 @@ nav_order: 5
 
 ### Papers
 
-I have published over **100 peer-reviewed papers**, with over **11,000 citations** (h-index 47). For the most up-to-date and complete list of publications, please visit my **[Google Scholar profile](https://scholar.google.com/citations?hl=en&user=_LKZ3nAAAAAJ&view_op=list_works&sortby=pubdate)**.
+I have published over **100 peer-reviewed papers**, with over **11,000 citations** (h-index 48). For the most up-to-date and complete list of publications, please visit my **[Google Scholar profile](https://scholar.google.com/citations?hl=en&user=_LKZ3nAAAAAJ&view_op=list_works&sortby=pubdate)**.
+
+- **Hao, J.** (2026). Semantic variability of LLM-generated replies across LLMs: Implications for designing conversation-based assessment. In _Proceedings of the Artificial Intelligence in Measurement and Education Conference (AIME-Con): Coordinated Session Papers_ (pp. 82–88).
+
+- Zhang, T., Chen, Y., **Hao, J.**, Kerzabi, E., Kyllonen, P., Moustaki, I., & Xin, T. (2026). Measuring negotiation traits with collaborative choice data: A two-stage latent variable model. _arXiv preprint arXiv:2610.07630_. https://arxiv.org/abs/2610.07630
 
 - von Davier, A. A., & **Hao, J.** (2026). Robert J. Mislevy and computational psychometrics. _Educational Measurement: Issues and Practice_, _45_(3), e70024. https://doi.org/10.1111/emip.70024
 

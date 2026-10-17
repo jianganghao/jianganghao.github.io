@@ -148,6 +148,16 @@
 - title: Honors and Awards
   type: time_table
   contents:
+    - title: Top 10 Most-Cited Paper Published in 2024
+      institution: "Educational Measurement: Issues and Practice"
+      year: 2026
+      description:
+        - "Transforming assessment: The impacts and implications of large language models and generative AI"
+    - title: Top 10 Most-Cited Paper Published in 2024
+      institution: Journal of Educational Measurement
+      year: 2026
+      description:
+        - "Using keystroke behavior patterns to detect nonauthentic texts in writing assessments: Evaluating the fairness of predictive models"
     - title: Annual Award for Exceptional Achievement in Educational Measurement
       institution: National Council on Measurement in Education (NCME)
       year: 2024
@@ -169,3 +179,34 @@
     - title: First Prize for the Advancement of Science and Technology
       institution: Shanghai, China
       year: 2005
+
+- title: Mentorship
+  type: time_table
+  contents:
+    - title: Xiaomeng Huang
+      institution: ETS Summer Intern; Educational Communication and Technology Ph.D. student at NYU
+      year: 2026
+    - title: Nurseit Baizhanov
+      institution: ETS Visiting Scholar; National Testing Center of Kazakhstan
+      year: 2025
+    - title: Kehinde Elelu
+      institution: ETS Summer Intern; Civil Engineering Ph.D. student at Clemson University
+      year: 2024
+    - title: Yang Zhong
+      institution: ETS Summer Intern; Computer Science Ph.D. student at the University of Pittsburgh
+      year: 2023
+    - title: Daniel Adams
+      institution: ETS Summer Intern; now ETS Psychometrician
+      year: 2018
+    - title: Yang Jiang
+      institution: ETS Summer Intern; now ETS Research Scientist
+      year: 2017
+    - title: Lu Ou
+      institution: ETS Summer Intern; now at Netflix
+      year: 2016
+    - title: Thales Ricarte
+      institution: ETS Exchange Student; University of Sao Paulo
+      year: 2015
+    - title: Zuowei Wang
+      institution: ETS Summer Intern; now ETS Research Scientist
+      year: 2014

@@ -30,11 +30,12 @@ nav_order: 4
 
 ### Mentoring
 
-- Nurseit Baizhanov, ETS Visiting Scholar (National Testing Center of Kazakhstan)
-- Kehinde Elelu, 2024 ETS Summer Intern (Civil Engineering Ph.D. Student of Clemson University)
-- Yang Zhong, 2023 ETS Summer Intern (Computer Science Ph.D. Student of the University of Pittsburgh)
-- Daniel Adams, 2018 ETS Summer Intern (Psychometrics Ph.D. Student of the University of Wisconsin - Madison), Now ETS Psychometrician
-- Yang Jiang, 2017 ETS Summer Intern (Cognitive Science Ph.D. Student of Columbia University), Now ETS Research Scientist
-- Lu Ou, 2016 ETS Summer Intern (Statistics Ph.D. Student of Penn State University), Now at Netflix
+- Xiaomeng Huang, 2026 ETS Summer Intern (Educational Communication and Technology Ph.D. student at NYU)
+- Nurseit Baizhanov, 2025 ETS Visiting Scholar (National Testing Center of Kazakhstan)
+- Kehinde Elelu, 2024 ETS Summer Intern (Civil Engineering Ph.D. student at Clemson University)
+- Yang Zhong, 2023 ETS Summer Intern (Computer Science Ph.D. student at the University of Pittsburgh)
+- Daniel Adams, 2018 ETS Summer Intern (Psychometrics Ph.D. student at the University of Wisconsin–Madison), now ETS Psychometrician
+- Yang Jiang, 2017 ETS Summer Intern (Cognitive Science Ph.D. student at Columbia University), now ETS Research Scientist
+- Lu Ou, 2016 ETS Summer Intern (Statistics Ph.D. student at Penn State University), now at Netflix
 - Thales Ricarte, 2015 ETS Exchange Student (Psychometrics Ph.D. student of the University of São Paulo)
-- Zuowei Wang, 2014 ETS Summer Intern (Psychology Ph.D. student of the University of Michigan), Now ETS Research Scientist
+- Zuowei Wang, 2014 ETS Summer Intern (Psychology Ph.D. student at the University of Michigan), now ETS Research Scientist

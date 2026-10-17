@@ -28,13 +28,7 @@ nav_order: 2
   _Journal of Educational Measurement_
 
 - **Reviewer (active)**<br>
-  _Psychometrika_; _Journal of Educational Measurement_; _Educational and Psychological Measurement_;<br>
-  _Journal of Educational and Behavioral Statistics_; _Journal of Applied Measurement in Education_; _International Journal of Testing_;<br>
-  _Learning and Instruction_; _Computers & Education_; _Journal of Computer Assisted Learning_; _PLOS One_;<br>
-  _Journal of Learning Analytics_; _Computers in Human Behavior_;<br>
-  _Journal of Educational Data Mining_; _Educational Assessment_;<br>
-  _IEEE Transactions on Learning Technologies_; _Quality Assurance in Education_;<br>
-  _Studies in Educational Evaluation_; _Assessing Writing_; _ETS Research Report_
+  _Psychometrika_ | _Journal of Educational Measurement_ | _Educational and Psychological Measurement_ | _Journal of Educational and Behavioral Statistics_ | _Journal of Applied Measurement in Education_ | _International Journal of Testing_ | _Learning and Instruction_ | _Computers & Education_ | _Journal of Computer Assisted Learning_ | _PLOS One_ | _Journal of Learning Analytics_ | _Computers in Human Behavior_ | _Journal of Educational Data Mining_ | _Educational Assessment_ | _IEEE Transactions on Learning Technologies_ | _Quality Assurance in Education_ | _Studies in Educational Evaluation_ | _Assessing Writing_ | _ETS Research Report_
 
 - **Conference Program/Organizing Committee**
 
@@ -50,6 +44,7 @@ nav_order: 2
   - _International Conference on Learning Sciences (ICLS)_: 2018
   - _IEEE International Conference on Systems, Man, and Cybernetics_: 2015
 
+<br>
 
 - **Workshop/Symposium Chair/Panel**
 
